@@ -1,0 +1,108 @@
+baseURL = "https://ramiro.me"
+title = "ramiro.me"
+#subtitle  = ""
+
+DefaultContentLanguage = "en"
+languageCode = "en-us"
+
+theme = "hello"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = "all rights reserved"
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpored = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  posts = "/posts/:title/"
+
+[author]
+  name = "ramiro"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  dateform        = "2 Jan, 2006"
+  dateformShort   = "2 Jan"
+  dateformNum     = "2006.01.02"
+  dateformNumTime = "2006.01.02 02:04 pm GMT -0700"
+
+  # Metadata mostly used in document's head
+  description = ""
+  keywords = ""
+  images = [""]
+
+  homeSubtitle = "original stories"
+
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = ""
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  justifyContent = false  # Set "text-align: justify" to .content.
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  themeColor = "#252627"
+
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#252627"
+    msapplication = "#252627"
+    theme = "#252627"
+
+  [params.logo]
+#    path         = "img/storyinfluence_logo_transparent.png"
+    logoText     = "ramiro.me"
+    logoHomeLink = "/"
+    # Set to a valid CSS color to change the cursor in the logo.
+    #logoColor    = "#D12F19"
+
+  # Social icons
+  [[params.social]]
+    name = ""
+    url  = "mailto:nobody@example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "about"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "posts"
+    url        = "posts/"
