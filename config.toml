@@ -97,11 +97,11 @@ disableHugoGeneratorInject = false
     name = ""
     url  = "mailto:nobody@example.com"
 
-[menu]
-  [[menu.main]]
-    identifier = "about"
-    name       = "about"
-    url        = "about/"
+# [menu]
+#  [[menu.main]]
+#     identifier = "about"
+#     name       = "about"
+#     url        = "about/"
 #  [[menu.main]]
 #    identifier = "posts"
 #    name       = "posts"
