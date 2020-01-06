@@ -86,7 +86,7 @@ disableHugoGeneratorInject = false
     theme = "#252627"
 
   [params.logo]
-#    path         = "img/storyinfluence_logo_transparent.png"
+    path         = ""
     logoText     = "ramiro.me"
     logoHomeLink = "/"
     # Set to a valid CSS color to change the cursor in the logo.
