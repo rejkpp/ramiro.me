@@ -41,6 +41,8 @@ disableHugoGeneratorInject = false
 
 [author]
   name = "ramiro"
+  homepage = "ramiro.me"
+
 
 [blackfriday]
   hrefTargetBlank = true
