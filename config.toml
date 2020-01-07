@@ -5,7 +5,7 @@ title = "ramiro.me"
 DefaultContentLanguage = "en"
 languageCode = "en-us"
 
-theme = ""
+theme = "hello"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
