@@ -14,14 +14,6 @@
             {{ end }}
 
             <span class="theme-toggle unselectable">{{ partial "theme-icon.html" . }}</span>
-
-            <button id="themeColorButton" class="icon-wrapper">
-              <div id="sunRays" class="sun-rays"></div>
-              <div id="moonOrSun" class="moon-or-sun"></div>
-              <div id="moonMask" class="moon-mask"></div>
-            </button>
         </span>
     </span>
-    {{ $script := resources.Get "js/toggleColors.js" }}
-    <script src="{{ $script.RelPermalink }}"></script>
 </header>
