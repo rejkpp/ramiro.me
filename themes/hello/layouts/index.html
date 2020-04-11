@@ -2,6 +2,9 @@
     <main aria-role="main">
         <div>
             <h1>{{ .Site.Title }}</h1>
+            <div>
+                {{ partial "opt-in.html" . }}
+            </div>
 
             {{- with .Site.Params.homeSubtitle }}
                 <p>{{.}}</p>
