@@ -1,7 +1,9 @@
 {{ define "main" }}
     <main aria-role="main">
         <div>
-            <h1>{{ .Site.Title }}</h1>
+            <h1>
+              {{ partial "copy.html" . }}
+            </h1>
             <div>
                 {{ partial "opt-in.html" . }}
             </div>
