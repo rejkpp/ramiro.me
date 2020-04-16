@@ -8,4 +8,4 @@ tags:
   - untagged
 ---
 
-# confirmed! the webinar replay will be sent to you once it’s uploaded.
+# confirmed! the webinar replay will be sent to you once it’s been uploaded.
