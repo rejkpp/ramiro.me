@@ -8,4 +8,4 @@ tags:
   - untagged
 ---
 
-### request complete. i'll let you know when the next training will be. i look forward to seeing you there :)
+## request complete. i'll let you know when the next training will be. i look forward to seeing you there :)
