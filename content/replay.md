@@ -8,5 +8,6 @@ tags:
   - untagged
 ---
 
-{{< partial "embed/encorereplay.html" >}}
 this will be up until april 23rd.
+
+{{< partial "embed/encorereplay.html" >}}
