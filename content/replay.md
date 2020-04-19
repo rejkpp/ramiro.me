@@ -8,4 +8,4 @@ tags:
   - untagged
 ---
 
-# confirmed! the webinar replay will be sent to you once it’s been uploaded.
+<iframe src="https://player.vimeo.com/video/409370944" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
