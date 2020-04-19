@@ -1,5 +1,5 @@
 ---
-title: "replay encore webinar: how to become more influential with the power of storytelling"
+title: "replay encore webinar: become more influential with the power of storytelling"
 date: 2020-04-15T05:19:42+01:00
 draft: false
 toc: false
