@@ -8,6 +8,6 @@ tags:
   - untagged
 ---
 
-this will be up until april 23rd.
+this will be up until april 22nd.
 
 {{< partial "embed/encorereplay.html" >}}
