@@ -8,8 +8,10 @@ tags:
   - untagged
 ---
 
-#register for new dates below
-##become more influential with the power of storytelling
+# register for new dates below
+## become more influential with the power of storytelling
 
-[29 april, 13:00 CEST](storyinfluence)
-[6 may, 13:00 CEST](/encore)
+### [29 april, 13:00 CEST](storyinfluence)
+<br>
+<br>
+### [6 may, 13:00 CEST](/encore)
