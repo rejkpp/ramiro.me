@@ -11,5 +11,12 @@ tags:
 # register for new dates below
 ## become more influential with the power of storytelling
 
-### [29 april, 13:00 CEST](storyinfluence) {:target="_blank"}
-### [6 may, 13:00 CEST](encore) {:target="_blank"}
+### [29 april, 13:00 CEST](storyinfluence)
+### [6 may, 13:00 CEST](encore)
+
+
+###<a href="/storyinfluence" target="_blank">29 april, 13:00 cest</a>
+
+<br>
+
+###<a href="/encore" target="_blank">6 may, 13:00 cest</a>
