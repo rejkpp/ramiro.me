@@ -12,6 +12,4 @@ tags:
 ## become more influential with the power of storytelling
 
 ### [29 april, 13:00 CEST](storyinfluence)
-<br>
-<br>
 ### [6 may, 13:00 CEST](/encore)
