@@ -1,5 +1,5 @@
 ---
-title: "replay encore webinar: become more influential with the power of storytelling"
+title: "replay expired"
 date: 2020-04-15T05:19:42+01:00
 draft: false
 toc: false
@@ -8,6 +8,8 @@ tags:
   - untagged
 ---
 
-this will be up until april 22nd.
+#register for new dates below
+##become more influential with the power of storytelling
 
-{{< partial "embed/encorereplay.html" >}}
+[29 april, 13:00 CEST](storyinfluence)
+[6 may, 13:00 CEST](/encore)
