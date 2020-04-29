@@ -3,14 +3,12 @@
         <div>
             <div>
                 {{ partial "embed/storyorigin.html" . }}
-              </div>
-            <div>
-              <h1>
-                {{ partial "copy.html" . }}
-              </h1>
-                {{ partial "forms/opt-in.html" . }}
+                <h1>
+                  {{ partial "copy.html" . }}
+                </h1>
+                  {{ partial "forms/opt-in.html" . }}
             </div>
-
+            
             {{- with .Site.Params.homeSubtitle }}
                 <p>{{.}}</p>
             {{- end }}
