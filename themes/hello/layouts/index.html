@@ -1,11 +1,13 @@
 {{ define "main" }}
     <main aria-role="main">
         <div>
-            <h1>
-              {{ partial "copy.html" . }}
-            </h1>
             <div>
                 {{ partial "embed/storyorigin.html" . }}
+              </div>
+            <div>
+              <h1>
+                {{ partial "copy.html" . }}
+              </h1>
                 {{ partial "forms/opt-in.html" . }}
             </div>
 
