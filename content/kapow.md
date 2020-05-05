@@ -9,4 +9,4 @@ tags:
 ---
 
 you are in baby!
-we'll schedule our session right away :D
+we'll get you set up right away :D
