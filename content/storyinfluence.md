@@ -1,5 +1,5 @@
 ---
-title: "influence with story"
+title: "become more influential with the power of story"
 date: 2020-04-15T05:19:42+01:00
 draft: false
 toc: false
@@ -8,7 +8,6 @@ tags:
   - untagged
 ---
 
-# register for new dates below
-## become more influential with the power of storytelling
+## register for new dates below
 
 {{< partial "embed/storyinfluence.html" >}}
