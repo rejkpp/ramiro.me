@@ -11,30 +11,16 @@ tags:
 # register for new dates below
 ## become more influential with the power of storytelling
 
-<details open>
-<summary>may</summary>
-<details>
-<summary>19</summary>
-##### [19 may, 13:00 cest](/storyinfluence/2020.05.19.13.00)
-##### [19 may, 19:00 cest](/storyinfluence/2020.05.19.19.00)
-</details>
-<details>
-<summary>21</summary>
-##### [21 may, 13:00 cest](/storyinfluence/2020.05.21.13.00)
-##### [21 may, 19:00 cest](/storyinfluence/2020.05.21.19.00)
-</details>
-<details>
-<summary>26</summary>
-##### [26 may, 13:00 cest](/storyinfluence/2020.05.26.13.00)
-##### [26 may, 19:00 cest](/storyinfluence/2020.05.26.19.00)
-</details>
-<details>
-<summary>28</summary>
-##### [28 may, 13:00 cest](/storyinfluence/2020.05.28.13.00)
-##### [28 may, 19:00 cest](/storyinfluence/2020.05.28.19.00)
-</details>
-
-</details>
+| may      | jun |
+| ----------- | ----------- |
+|[19 may, 13:00 cest](/storyinfluence/2020.05.19.13.00)| Title       |
+|[19 may, 19:00 cest](/storyinfluence/2020.05.19.19.00)| Title       |
+|[21 may, 13:00 cest](/storyinfluence/2020.05.21.13.00)| Title       |
+|[21 may, 19:00 cest](/storyinfluence/2020.05.21.19.00)| Title       |
+|[26 may, 13:00 cest](/storyinfluence/2020.05.26.13.00)| Title       |
+|[26 may, 19:00 cest](/storyinfluence/2020.05.26.19.00)| Title       |
+|[28 may, 13:00 cest](/storyinfluence/2020.05.28.13.00)| Title       |
+|[28 may, 19:00 cest](/storyinfluence/2020.05.28.19.00)| Title       |
 
 
 <details>
