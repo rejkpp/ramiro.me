@@ -1,0 +1,59 @@
+---
+title: "influence with story"
+date: 2020-04-15T05:19:42+01:00
+draft: false
+toc: false
+images:
+tags:
+  - untagged
+---
+
+# register for new dates below
+## become more influential with the power of storytelling
+
+<details open>
+<summary>may</summary>
+<details>
+<summary>19</summary>
+##### [19 may, 13:00 cest](/storyinfluence/2020.05.19.13.00)
+##### [19 may, 19:00 cest](/storyinfluence/2020.05.19.19.00)
+</details>
+<details>
+<summary>21</summary>
+##### [21 may, 13:00 cest](/storyinfluence/2020.05.21.13.00)
+##### [21 may, 19:00 cest](/storyinfluence/2020.05.21.19.00)
+</details>
+<details>
+<summary>26</summary>
+##### [26 may, 13:00 cest](/storyinfluence/2020.05.26.13.00)
+##### [26 may, 19:00 cest](/storyinfluence/2020.05.26.19.00)
+</details>
+<details>
+<summary>28</summary>
+##### [28 may, 13:00 cest](/storyinfluence/2020.05.28.13.00)
+##### [28 may, 19:00 cest](/storyinfluence/2020.05.28.19.00)
+</details>
+
+</details>
+
+
+<details>
+<summary>jun</summary>
+### [02 jun, 13:00 cest](/storyinfluence/2020.06.02.13.00)
+### [02 jun, 19:00 cest](/storyinfluence/2020.06.02.19.00)
+
+### [04 jun, 13:00 cest](/storyinfluence/2020.06.04.13.00)
+### [04 jun, 19:00 cest](/storyinfluence/2020.06.04.19.00)
+
+### [09 jun, 13:00 cest](/storyinfluence/2020.06.09.13.00)
+### [09 jun, 19:00 cest](/storyinfluence/2020.06.09.19.00)
+
+### [11 jun, 13:00 cest](/storyinfluence/2020.06.11.13.00)
+### [11 jun, 19:00 cest](/storyinfluence/2020.06.11.19.00)
+
+### [16 jun, 13:00 cest](/storyinfluence/2020.06.16.13.00)
+### [16 jun, 19:00 cest](/storyinfluence/2020.06.16.19.00)
+
+### [18 jun, 13:00 cest](/storyinfluence/2020.06.18.13.00)
+### [18 jun, 19:00 cest](/storyinfluence/2020.06.18.19.00)
+</details>
