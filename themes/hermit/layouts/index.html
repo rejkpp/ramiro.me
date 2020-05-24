@@ -1,24 +1,11 @@
-{{ define "head" }}
-	{{ if .Site.Params.bgImg -}}
-	<style>.bg-img {background-image: url('{{.Site.Params.bgImg}}');}</style>
-	{{- else if .Site.Params.images -}}
-		{{- range first 1 .Site.Params.images -}}
-		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
-		{{- end -}}
-	{{- end -}}
-{{ end }}
-
 {{ define "main" }}
-	{{- if (or .Site.Params.images .Site.Params.bgImg) }}
-	<div class="bg-img"></div>
-	{{- end }}
 	<div class="reveal">
 		<div class="slides">
 			<section>Slide 1</section>
 			<section>Slide 2</section>
 		</div>
-	</div>	
-	<div id="spotlight" class="animated fadeIn">
+	</div>
+	<!-- <div id="spotlight" class="animated fadeIn">
 		<div id="home-center">
 		</div>
 		<div id="home-footer">
@@ -28,6 +15,6 @@
 				<!-- <a href="/privacy" style="border-bottom: 1px solid;">terms</a>. -->
 			</p>
 		</div>
-	</div>
+	</div> -->
 
 {{ end }}
