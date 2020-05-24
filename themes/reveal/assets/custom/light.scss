@@ -16,6 +16,9 @@ $mainFont: Courier, "Courier New", monospace;
 $mainColor: #fffafa;
 $headingFont: Courier, "Courier New", monospace;
 $headingColor: #333333;
+$headingColor1: #666666;
+$headingColor2: #999999;
+$headingColor3: #cccccc;
 $headingTextShadow: none;
 $headingTextTransform: none;
 // $headingLetterSpacing: -0.03em;
@@ -27,6 +30,13 @@ $selectionBackgroundColor: #fb6970;
 .reveal a {
   line-height: 1.3em;
 }
+
+$heading1Color: $headingColor;
+$heading2Color: $headingColor2;
+$heading3Color: $headingColor;
+$heading4Color: $headingColor2;
+$heading5Color: $headingColor3;
+$heading6Color: $headingColor;
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
