@@ -118,12 +118,10 @@ mediaType = "text/html"
 isHTML = true
 
 [params.reveal_hugo]
-custom_theme = "custom-light.scss"
+custom_theme = "custom/light.scss"
 custom_theme_compile = true
+targetPath = "css/custom.css"
+enableSourceMap = true
 # theme = "simple"
 # theme = "night"
 transition = "zoom"
-
-[params.reveal_hugo.custom_theme_options]
-targetPath = "css/custom-light.css"
-enableSourceMap = true
