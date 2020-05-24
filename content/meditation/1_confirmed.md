@@ -2,4 +2,4 @@
 weight: 10
 ---
 
-### yeah baby! let's be meditation ninjas together!
+## super! i'll send you more info as soon as possible.
