@@ -40,15 +40,6 @@
 		{{ $script := $main | minify | fingerprint -}}
 		<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
 	{{ end }}
-	<script>
-		Reveal.initialize({
-			hash: true,
-
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [  ]
-		});
-	</script>
-
 
 	{{- partial "analytics.html" . }}
 	{{- if templates.Exists "partials/extra-foot.html" -}}
