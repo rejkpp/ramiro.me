@@ -118,5 +118,5 @@ mediaType = "text/html"
 isHTML = true
 
 [params.reveal_hugo]
-theme = "custom"
+theme = "beige"
 transition = "zoom"
