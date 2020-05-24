@@ -1,11 +1,5 @@
 ---
-title: "story flow [tool]"
-date: 2020-04-17T05:19:42+01:00
-draft: false
-toc: false
-images:
-tags:
-  - untagged
+weight: 10
 ---
 
 a simple story structure to create your stories for influence\
