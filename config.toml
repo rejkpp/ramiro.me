@@ -60,18 +60,18 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   customJS  = []
 
 [menu]
-  [[menu.main]]
-    name       = "resources"
-    url        = "feed/"
-    weight = 10
-  [[menu.main]]
-    name       = "reviews"
-    url        = "reviews/"
-    weight = 20
-  [[menu.main]]
-    name       = "about"
-    url        = "about/"
-    weight = 30
+  # [[menu.main]]
+  #   name       = "resources"
+  #   url        = "feed/"
+  #   weight = 10
+  # [[menu.main]]
+  #   name       = "reviews"
+  #   url        = "reviews/"
+  #   weight = 20
+  # [[menu.main]]
+  #   name       = "about"
+  #   url        = "about/"
+  #   weight = 30
 
 [permalinks]
   posts = "/feed/:title/"
