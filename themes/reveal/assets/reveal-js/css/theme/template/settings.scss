@@ -6,7 +6,6 @@ $backgroundColor: #2b2b2b;
 
 // Primary/body text
 $mainFont: 'Lato', sans-serif;
-$mainFontSize: 0.3vw;
 $mainColor: #eee;
 
 // Vertical spacing between blocks of text
@@ -23,12 +22,14 @@ $headingTextShadow: none;
 $headingFontWeight: normal;
 $heading1TextShadow: $headingTextShadow;
 
-$heading1Size: 3.77vw;
-$heading2Size: 2.11vw;
-$heading3Size: 2.3vw;
-$heading4Size: 1.8vw;
-$heading5Size: 0.90vw;
-$heading6Size: 0.60vw;
+$heading1Size: 3.4em;
+$heading2Size: 2.3em;
+$heading3Size: 1.35em;
+$heading4Size: 0.8em;
+$heading5Size: 0.60em;
+$heading6Size: 0.50em;
+$mainFontSize: 0.3em;
+
 
 $codeFont: monospace;
 
