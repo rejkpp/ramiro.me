@@ -92,6 +92,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h4 {
   font-size: 1em; }
 
+.reveal h5 {
+  font-size: 0.9em; }
+
+.reveal h6 {
+  font-size: 0.6em; }
+
 .reveal h1 {
   text-shadow: none; }
 
