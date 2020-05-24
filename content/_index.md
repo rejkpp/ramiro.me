@@ -1,4 +1,4 @@
 ---
-title: "home"
+title: "ramiro.me"
 outputs: ["Reveal"]
 ---
