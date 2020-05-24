@@ -110,4 +110,6 @@ mediaType = "text/html"
 isHTML = true
 
 [params.reveal_hugo]
-theme = "moon"
+theme = "custom"
+slide_number = true
+transition = "zoom"
