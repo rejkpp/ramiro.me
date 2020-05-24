@@ -29,7 +29,9 @@
 		</div>
 		<div id="home-footer">
 			<p>
-				&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}. {{ .Site.Params.footerCopyright | safeHTML }}. <a href="/privacy" style="border-bottom: 1px dotted;">privacy.</a> <a href="/terms" style="border-bottom: 1px dotted;">terms.</a>
+				&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}.{{ .Site.Params.footerCopyright | safeHTML }}.
+				<a href="/privacy" style="border-bottom: 1px solid;">privacy</a>.
+				<a href="/privacy" style="border-bottom: 1px solid;">terms</a>.
 			</p>
 		</div>
 	</div>
