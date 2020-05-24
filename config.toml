@@ -2,7 +2,7 @@ baseURL = "https://ramiro.me"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "ramiro.me"
-theme = "hermit"
+theme = "reveal"
 # enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
@@ -100,3 +100,11 @@ disableRSS     = true
 disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
