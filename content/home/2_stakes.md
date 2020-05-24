@@ -1,4 +1,5 @@
 ---
 weight: 20
 ---
-stakes
+
+<!-- stakes -->
