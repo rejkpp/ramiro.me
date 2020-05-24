@@ -1,6 +1,6 @@
 ---
 title: "ramiro.me"
-outputs: "Reveal"
+outputs: ["Reveal"]
 ---
 
 ### online community training on storytelling
