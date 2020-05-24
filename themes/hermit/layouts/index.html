@@ -29,8 +29,7 @@
 		</div>
 		<div id="home-footer">
 			<p>
-				&copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL }}">{{ .Site.Author.name }}</a>{{ .Site.Params.footerCopyright | safeHTML }}
-				{{- with (not (in (.Site.Language.Get "disableKinds") "RSS")) }} &#183; {{ end }}
+				&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}.{{ .Site.Params.footerCopyright | safeHTML }}
 			</p>
 		</div>
 	</div>
