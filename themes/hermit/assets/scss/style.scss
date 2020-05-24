@@ -94,8 +94,8 @@ a {
   transition-timing-function: ease-out;
 
   &:hover {
-    color: #fff;
-    text-shadow: 0 0 1px #fff;
+    color: $theme;
+    text-shadow: 0 0 1px $theme;
   }
 }
 
@@ -378,7 +378,7 @@ p.img-404 {
       }
 
       &:hover {
-        border-color: #fff;
+        border-color: $theme;
       }
 
       svg {
