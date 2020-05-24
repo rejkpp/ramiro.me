@@ -4,10 +4,6 @@
 
 
 {{ define "main" }}
-	{{- if (or .Site.Params.images .Site.Params.bgImg) }}
-	<div class="bg-img"></div>
-	{{- end }}
-	<div id="spotlight" class="animated fadeIn">
 		<div id="home-footer">
 			<p>
 				&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}.{{ .Site.Params.footerCopyright | safeHTML }}.
@@ -15,7 +11,6 @@
 				<!-- <a href="/privacy" style="border-bottom: 1px solid;">terms</a>. -->
 			</p>
 		</div>
-	</div>
 
 	<!-- {{ partial "revealjs.html" . }} -->
 {{ end }}
