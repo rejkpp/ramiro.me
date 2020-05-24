@@ -111,5 +111,4 @@ isHTML = true
 
 [params.reveal_hugo]
 theme = "custom"
-slide_number = true
 transition = "zoom"
