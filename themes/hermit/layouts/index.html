@@ -1,27 +1,40 @@
+{{ define "head" }}
+	{{ if .Site.Params.bgImg -}}
+	<style>.bg-img {background-image: url('{{.Site.Params.bgImg}}');}</style>
+	{{- else if .Site.Params.images -}}
+		{{- range first 1 .Site.Params.images -}}
+		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
+		{{- end -}}
+	{{- end -}}
+{{ end }}
+
 {{ define "main" }}
-
-	<!-- <div class="reveal">
-		<div class="slides">
-			<section>Slide 1</section>
-			<section>Slide 2</section> -->
-			<div id="home-footer">
-				<p>
-					&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}.{{ .Site.Params.footerCopyright | safeHTML }}.
-					<!-- <a href="/privacy" style="border-bottom: 1px solid;">privacy</a>. -->
-					<!-- <a href="/privacy" style="border-bottom: 1px solid;">terms</a>. -->
-				</p>
+	{{- if (or .Site.Params.images .Site.Params.bgImg) }}
+	<div class="bg-img"></div>
+	{{- end }}
+	<div id="spotlight" class="animated fadeIn">
+		<div id="home-center">
+			<h1 id="home-title">{{ .Site.Title }}</h1>
+			{{- with .Site.Params.homeSubtitle }}
+			<p id="home-subtitle">{{.}}</p>
+			{{- end }}
+			{{- with .Site.Params.social }}
+			<div id="home-social">
+				{{ partialCached "social-icons.html" . }}
 			</div>
-		<!-- </div>
-	</div> -->
-	<script src="js/reveal.js"></script>
-	<script>
-		Reveal.initialize({
-			hash: true,
+			{{- end }}
+			<nav id="home-nav" class="site-nav">
+				{{ partialCached "menu.html" . }}
+			</nav>
+		</div>
+		<div id="home-footer">
+			<p>
+				&copy; {{ now.Format "2006" }} {{ .Site.Author.name }}.{{ .Site.Params.footerCopyright | safeHTML }}.
+				<!-- <a href="/privacy" style="border-bottom: 1px solid;">privacy</a>. -->
+				<!-- <a href="/privacy" style="border-bottom: 1px solid;">terms</a>. -->
+			</p>
+		</div>
+	</div>
 
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [  ]
-		});
-	</script>
-
-
+	{{ partial "revealjs.html" . }}
 {{ end }}
