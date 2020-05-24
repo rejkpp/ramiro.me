@@ -57,7 +57,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # Integrate Javascript files or stylesheets by adding the url to the external assets or by
   # linking local files with their path relative to the static folder, e.g. "css/styles.css"
   customCSS = ["css/reset.css","css/reveal.css","css/custom.css"]
-  customJS  = ["js/reveal.js"]
+  customJS  = []
 
 [menu]
   # [[menu.main]]
