@@ -9,6 +9,9 @@ tags:
 ---
 
 a simple story structure
+<br>
 to create your stories for influence
-enter details below and i'll email it right away.
+<br>
+enter details below and it will be sent right away.
+<br>
 {{< partial "forms/story-flow.html" >}}
