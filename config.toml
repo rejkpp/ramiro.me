@@ -80,7 +80,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   disableReadOtherPosts = false
 
   # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+  contentTypeName = "feed"
 
 
 archetypeDir = "archetypes"
