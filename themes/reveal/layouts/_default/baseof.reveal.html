@@ -10,6 +10,11 @@
          create layouts/partials/{section}/reveal-hugo/head.html -->
     {{- $sectionHeadPartial := printf "%s/reveal-hugo/head" (.Page.Section | default "home") -}}
     {{- if fileExists (printf "layouts/partials/%s.html" $sectionHeadPartial) -}}{{ partial $sectionHeadPartial . }}{{- end }}
+
+    <!-- partial for modal modal -->
+    {{ partial "modal/modal.html" . }}
+
+
   </head>
   <body>
     <div class="reveal">
@@ -32,5 +37,8 @@
          create layouts/partials/{section}/reveal-hugo/body.html -->
     {{- $sectionBodyPartial := printf "%s/reveal-hugo/body" (.Page.Section | default "home") -}}
     {{- if fileExists (printf "layouts/partials/%s.html" $sectionBodyPartial) -}}{{ partial $sectionBodyPartial . }}{{- end }}
+
+    <!-- partial for modal modal -->
+    {{ partial "modal/modaljs.html" . }}
   </body>
 </html>

@@ -12,8 +12,15 @@
         <div></div>
         <div></div>
         <div></div>
-    </div>
-    <span>apply now</span>
-  </button>
+      </div>
+      <span>apply now</span>
+    </button>
+    <aside id="default-popup" class="modal-popup">
+      {{ partial "embed/storyorigin.html" . }}
+    </aside>
+    <article class="modal-contents">
+      <button onclick="javascript:openDialog();"> > video</button>
+    </article>
+    <div class="modal-cover"></div>
 </div>
 </div>
