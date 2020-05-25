@@ -8,3 +8,4 @@ weight: 10
 ##### be remembered. . .
 
 {{< partial "forms/opt-in.html" >}}
+{{< partial "modal/video.html" >}}
