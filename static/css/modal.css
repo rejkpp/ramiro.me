@@ -7,7 +7,7 @@
  */
 
 body {
-	/* display: flex; */
+	display: flex;
 }
 
 .modal-active body {
@@ -16,10 +16,10 @@ body {
 
 .modal-cover {
 	position: fixed;
-	width: 1000%;
-	height: 1000%;
-	top: -50%;
-	left: -50%;
+	width: 100vw;
+	height: 100vh;
+	top: -4vh;
+	left: -16vw;
 	z-index: 1;
 	visibility: hidden;
 	opacity: 0;
