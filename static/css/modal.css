@@ -7,7 +7,7 @@
  */
 
 body {
-	display: flex;
+	/* display: flex; */
 }
 
 .modal-active body {
