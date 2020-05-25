@@ -11,9 +11,10 @@
     {{- $sectionHeadPartial := printf "%s/reveal-hugo/head" (.Page.Section | default "home") -}}
     {{- if fileExists (printf "layouts/partials/%s.html" $sectionHeadPartial) -}}{{ partial $sectionHeadPartial . }}{{- end }}
 
-    <!-- partial for modal modal -->
-    {{ partial "modal/modal.html" . }}
-    {{ partial "custom/css.html" . }}
+    <!-- custom links -->
+    {{ partial "custom/link/own-css-link.html" . }}
+    {{ partial "custom/link/modal-css-link.html" . }}
+    {{ partial "custom/script/modal-script.html" . }}
 
   </head>
   <body>
@@ -38,7 +39,8 @@
     {{- $sectionBodyPartial := printf "%s/reveal-hugo/body" (.Page.Section | default "home") -}}
     {{- if fileExists (printf "layouts/partials/%s.html" $sectionBodyPartial) -}}{{ partial $sectionBodyPartial . }}{{- end }}
 
-    <!-- partial for modal modal -->
-    {{ partial "modal/modaljs.html" . }}
+    <!-- custom links -->
+    {{ partial "custom/link/modal-js-link.html" . }}
+
   </body>
 </html>

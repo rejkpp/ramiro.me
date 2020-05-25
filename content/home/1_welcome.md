@@ -7,5 +7,5 @@ weight: 10
 ##### tell a story that matters. have more influence.
 ##### be remembered. . .
 
-{{< partial "forms/opt-in.html" >}}
-{{< partial "modal/video.html" >}}
+{{< partial "forms/opt-in-welcome.html" >}}
+{{< partial "modal/video-button.html" >}}

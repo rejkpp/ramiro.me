@@ -1,15 +1,26 @@
-.footer-menu {
+.bars{
 	font-family: courier,"courier new", monospace;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+	left: 0;
+	width: 100%;
+	color: #fffff0;
+	text-align: center;
+}
+.top-bar {
+	top: 0;
+  background-color: #fb6970;
+	z-index: 998;
+	padding: 0em;
+}
+.bottom-bar {
+	bottom: 0;
   background-color: #333333;
-  color: #fffff0;
-  text-align: center;
+	z-index: 999;
 	padding: 0.9em;
 }
-
+.reveal .progress {
+	z-index: 1000;
+}
 a{
 	color: #fffff0;
 	text-decoration: none;

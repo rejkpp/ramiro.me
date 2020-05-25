@@ -6,4 +6,4 @@ more influence with the power of story
 \
 register for new dates below
 
-{{< partial "embed/storyinfluence.html" >}}
+{{< partial "embed/calendar/storyinfluence.html" >}}
