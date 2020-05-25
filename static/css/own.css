@@ -1,12 +1,13 @@
 .footer-menu {
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: #333333;
-   color: #fffff0;
-   text-align: center;
-	 padding: 0.45em;
+	font-family: courier,"courier new", monospace;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  color: #fffff0;
+  text-align: center;
+	padding: 0.45em;
 }
 
 a{
