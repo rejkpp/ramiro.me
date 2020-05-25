@@ -16,10 +16,10 @@ body {
 
 .modal-cover {
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	top: -4vh;
-	left: -16vw;
+	width: 1000vw;
+	height: 1000vh;
+	top: -50vh;
+	left: -50vw;
 	z-index: 1;
 	visibility: hidden;
 	opacity: 0;
