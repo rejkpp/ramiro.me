@@ -32,7 +32,7 @@ body {
 
 .modal-contents {
 	position: relative;
-	padding: 23px;
+	padding: 0;
 	max-width: 700px;
 	margin: auto;
 }
