@@ -18,7 +18,7 @@ body {
 	position: fixed;
 	width: 1000vw;
 	height: 1000vh;
-	top: -50vh;
+	top: -500vh;
 	left: -50vw;
 	z-index: 1;
 	visibility: hidden;
