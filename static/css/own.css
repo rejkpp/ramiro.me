@@ -21,6 +21,10 @@
 .reveal .progress {
 	z-index: 1000;
 }
+.align-right{
+	text-align: end;
+	margin-right: 1em;
+}
 a{
 	color: #fffff0;
 	text-decoration: none;
