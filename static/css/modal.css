@@ -14,7 +14,7 @@ body {
 	/* transform: scale( 0.9 ); */
 }
 
-.modal-cover {
+.modal-cover, .modal-cover2 {
 	position: fixed;
 	width: 1000vw;
 	height: 1000vh;
@@ -25,7 +25,7 @@ body {
 	opacity: 0;
 	background: rgba(51,51,51,0.7);
 }
-	.modal-active .modal-cover {
+	.modal-active .modal-cover, .modal-active .modal-cover2 {
 		visibility: visible;
 		opacity: 1;
 	}
@@ -82,7 +82,8 @@ body {
 .modal-ready body,
 .modal-ready .modal-contents,
 .modal-ready .modal-popup,
-.modal-ready .modal-cover {
+.modal-ready .modal-cover,
+.modal-ready .modal-cover2, {
 	transform-origin: 50% 50%;
 	transition: 0.23s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }

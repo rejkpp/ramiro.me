@@ -10,6 +10,7 @@ var Modal = (function(){
 	var container = document.documentElement,
 		popup = document.querySelector( '.modal-popup-animate' ),
 		cover = document.querySelector( '.modal-cover' ),
+		cover2 = document.querySelector( '.modal-cover2' ),
 		currentState = null;
 
 	container.classList.add( 'modal-ready' );
@@ -27,6 +28,9 @@ var Modal = (function(){
 	function onDocumentClick( event ) {
 
 		if( event.target === cover ) {
+			deactivate();
+		}
+		if( event.target === cover2 ) {
 			deactivate();
 		}
 
