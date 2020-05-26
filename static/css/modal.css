@@ -20,7 +20,7 @@ body {
 	height: 100vh;
 	top: 0;
 	left: 0;
-	z-index: 1001;
+	z-index: 1;
 	visibility: hidden;
 	opacity: 0;
 	background: rgba(51,51,51,0.7);
@@ -57,7 +57,7 @@ body {
 	margin: 0;
 	visibility: hidden;
 	opacity: 0;
-	z-index: 1003;
+	z-index: 3;
 	padding: 30px;
 
 	border-radius: 3px;
