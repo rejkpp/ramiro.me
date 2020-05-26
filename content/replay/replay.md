@@ -7,3 +7,6 @@ weight: 10
 
 ### [29 april, 13:00 cest](storyinfluence)
 ### [6 may, 13:00 cest](encore)
+
+<!-- modal cover, only put once -->
+{{ partial "modal/modal-cover-class.html" . }}
