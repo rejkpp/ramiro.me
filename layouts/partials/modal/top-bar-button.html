@@ -1,16 +1,6 @@
 <!-- this partial is for css styling the button -->
 {{ partial "custom/css/top-bar-button-css.html" . }}
 
-<!-- everything in aside will be in the popup window -->
-<aside id="popup-2" class="modal-popup">
-<!-- this partial is to keep the code modular and clear -->
-  {{ partial "forms/opt-in-top.html" . }}
-</aside>
-<!-- everything in artical is to generate the button that triggers the popup windown -->
-<article class="modal-contents">
   <p class="align-right">free story strategy session
-  <!-- this button triggers the js actions edit onclick for number order dialog-->
-    <!-- <button class="top-bar-button" onclick="javascript:openDialog2();">schedule now</button> -->
     {{ partial "embed/calendar/story_strategy_session-free.html" . }}
   </p>
-</article>
