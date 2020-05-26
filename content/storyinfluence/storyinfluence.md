@@ -2,9 +2,9 @@
 weight: 10
 ---
 
-### more influence with the power of story
+##### more influence with the power of story
 \
-#### register for new dates below
+###### register for new dates below
 
 {{< partial "embed/calendar/storyinfluence.html" >}}
 <!-- modal cover, only put once -->
