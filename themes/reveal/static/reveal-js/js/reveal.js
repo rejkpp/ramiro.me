@@ -5423,7 +5423,7 @@
 			event.preventDefault && event.preventDefault();
 		}
 		// ESC or O key
-		else if ( ( keyCode === 27 || keyCode === 79 ) && features.transforms3d ) {
+		else if ( ( keyCode === 79 ) && features.transforms3d ) {
 			if( dom.overlay ) {
 				closeOverlay();
 			}
