@@ -51,14 +51,14 @@ body {
 
 .modal-popup {
 	position: absolute;
-	width: 89%;
+	/* width: 89%;
 	left: 5.5%;
 	top: 5.5%;
-	margin: 0;
+	margin: 0; */
 	visibility: hidden;
 	opacity: 0;
 	z-index: 3;
-	padding: 30px;
+	/* padding: 30px; */
 
 	border-radius: 3px;
 	/* box-sizing: border-box; */
