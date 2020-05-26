@@ -2,12 +2,12 @@
 {{ partial "custom/css/video-button-css.html" . }}
 
 <!-- everything in aside will be in the popup window -->
-<aside id="second-popup" class="modal-popup">
+<aside id="popup-1" class="modal-popup">
 <!-- this partial is to keep the code modular and clear -->
   {{ partial "embed/video/storyorigin.html" . }}
 </aside>
 <!-- everything in artical is to generate the button that triggers the popup windown -->
 <article class="modal-contents">
   <!-- this button triggers the js actions edit onclick for number order dialog-->
-  <button class="video-button" onclick="javascript:openSecondDialog();">> video</button>
+  <button class="video-button" onclick="javascript:openDialog1();">> video</button>
 </article>
