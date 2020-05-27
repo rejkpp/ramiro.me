@@ -16,7 +16,7 @@
 	bottom: 0;
   background-color: #333333;
 	z-index: 999;
-	padding: 0.9em;
+	padding: 0.9em 0;
 }
 .reveal .progress {
 	z-index: 1000;
