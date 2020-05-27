@@ -1,3 +1,9 @@
 <div class="bars top-bar">
-    {{ partial "modal/top-bar-button.html" . }}
+  <!-- this partial is for css styling the button -->
+  {{ partial "custom/css/top-bar-button-css.html" . }}
+
+    <p class="align-right">story session
+      {{ partial "embed/calendar/story_session-button.html" . }}
+    </p>
+
 </div>

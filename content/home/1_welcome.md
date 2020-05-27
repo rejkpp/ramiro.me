@@ -5,5 +5,4 @@ weight: 10
 #### story session to become
 #### a better storyteller
 
-<!-- {{< partial "modal/video-button.html" >}} -->
 {{< partial "embed/calendar/story_session-buttons.html" >}}
