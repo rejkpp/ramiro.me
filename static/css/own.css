@@ -29,3 +29,8 @@ a{
 	color: #fffff0;
 	text-decoration: none;
 }
+#profile{
+	position: absolute;
+  top: 50px;
+  right: 20px;
+}
