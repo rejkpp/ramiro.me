@@ -1,11 +1,9 @@
 ---
 weight: 10
 ---
+# get clarity on how to use the power of story
+#### story session to become
+#### a better storyteller
 
-### online community
-### training on storytelling
-##### tell a story that matters. have more influence.
-##### be remembered. . .
-
-{{< partial "forms/opt-in-welcome.html" >}}
-{{< partial "modal/video-button.html" >}}
+<!-- {{< partial "modal/video-button.html" >}} -->
+{{< partial "embed/calendar/story_session-buttons.html" >}}
