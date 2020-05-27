@@ -126,6 +126,6 @@ enableSourceMap = true
 # theme = "night"
 transition = "zoom"
 
-[logo]
+[params.logo]
 src = "./profile.png"
 alt = ""
