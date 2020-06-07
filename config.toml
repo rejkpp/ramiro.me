@@ -118,7 +118,7 @@ mediaType = "text/html"
 isHTML = true
 
 [params.reveal_hugo]
-custom_theme = "custom/light.scss"
+custom_theme = "custom/dark.scss"
 custom_theme_compile = true
 targetPath = "css/custom.css"
 enableSourceMap = true
