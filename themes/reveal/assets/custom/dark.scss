@@ -15,7 +15,8 @@
 $mainFont: Courier, "Courier New", monospace;
 $mainColor: #131619;
 $headingFont: Courier, "Courier New", monospace;
-$headingColor: #333333;
+$headingColor: #fffff0;
+$headingColor1: #333333;
 $headingColor2: #666666;
 $headingColor3: #999999;
 $headingColor4: #cccccc;
@@ -31,12 +32,12 @@ $selectionBackgroundColor: rgba(192, 58, 68, 0.6);
   line-height: 1.3em;
 }
 
-$heading1Color: $headingColor4;
-$heading2Color: $headingColor3;
-$heading3Color: $headingColor4;
-$heading4Color: $headingColor3;
-$heading5Color: $headingColor4;
-$heading6Color: $headingColor3;
+$heading1Color: $headingColor;
+$heading2Color: $headingColor4;
+$heading3Color: $headingColor;
+$heading4Color: $headingColor4;
+$heading5Color: $headingColor;
+$heading6Color: $headingColor4;
 
 // section.has-dark-background {
 // 	&, h1, h2, h3, h4, h5, h6 {
