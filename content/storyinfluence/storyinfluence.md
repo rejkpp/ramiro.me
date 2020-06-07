@@ -2,7 +2,7 @@
 weight: 10
 ---
 
+###### free online training
 ### more influence with
 ### the power of story
-###### free online training
 {{< partial "embed/calendar/story_influence-button.html" >}}
