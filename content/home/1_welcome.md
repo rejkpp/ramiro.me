@@ -1,7 +1,7 @@
 ---
 weight: 10
 ---
-# get clarity on how to use the power of story
+# learn how to use the power of story
 #### story session to become
 #### a better storyteller
 
