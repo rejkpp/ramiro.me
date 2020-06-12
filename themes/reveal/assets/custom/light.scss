@@ -23,9 +23,9 @@ $headingTextShadow: none;
 $headingTextTransform: none;
 // $headingLetterSpacing: -0.03em;
 $backgroundColor: $mainColor;
-$linkColor: #fb6970;
+$linkColor: #c03a44;
 $linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: rgba(251,105,112, 0.6);
+$selectionBackgroundColor: rgba(192, 58, 68, 0.6);
 
 .reveal a {
   line-height: 1.3em;
