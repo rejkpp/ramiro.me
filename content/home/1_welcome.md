@@ -22,7 +22,7 @@ weight: 10
 ##### insignificant, like you don't matter.
 \
 ##### we believe that everyone's
-##### story needs to be heard.
+##### story deserves to be heard.
 \
 ###### copyright © 2020 ramiro. all rights reserved.
 ###### kvk: 77049608 | vat: nl003154249B46.
