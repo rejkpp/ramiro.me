@@ -38,7 +38,7 @@ weight: 10
 ##### {{< partial "br.html" >}}
 ##### (3) be remembered
 ---
-##### {{< partial "embed/calendar/story_session-button.html" >}}
+{{< partial "embed/calendar/story_session-button.html" >}}
 ##### {{< partial "br.html" >}}
 ##### so you can stop feeling
 ##### like you don't matter
