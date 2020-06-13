@@ -4,7 +4,6 @@
 
 html {
   line-height: 1.15; /* 1 */
-
 }
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
@@ -50,9 +49,6 @@ html {
 }
 a{
 	color: #fffff0;
-}
-.link-cta{
-	text-decoration:underline;
 }
 
 #profile{
