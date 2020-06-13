@@ -11,16 +11,12 @@ weight: 10
 {{< partial "embed/calendar/story_session-buttons-video.html" >}}
 
 ---
-##### at ramiro.me, we know that you want
-##### to make a difference.
-##### to do that, you need the ability
-##### to influence and inspire people.
+##### at ramiro.me, we know that you want to make a difference.
+##### to do that, you need the ability to influence and inspire people.
 ##### {{< partial "br.html" >}}
-##### the problem is, it's hard to
-##### get people's attention.
+##### the problem is, it's hard to get people's attention.
 ##### {{< partial "br.html" >}}
-##### which makes you feel rejected,
-##### insignificant, like you don't matter.
+##### which makes you feel rejected, insignificant, like you don't matter.
 ---
 ##### we believe that everyone's
 ##### story deserves to be heard.
