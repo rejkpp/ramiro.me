@@ -11,7 +11,7 @@ weight: 10
 {{< partial "embed/calendar/story_session-buttons-video.html" >}}
 
 ---
-—
+
 ##### at ramiro.me, we know that
 ##### you want to make a difference.
 ##### to do that, you need the ability
