@@ -27,7 +27,6 @@ weight: 10
 ##### rejected, insignificant,
 ##### like you don't matter.
 ---
-###### {{< partial "br.html" >}}
 ##### we believe that everyone's
 ##### story deserves to be heard.
 ###### {{< partial "br.html" >}}
