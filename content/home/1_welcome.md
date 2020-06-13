@@ -19,6 +19,6 @@ weight: 10
 
 ---
 
-# guide
+
 
 {{% /section %}}
