@@ -10,10 +10,15 @@ weight: 10
 {{< partial "embed/calendar/story_session-buttons.html" >}}
 
 ---
+
 stakes
+
 ---
+
 value
+
 ---
+
 guide
 
 {{% /section %}}
