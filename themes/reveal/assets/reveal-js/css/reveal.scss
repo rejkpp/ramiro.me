@@ -237,7 +237,7 @@ body {
 }
 
 $controlArrowSize: 3.6em;
-$controlArrowSpacing: 2.3em;
+$controlArrowSpacing: 1.4em;
 $controlArrowLength: 2.6em;
 $controlArrowThickness: 0.5em;
 $controlsArrowAngle: 45deg;
@@ -433,7 +433,7 @@ $controlsArrowAngleActive: 36deg;
 }
 .reveal:not(.has-horizontal-slides) .controls .navigate-down {
 	right: $controlArrowSpacing;
-	bottom: 0.5em;
+	bottom: 2.3em;
 }
 
 // Invert arrows based on background color
