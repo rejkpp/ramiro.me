@@ -429,7 +429,7 @@ $controlsArrowAngleActive: 36deg;
 // Adjust the layout when there are no horizontal slides
 .reveal:not(.has-horizontal-slides) .controls .navigate-up {
 	right: $controlArrowSpacing;
-	bottom: $controlArrowSpacing + $controlArrowSize;
+	bottom: $controlArrowSpacing + $controlArrowSize + 1em;
 }
 .reveal:not(.has-horizontal-slides) .controls .navigate-down {
 	right: $controlArrowSpacing;
