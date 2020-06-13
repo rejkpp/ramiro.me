@@ -14,26 +14,26 @@ weight: 10
 ##### at ramiro.me,
 ##### we know that you want to
 ##### make a difference.
-######
+###### {{< partial "br.html" >}}
 ##### to do that, you need the
 ##### ability to influence and
 ##### inspire people.
 ---
-######
+###### {{< partial "br.html" >}}
 ##### the problem is, it's hard to
 ##### get people's attention.
-######
+###### {{< partial "br.html" >}}
 ##### which makes you feel
 ##### rejected, insignificant,
 ##### like you don't matter.
 ---
-######
+###### {{< partial "br.html" >}}
 ##### we believe that everyone's
 ##### story deserves to be heard.
-######
+###### {{< partial "br.html" >}}
 ##### we understand how lonely
 ##### it feels to be negelected.
-######
+###### {{< partial "br.html" >}}
 ##### that is why we teach people
 ##### how to tell a story that matters.
 ---
