@@ -14,16 +14,16 @@ weight: 10
 ##### to make a difference.
 ##### to do that, you need the ability
 ##### to influence and inspire people.
-\
+<br>
 ##### the problem is it's hard to
 ##### get people's attention.
-\
+<br>
 ##### which makes you feel rejected,
 ##### insignificant, like you don't matter.
-\
+<br>
 ##### we believe that everyone's
 ##### story deserves to be heard.
-\
+<br>
 ###### copyright © 2020 ramiro. all rights reserved.
 ###### kvk: 77049608 | vat: nl003154249B46.
 
