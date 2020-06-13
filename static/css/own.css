@@ -27,8 +27,11 @@
 }
 a{
 	color: #fffff0;
-	text-decoration: underline;
 }
+.link-cta{
+	text-decoration: 
+}
+
 #profile{
 	position: absolute;
   top: 50px;
