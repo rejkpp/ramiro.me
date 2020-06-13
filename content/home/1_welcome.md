@@ -11,14 +11,14 @@ weight: 10
 
 ---
 
-stakes
+# stakes
 
 ---
 
-value
+# value
 
 ---
 
-guide
+# guide
 
 {{% /section %}}
