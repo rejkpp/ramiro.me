@@ -20,25 +20,23 @@ weight: 10
 ##### {{< partial "br.html" >}}
 ##### which makes you feel rejected,
 ##### insignificant, like you don't matter.
-##### {{< partial "br.html" >}}
+---
 ##### we believe that everyone's
 ##### story deserves to be heard.
----
+##### {{< partial "br.html" >}}
 ##### we understand how lonely
 ##### it feels to be negelected.
 ##### {{< partial "br.html" >}}
 ##### that is why we teach people
 ##### how to tell a story that matters.
-##### {{< partial "br.html" >}}
+---
 ##### here’s how we do it:
-##### (1)
-{{< partial "embed/calendar/story_session-link.html" >}}
+##### (1) {{< partial "embed/calendar/story_session-link.html" >}}
 ##### (2) learn storytelling
 ##### (3) have more influence
-
----
 ##### {{< partial "br.html" >}}
-{{< partial "embed/calendar/story_session-link.html" >}}
+---
+##### {{< partial "embed/calendar/story_session-link.html" >}}
 ##### {{< partial "br.html" >}}
 ##### so you can stop feeling
 ##### like you don't matter
