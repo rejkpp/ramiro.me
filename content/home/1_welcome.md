@@ -42,9 +42,9 @@ weight: 10
 {{< partial "embed/calendar/story_session-buttons-booknow.html" >}}
 ##### {{< partial "br.html" >}}
 ##### so you can stop feeling
-##### like you don't matter
-##### tell your story,
-##### make a difference,
+##### like you don't matter.
+##### tell your story.
+##### make a difference.
 ##### be remembered.
 ##### {{< partial "br.html" >}}
 ###### copyright © 2020 ramiro. all rights reserved.
