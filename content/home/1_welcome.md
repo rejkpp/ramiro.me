@@ -12,7 +12,7 @@ weight: 10
 ---
 
 ###### copyright © 2020 ramiro. all rights reserved.
-###### chamber of commerce: 77049608. vat: nl003154249B46.
+###### kvk: 77049608. vat: nl003154249B46.
 
 
 {{% /section %}}
