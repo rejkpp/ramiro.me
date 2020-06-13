@@ -27,7 +27,7 @@
 }
 a{
 	color: #fffff0;
-	text-decoration: none;
+	text-decoration: underline;
 }
 #profile{
 	position: absolute;
