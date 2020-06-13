@@ -61,7 +61,7 @@
 			controlsTutorial: true,
 
 			// Determines where controls appear, "edges" or "bottom-right"
-			controlsLayout: 'bottom',
+			controlsLayout: 'bottom-right',
 
 			// Visibility rule for backwards navigation arrows; "faded", "hidden"
 			// or "visible"
