@@ -122,8 +122,6 @@ custom_theme = "custom/light.scss"
 custom_theme_compile = true
 targetPath = "css/custom.css"
 enableSourceMap = true
-# theme = "simple"
-# theme = "night"
 transition = "zoom"
 
 [params.logo]
