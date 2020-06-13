@@ -16,7 +16,7 @@ weight: 10
 ##### to do that, you need the ability
 ##### to influence and inspire people.
 ##### {{< partial "br.html" >}}
-##### the problem is it's hard to
+##### the problem is, it's hard to
 ##### get people's attention.
 ##### {{< partial "br.html" >}}
 ##### which makes you feel rejected,
