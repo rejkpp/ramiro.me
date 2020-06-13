@@ -7,7 +7,8 @@ weight: 10
 #### story session to become
 #### a better storyteller
 
-{{< partial "embed/calendar/story_session-buttons.html" >}}
+{{< partial "embed/calendar/story_session-buttons-booknow.html" >}}
+{{< partial "embed/calendar/story_session-buttons-video.html" >}}
 
 ---
 ##### at ramiro.me, we know that you want
@@ -38,7 +39,7 @@ weight: 10
 ##### {{< partial "br.html" >}}
 ##### (3) be remembered
 ---
-{{< partial "embed/calendar/story_session-button.html" >}}
+{{< partial "embed/calendar/story_session-buttons-booknow.html" >}}
 ##### {{< partial "br.html" >}}
 ##### so you can stop feeling
 ##### like you don't matter
