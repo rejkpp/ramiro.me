@@ -11,13 +11,6 @@ weight: 10
 
 ---
 
-# stakes
-
----
-
-# value
-
----
 
 
 
