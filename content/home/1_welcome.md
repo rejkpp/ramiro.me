@@ -24,7 +24,28 @@ weight: 10
 ##### we believe that everyone's
 ##### story deserves to be heard.
 #####
+---
+##### we understand how lonely
+##### it feels to be negelected.
+#####
+##### that is why we teach people
+##### how to tell a story that matters.
+#####
+##### here’s how we do it:
+##### (1)
+{{< partial "embed/calendar/story_session-link.html" >}}
+##### (2) learn storytelling
+##### (3) have more influence
 
+---
+{{< partial "embed/calendar/story_session-link.html" >}}
+#####
+##### so you can stop feeling
+##### like you don't matter
+##### tell your story,
+##### make a difference,
+##### be remembered.
+##### 
 ###### copyright © 2020 ramiro. all rights reserved.
 ###### kvk: 77049608 | vat: nl003154249B46.
 
