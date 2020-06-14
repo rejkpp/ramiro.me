@@ -37,11 +37,11 @@ weight: 10
 ##### how to tell a story that matters.
 ---
 ##### here’s how we do it:
-##### {{< partial "br.html" >}}
+###### {{< partial "br.html" >}}
 ##### (1) {{< partial "embed/calendar/story_session-link.html" >}}
-##### {{< partial "br.html" >}}
+###### {{< partial "br.html" >}}
 ##### (2) learn storytelling
-##### {{< partial "br.html" >}}
+###### {{< partial "br.html" >}}
 ##### (3) be remembered
 ---
 {{< partial "embed/calendar/story_session-buttons-booknow.html" >}}
