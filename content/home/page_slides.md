@@ -29,10 +29,10 @@ weight: 10
 ---
 ##### we believe that everyone's
 ##### story deserves to be heard.
-###### {{< partial "br.html" >}}
+ {{< partial "br.html" >}}
 ##### we understand how lonely
 ##### it feels to be negelected.
-###### {{< partial "br.html" >}}
+ {{< partial "br.html" >}}
 ##### that is why we teach people
 ##### how to tell a story that matters.
 ---
