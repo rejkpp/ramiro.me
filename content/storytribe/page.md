@@ -3,6 +3,6 @@ title: "ramiro.me"
 outputs: ["Reveal"]
 ---
 
-##### story.tribe
+##### story.trib
 ##### contribution
 {{< partial "payment/full.html" >}}
