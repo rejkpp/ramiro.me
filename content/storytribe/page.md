@@ -1,8 +1,7 @@
 ---
-title: "ramiro.me"
-outputs: ["Reveal"]
+weight: 10
 ---
 
-##### story.trib
+##### story.tribe
 ##### contribution
 {{< partial "payment/full.html" >}}

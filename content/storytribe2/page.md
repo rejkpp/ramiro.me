@@ -1,6 +1,5 @@
 ---
-title: "ramiro.me"
-outputs: ["Reveal"]
+weight: 10
 ---
 
 ##### story.tribe
