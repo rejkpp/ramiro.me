@@ -3,8 +3,8 @@
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 <button
-  style="background-color:#FB6790;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-sku_HE1gJFdnk97Tdq"
+  style="background-color:#c03a44;color:#fffafa;padding:0.5em 2em;border:0;border-radius:4px;font-size:4em"
+  id="checkout-button-price_1Gu1WlEVMxTYsFzVZYqFY6hO"
   role="link"
 >
   pay
@@ -16,20 +16,20 @@
 (function() {
   var stripe = Stripe('pk_live_2aBPpoRnx1pJOUZ7g93fnW5i00LG9uUPhF');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_HE1gJFdnk97Tdq');
+  var checkoutButton = document.getElementById('checkout-button-price_1Gu1WlEVMxTYsFzVZYqFY6hO');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_HE1gJFdnk97Tdq', quantity: 1}],
-
+      lineItems: [{price: 'price_1Gu1WlEVMxTYsFzVZYqFY6hO', quantity: 1}],
+      mode: 'subscription',
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
       // a successful payment.
       // Instead use one of the strategies described in
       // https://stripe.com/docs/payments/checkout/fulfillment
       successUrl: window.location.protocol + '//ramiro.me/kapow',
-      cancelUrl: window.location.protocol + '//ramiro.me/storytribe1',
+      cancelUrl: window.location.protocol + '//ramiro.me/storytribe2',
     })
     .then(function (result) {
       if (result.error) {
