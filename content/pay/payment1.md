@@ -8,4 +8,4 @@ tags:
   - untagged
 ---
 
-{{< partial "payment/custom1.html" >}}
+<!-- {{< partial "payment/custom1.html" >}} -->
