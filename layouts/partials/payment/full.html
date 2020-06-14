@@ -16,13 +16,13 @@
 (function() {
   var stripe = Stripe('pk_live_2aBPpoRnx1pJOUZ7g93fnW5i00LG9uUPhF');
 
-  var checkoutButton = document.getElementById('checkout-button-sku_HE1gt6c0Q2u3wX');
+  var checkoutButton = document.getElementById('checkout-button-price_HLscmDccKNgbl6');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      items: [{sku: 'sku_HE1gt6c0Q2u3wX', quantity: 1}],
-
+      lineItems: [{price: 'price_HLscmDccKNgbl6', quantity: 1}],
+      mode: 'payment',
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
       // a successful payment.
