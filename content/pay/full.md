@@ -2,5 +2,6 @@
 weight: 10
 ---
 
-#### story tribe contribution
+#### story.tribe
+#### contribution
 {{< partial "payment/full.html" >}}
