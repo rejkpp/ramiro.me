@@ -5,4 +5,4 @@ outputs: ["Reveal"]
 
 ##### story.tribe
 ##### contribution
-{{< partial "payment/pay2.html" >}}
+{{< partial "payment/2pay.html" >}}
