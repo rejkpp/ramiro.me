@@ -51,7 +51,7 @@ weight: 10
 ##### tell your story.
 ##### make a difference.
 ##### be remembered.
-###### {{< partial "br.html" >}}
+{{< partial "br.html" >}}
 ###### copyright © 2020 ramiro. all rights reserved.
 ###### kvk: 77049608 | vat: nl003154249B46.
 
