@@ -2,7 +2,7 @@
 weight: 10
 ---
 
-##### story.tribe
-##### contribution
+##### secret breath
+##### payment
 {{< partial "payment/b-eur.html" >}}
 {{< partial "payment/b-usd.html" >}}
