@@ -1,0 +1,45 @@
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#c03a44;color:#fffafa;padding:0.5em 2em;border:0;border-radius:4px;font-size:4em"
+  id="checkout-button-price_1HWqx6EVMxTYsFzVKvvPQJqk"
+  role="link"
+  type="button"
+>
+  €484,-
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_2aBPpoRnx1pJOUZ7g93fnW5i00LG9uUPhF');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1HWqx6EVMxTYsFzVKvvPQJqk');
+  checkoutButton.addEventListener('click', function () {
+    // When the customer clicks on the button, redirect
+    // them to Checkout.
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1HWqx6EVMxTYsFzVKvvPQJqk', quantity: 1}],
+      mode: 'payment',
+      // Do not rely on the redirect to the successUrl for fulfilling
+      // purchases, customers may not always reach the success_url after
+      // a successful payment.
+      // Instead use one of the strategies described in
+      // https://stripe.com/docs/payments/checkout/fulfill-orders
+      successUrl: window.location.protocol + '//ramiro.me/kapow',
+      cancelUrl: window.location.protocol + '//ramiro.me/breath',
+    })
+    .then(function (result) {
+      if (result.error) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer.
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
