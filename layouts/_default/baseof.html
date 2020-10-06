@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	{{ partial "layout/head.html" . }}
+
+	<!-- custom links -->
+	{{ partial "custom/link/own-css-link.html" . }}
+
+</head>
+<body class="is-preload">
+	{{ block "main" . }}{{ end }}
+
+	{{ partial "layout/footer.html" . }}
+	{{ partial "layout/javascript.html" . }}
+
+</body>
+</html>
