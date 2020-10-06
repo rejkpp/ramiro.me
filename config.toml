@@ -124,7 +124,3 @@ custom_theme_compile = true
 targetPath = "css/custom.css"
 enableSourceMap = true
 transition = "convex"
-
-[params.logo]
-src = "./profile.png"
-alt = ""
