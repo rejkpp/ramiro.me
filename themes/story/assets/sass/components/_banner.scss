@@ -934,13 +934,13 @@
 	@mixin color-banner($p: null) {
 		.banner {
 			.image {
-				background-color: transparentize(_palette($p, fg-bold), 0.875);
+				background-color: transparentize(_palette($p, bg), 0.875);
 			}
 
 			@if ($p != 'invert') {
 				&.invert {
 					.image {
-						background-color: transparentize(_palette(invert, fg-bold), 0.875);
+						background-color: transparentize(_palette(invert, bg), 0.875);
 					}
 				}
 			}

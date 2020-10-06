@@ -36,6 +36,7 @@
 		padding: 0 2.5em;
 		text-overflow: ellipsis;
 		overflow: hidden;
+		margin: 0.25rem;
 
 		&.icon {
 			&:before {
@@ -96,7 +97,7 @@
 			}
 
 			&.primary {
-				background-color: _palette($p, fg-bold);
+				background-color: _palette($p, color1);
 				box-shadow: none;
 				color: _palette($p, bg) !important;
 

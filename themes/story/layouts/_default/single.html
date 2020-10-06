@@ -1,9 +1,13 @@
 {{ define "main" }}
-	<main>
-		<article>
-			<div>
-				{{ .Content }}
-			</div>
-		</article>
-	</main>
+
+<!-- Banner -->
+<section class="banner style2 orient-center content-align-center image-position-center fullscreen onload-image-fade-in onload-content-fade-in">
+  <div class="content">
+		{{ .Content }}
+  </div>
+  <div class="image">
+    {{ with .Params.banner }}<img src="{{.img}}" alt="{{.alt}}" />{{end}}
+  </div>
+</section>
+
 {{ end }}
