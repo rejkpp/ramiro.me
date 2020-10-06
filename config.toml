@@ -100,7 +100,3 @@ disableRSS     = true
 disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
-
-# currently only the unsafe mode for goldmark is supported
-[markup.goldmark.renderer]
-unsafe = true
