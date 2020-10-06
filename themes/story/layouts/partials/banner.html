@@ -1,4 +1,5 @@
-				<!-- Banner -->
+{{ define "main" }}
+      	<!-- Banner -->
                 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
                     <div class="content">
                         {{ with .Site.Title }}<h1>{{.}}</h1>{{end}}
@@ -8,3 +9,4 @@
                         {{ with .Site.Params.logo }}<img src="{{.}}" alt="ramiro" />{{end}}
                     </div>
                 </section>
+{{end}}
