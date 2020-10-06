@@ -2,7 +2,7 @@ baseURL = "https://ramiro.me"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "ramiro.me"
-theme = "reveal"
+theme = "story"
 # enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
@@ -37,6 +37,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # keywords = ""
   # images = [""]
   themeColor = "#fffafa"
+  logo = "profile.png"
 
   homeSubtitle = ""
   footerCopyright = ' all rights reserved'
