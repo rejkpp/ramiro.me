@@ -111,8 +111,3 @@ unsafe = true
 codeFences = false  # use highlight.js
 # codeFences = true  # use hugo highlighting at compile time
 style = "tango"  # set a style for hugo highlighting
-
-[outputFormats.Reveal]
-baseName = "index"
-mediaType = "text/html"
-isHTML = true
