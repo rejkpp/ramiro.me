@@ -119,8 +119,7 @@
 			}
 		}
 	}
-	#footer {
-		> .wrapper.style2 {
+	#footer.wrapper.style2 {
 			&.invert {
 				&:not(.color1):not(.color2):not(.color3):not(.color4):not(.color5):not(.color6):not(.color7) {
 					background-color: _palette(invert, bg-alt);
@@ -131,4 +130,3 @@
 				}
 			}
 		}
-	}
