@@ -109,6 +109,21 @@
 					background-color: darken(_palette($p, accent), 12);
 				}
 			}
+			@if ($p != 'invert') {
+				&.invert {
+					.primary {
+						&:hover {
+							background-color: _palette($p, accent);
+							color: _palette(invert, fg);
+						}
+
+						&:active {
+							background-color: darken(_palette($p, accent), 12);
+							color: _palette(invert, fg);
+						}
+					}
+				}
+			}
 		}
 	}
 
