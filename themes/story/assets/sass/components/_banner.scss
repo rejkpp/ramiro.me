@@ -110,7 +110,7 @@
 
 							img {
 								@include vendor('transition', 'opacity #{$y} ease-in-out');
-								@include vendor('transition-delay', '#{$y * 0.75}');
+								// @include vendor('transition-delay', '#{$y * 0.75}');
 							}
 						}
 
@@ -135,7 +135,7 @@
 
 							img {
 								@include vendor('transition', 'opacity #{$y} ease-in-out');
-								@include vendor('transition-delay', '#{$y * 0.75}');
+								// @include vendor('transition-delay', '#{$y * 0.75}');
 							}
 						}
 
@@ -160,7 +160,7 @@
 
 							img {
 								@include vendor('transition', 'opacity #{$y} ease-in-out');
-								@include vendor('transition-delay', '#{$y * 0.75}');
+								// @include vendor('transition-delay', '#{$y * 0.75}');
 							}
 						}
 
@@ -185,7 +185,7 @@
 
 							img {
 								@include vendor('transition', 'opacity #{$y} ease-in-out');
-								@include vendor('transition-delay', '#{$y * 0.75}');
+								// @include vendor('transition-delay', '#{$y * 0.75}');
 							}
 						}
 
