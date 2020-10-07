@@ -97,7 +97,7 @@
 			}
 
 			&.primary {
-				background-color: _palette($p, color1);
+				background-color: _palette($p, fg-bold);
 				box-shadow: none;
 				color: _palette($p, bg) !important;
 
