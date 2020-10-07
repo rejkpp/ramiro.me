@@ -2,6 +2,6 @@
 
 ---
 
-##### secret breath
-##### payment
+## secret breath
+## payment
 {{< partial "payment/breath.html" >}}
