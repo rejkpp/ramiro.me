@@ -123,12 +123,12 @@
 			&.invert {
 				&:not(.color1):not(.color2):not(.color3):not(.color4):not(.color5):not(.color6):not(.color7) {
 					background-color: _palette(invert, bg-alt);
-					color: _palette(invert, bg-alt);
+					color: _palette(invert, fg);
 				}
 
 				> .inner {
 					background-color: _palette(invert, bg);
-					color: _palette(invert, bg);
+					color: _palette(invert, fg);
 				}
 			}
 		}
