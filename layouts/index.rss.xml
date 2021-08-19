@@ -15,7 +15,7 @@
   <channel>
     <title>story legacy at ramiro.me</title>
     <link>https://ramiro.me/show</link>
-    <description>{{ partial "podcast/description/main.md" }}</description>
+    <description>{{ partial "podcast/description/main.md" | safeHTML }}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <image>
@@ -23,7 +23,6 @@
       <title>story legacy at ramiro.me</title>
       <link>https://ramiro.me/show</link>
     </image>
-    <lastBuildDate>Thu, 19 Aug 2021 02:00:00 -0300</lastBuildDate>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     {{- with .OutputFormats.Get "RSS" -}}
     <author>ramiro.me</author>
