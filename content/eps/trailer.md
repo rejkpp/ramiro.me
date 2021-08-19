@@ -14,7 +14,7 @@ guid: bfe44401-e8b4-43ac-b9c7-fd4c0e24543f
 Date: "2021-08-01T20:00:00.00-03:00"
 duration: 76
 customLink: https://ramiro.me/show
-itunesSummary: {{< partial "podcast/description/trailerT.html" >}}
+itunesSummary: {{ partial "podcast/description/trailerT.html" }}
 
 ---
 {{< partial "podcast/description/trailer.html" >}}
