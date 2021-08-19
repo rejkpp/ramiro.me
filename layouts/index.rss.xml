@@ -82,6 +82,9 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <guid isPermaLink="false">{{ .Params.Guid }}</guid>
 
+      <dc:creator>{{ .Params.author}}</dc:creator>
+      <itunes:duration>{{ .Params.duration }}</itunes:duration>
+      <itunes:explicit>yes</itunes:explicit>
       <description>{{ .Content | html }}</description>
 
 
