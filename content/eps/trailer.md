@@ -16,4 +16,5 @@ duration: 76
 customLink: https://ramiro.me/show
 
 ---
-trailer
+
+{{ partial "podcast/description/trailer.html" | safeHTML }}
