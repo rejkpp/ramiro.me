@@ -70,8 +70,10 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
         {{ if eq .Params.TepisodeType "trailer"}}
           <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+          <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
         {{else}}
           <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+          <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
         {{end}}
 
       <description>{{ .Content | html }}</description>
