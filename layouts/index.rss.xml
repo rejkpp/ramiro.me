@@ -15,7 +15,7 @@
   <channel>
     <title>story legacy at ramiro.me</title>
     <link>https://ramiro.me/show</link>
-    <description>{{ partial "podcast/description/main.md" | safeHTML }}</description>
+    <description>{{ partial "podcast/description/main.html" | safeHTML }}</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <image>
@@ -80,6 +80,6 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
     </item>
     {{ end }}
 
-    
+
   </channel>
 </rss>
