@@ -75,6 +75,9 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
           <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
           <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
         {{end}}
+      <itunes:episode>{{ .Params.episode }}</itunes:episode>
+      <itunes:season>{{ .Params.season }}</itunes:season>
+      <itunes:author>{{ .Params.author}}</itunes:author>
 
       <description>{{ .Content | html }}</description>
 
