@@ -88,7 +88,15 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
       <dc:creator>{{ .Params.author}}</dc:creator>
       <itunes:duration>{{ .Params.duration }}</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
-      {{ .Content | html }}
+      <itunes:summary>
+        {{ .Params.itunesSummary}}
+      </itunes:summary>
+      <description>
+        {{ .Content | html }}
+      </description>
+      <content:encoded>
+        {{ .Content | html }}
+      </content:encoded>
     </item>
     {{ end }}
 
