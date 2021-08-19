@@ -1,6 +1,6 @@
 ---
-title: "trailer"
-type: "eps"
+title: trailer
+type: eps
 ---
 
 ## trailer
