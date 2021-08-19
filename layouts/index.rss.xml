@@ -15,7 +15,7 @@
   <channel>
     <title>story legacy at ramiro.me</title>
     <link>https://ramiro.me/show</link>
-    <description>{{ partial "podcast/description/main.md" }}</description>
+    <description>{{ partial "podcast/description/main.html" }}</description>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
     <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
     <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
