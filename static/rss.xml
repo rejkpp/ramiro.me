@@ -71,8 +71,7 @@
       <itunes:season>01</itunes:season>
       <itunes:author>ramiro.me</itunes:author>
       <itunes:summary>
-        itunes s01e03
-        &lt;p&gt;story.legacy
+        &lt;p&gt;itunes s01e03 story.legacy
         &lt;br&gt;&lt;br&gt;here at &lt;a href=&quot;http://ramiro.me/&quot;>ramiro.me&lt;/a&gt;
         &lt;br&gt;&lt;br&gt;a show for people who want to tell their story, make an impact and leave a legacy.
         &lt;/p&gt;
@@ -113,8 +112,7 @@
         <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
       </description>
       <content:encoded><![CDATA[
-        content.encoded s01e03
-        <p>story.legacy
+        <p>content.encoded s01e03 story.legacy
           <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
           <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
         </p>
