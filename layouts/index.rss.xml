@@ -24,7 +24,6 @@
       <link>https://ramiro.me/show</link>
     </image>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
-    {{- with .OutputFormats.Get "RSS" -}}
     <author>ramiro.me</author>
     <copyright>© 2021 ramiro. all rights reserved.</copyright>
 
