@@ -67,15 +67,13 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
 
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
-      {{ $episodeTitle := "[s"{{ .Params.season }}"e"{{ .Params.episode}}"]["{{ .Params.episodeType }}"]"{{ .Title }} }}
-      {{ $trailerTitle := "["{{ .Params.episodeType }}"]"{{ .Title }} }}
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
         {{ if eq .Params.TepisodeType "trailer"}}
-          <itunes:title>{{ $trailerTitle }}</itunes:title>
-          <title>{{ $trailerTitle }}</title>
+          <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+          <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
         {{else}}
-          <itunes:title>{{ $episodeTitle }}</itunes:title>
-          <title>{{ $episodeTitle }}</title>
+          <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+          <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
         {{end}}
       <itunes:episode>{{ .Params.episode }}</itunes:episode>
       <itunes:season>{{ .Params.season }}</itunes:season>
