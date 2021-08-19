@@ -27,9 +27,7 @@
     <author>ramiro.me</author>
     <copyright>© 2021 ramiro. all rights reserved.</copyright>
 
-
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
-    {{- end -}}
 
     <itunes:author>ramiro.me</itunes:author>
     <itunes:summary>a show for people who want to tell their story,
