@@ -65,7 +65,8 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
     <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
 
 
-    {{ range with .Pages "/eps" }}
+    {{ range .Pages }}
+    {{ with .Pages "eps"}}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
