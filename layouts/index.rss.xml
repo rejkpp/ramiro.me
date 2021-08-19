@@ -26,13 +26,54 @@
     <lastBuildDate>Thu, 19 Aug 2021 02:00:00 -0300</lastBuildDate>
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     {{- with .OutputFormats.Get "RSS" -}}
-
     <author>ramiro.me</author>
     <copyright>© 2021 ramiro. all rights reserved.</copyright>
 
 
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
+
+    <itunes:author>ramiro.me</itunes:author>
+    <itunes:summary>a show for people who want to tell their story,
+make an impact and leave a legacy.
+&lt;p&gt;&lt;/p&gt;
+learn how to tell stories that matter.
+personal stories from people just like you,
+who have gone through,
+tough shit, and came out with
+a story to tell.
+&lt;p&gt;&lt;/p&gt;
+i am ramiro, creator of story.legacy,
+your story guide and on this show, i show how to
+tell better stories.
+stories that matter.
+&lt;p&gt;&lt;/p&gt;
+guests come to share their story,
+we dive into the life lessons learned.
+i share my personal stories, the challenges
+and growth that came with it.
+&lt;p&gt;&lt;/p&gt;
+for more content and training on personal story
+go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
+    </itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>ramiro.me</itunes:name>
+      <itunes:email>help@ramiro.me</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:category text="Education">
+      <itunes:category text="Self-Improvement"/>
+    </itunes:category>
+    <itunes:category text="Arts">
+      <itunes:category text="Performing Arts"/>
+    </itunes:category>
+    <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
+
+
+
+
+
 
     {{ range $pages }}
     <item>
