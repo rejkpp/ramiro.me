@@ -16,5 +16,12 @@ duration: 76
 customLink: https://ramiro.me/show
 
 ---
-
+<itunes:summary>
+{{< partial "podcast/description/trailerT.html" >}}
+</itunes:summary>
+<description>
 {{< partial "podcast/description/trailer.html" >}}
+</description>
+<content:encoded>
+{{< partial "podcast/description/trailer.html" >}}
+</content:encoded>

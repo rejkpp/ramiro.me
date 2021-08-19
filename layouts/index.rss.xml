@@ -68,7 +68,6 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
     </itunes:category>
     <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
 
-
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
@@ -89,12 +88,9 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
       <dc:creator>{{ .Params.author}}</dc:creator>
       <itunes:duration>{{ .Params.duration }}</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
-      <description>{{ .Content | html }}</description>
-
-
+      {{ .Content | html }}
     </item>
     {{ end }}
-
 
   </channel>
 </rss>
