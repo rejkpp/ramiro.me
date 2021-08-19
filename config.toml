@@ -7,7 +7,6 @@ theme = "story"
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
 # hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
-rssLimit  = 10  # Maximum number of items in the RSS feed.
 copyright = "all rights reserved" # This message is only used by the RSS template.
 enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
 
@@ -24,7 +23,7 @@ canonifyURLs = true
 
 enableRobotsTXT = true
 enableMissingTranslationPlaceholders = false
-disableRSS     = true
+disableRSS     = false
 disableSitemap = false
 disable404     = false
 disableHugoGeneratorInject = false
