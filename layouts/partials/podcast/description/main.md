@@ -13,4 +13,4 @@ stories that matter.
 guests share their story. we dive into the life lessons learned from those experiences.  
 i share my personal stories, the challenges and growth that came with it.  
 
-for more content and training on personal story go to [ramiro.me/show](http://ramiro.me/show).
+for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a>.
