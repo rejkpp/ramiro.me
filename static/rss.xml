@@ -259,11 +259,9 @@
       <itunes:explicit>yes</itunes:explicit>
     </item>
     <item>
-      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:episodeType>trailer</itunes:episodeType>
       <itunes:title>[trailer]story.legacy</itunes:title>
       <title><![CDATA[[trailer]story.legacy]]></title>
-      <itunes:episode>00</itunes:episode>
-      <itunes:season>00</itunes:season>
       <itunes:author>ramiro.me</itunes:author>
       <itunes:summary>
         &lt;p&gt;story.legacy
