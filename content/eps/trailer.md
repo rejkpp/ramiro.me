@@ -17,4 +17,4 @@ customLink: https://ramiro.me/show
 
 ---
 
-{{ partial "podcast/description/trailer.html" | safeHTML }}
+{{< partial "podcast/description/trailer.html" >}}
