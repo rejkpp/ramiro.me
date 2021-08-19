@@ -1,6 +1,6 @@
 ---
 title: trailer
-type: eps
+type: ep
 ---
 
 ## trailer
