@@ -32,6 +32,20 @@
       <itunes:title>[trailer]story.legacy</itunes:title>
       <title><![CDATA[[trailer]story.legacy]]></title>
       <itunes:author>ramiro.me</itunes:author>
+      <itunes:summary>
+        &lt;p&gt;story.legacy&lt;/p&gt;
+        &lt;p&gt;here at &lt;a href=&quot;http://ramiro.me/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;ramiro.me&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;a show for people who want to tell their story, make an impact and leave a legacy.&lt;/p&gt;
+        &lt;p&gt;learn how to tell stories that matter.&lt;/p&gt;
+        &lt;p&gt;personal stories from people just like you, who have gone through&lt;/p&gt;
+        &lt;p&gt;tough shit, and came out with a story to tell.&lt;/p&gt;
+        &lt;p&gt;i am ramiro, creator of story.legacy, your story guide&lt;/p&gt;
+        &lt;p&gt;and on this show, i show how to tell better stories&lt;/p&gt;
+        &lt;p&gt;stories that matter.&lt;/p&gt;
+        &lt;p&gt;guests come to share their story and we dive into the life lessons learned from those personal experiences&lt;/p&gt;
+        &lt;p&gt;i share my personal stories, the challenges and growth that came with it.&lt;/p&gt;
+        &lt;p&gt;for more content and training on personal story go to ramiro.me/show&lt;/p&gt;
+      </itunes:summary>
       <description><![CDATA[ <p>story.legacy</p><p><br></p><p><span>here at </span><a href="http://ramiro.me">ramiro.me</a></p><p><br></p><p>a show for people who want to tell their story, make an impact and leave a legacy.</p><p><br></p><p>learn how to tell stories that matter. </p><p>personal stories from people just like you, who have gone through</p><p>tough shit, and came out with a story to tell.</p><p><br></p><p>i am ramiro, creator of story.legacy, your story guide</p><p><br></p><p>and on this show, i show how to tell better stories</p><p><br></p><p>stories that matter.</p><p><br></p><p>guests come to share their story and we dive into the life lessons learned from those personal experiences</p><p><br></p><p>i share my personal stories, the challenges and growth that came with it.</p><p><br></p><p>for more content and training on telling personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a> </p> ]]></description>
       <content:encoded><![CDATA[<p>story.legacy</p>
       <p><br></p>
@@ -51,22 +65,8 @@
       <guid isPermaLink="false">bfe44401-e8b4-43ac-b9c7-fd4c0e24543f</guid>
       <link>https://ramiro.me/show</link>
       <dc:creator><![CDATA[ramiro.me]]></dc:creator>
-      <pubDate>Wed, 18 Aug 2021 23:00:00 +0000</pubDate>
+      <pubDate>wed, 18 aug 2021 22:00:00 +0000</pubDate>
       <itunes:duration>76</itunes:duration>
-      <itunes:summary>
-        &lt;p&gt;story.legacy&lt;/p&gt;
-        &lt;p&gt;here at &lt;a href=&quot;http://ramiro.me/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;ramiro.me&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;a show for people who want to tell their story, make an impact and leave a legacy.&lt;/p&gt;
-        &lt;p&gt;learn how to tell stories that matter.&lt;/p&gt;
-        &lt;p&gt;personal stories from people just like you, who have gone through&lt;/p&gt;
-        &lt;p&gt;tough shit, and came out with a story to tell.&lt;/p&gt;
-        &lt;p&gt;i am ramiro, creator of story.legacy, your story guide&lt;/p&gt;
-        &lt;p&gt;and on this show, i show how to tell better stories&lt;/p&gt;
-        &lt;p&gt;stories that matter.&lt;/p&gt;
-        &lt;p&gt;guests come to share their story and we dive into the life lessons learned from those personal experiences&lt;/p&gt;
-        &lt;p&gt;i share my personal stories, the challenges and growth that came with it.&lt;/p&gt;
-        &lt;p&gt;for more content and training on personal story go to ramiro.me/show&lt;/p&gt;
-      </itunes:summary>
       <itunes:explicit>yes</itunes:explicit>
     </item>
   </channel>
