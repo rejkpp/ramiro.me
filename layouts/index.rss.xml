@@ -67,8 +67,8 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
 
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
-      {{ $episodeTitle := [s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }} }}
-      {{ $trailerTitle := [{{ .Params.episodeType }}]{{ .Title }} }}
+      {{ $episodeTitle := "[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}" }}
+      {{ $trailerTitle := "[{{ .Params.episodeType }}]{{ .Title }}" }}
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
         {{ if eq .Params.TepisodeType "trailer"}}
           <itunes:title>$trailerTitle</itunes:title>
