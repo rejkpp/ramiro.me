@@ -1,4 +1,4 @@
-description a show for people who want to tell their story, make an impact and leave a legacy.  
+description a show for people who want to tell their story, make an impact and leave a legacy.<br>
 
 learn how to tell stories that matter.  
 personal stories from people just like you,  
