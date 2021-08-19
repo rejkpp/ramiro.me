@@ -29,34 +29,33 @@
     <copyright><![CDATA[© 2021 ramiro. all rights reserved.]]></copyright>
     <language><![CDATA[en]]></language>
     <itunes:author>ramiro.me</itunes:author>
-    <itunes:summary>
-    a show for people who want to
-    tell their story,
-    make an impact and
-    leave a legacy.
-    &lt;p&gt;
-    learn how to tell stories that matter.
-    personal stories from people just like you,
-    who have gone through,
-    tough shit, and came out with
-    a story to tell.
-    &lt;/p&gt;
-    &lt;p&gt;
-    i am ramiro, creator of story.legacy,
-    your story guide and on this show, i show how to
-    tell better stories.
-    stories that matter.
-    &lt;/p&gt;
-    &lt;p&gt;
-    guests come to share their story,
-    we dive into the life lessons learned.
-    i share my personal stories, the challenges
-    and growth that came with it.
-    &lt;/p&gt;
-    &lt;p&gt;
-    for more content and training on personal story
-    go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
-    &lt;/p&gt;
+    <itunes:summary>a show for people who want to
+tell their story,
+make an impact and
+leave a legacy.
+&lt;p&gt;
+learn how to tell stories that matter.
+personal stories from people just like you,
+who have gone through,
+tough shit, and came out with
+a story to tell.
+&lt;/p&gt;
+&lt;p&gt;
+i am ramiro, creator of story.legacy,
+your story guide and on this show, i show how to
+tell better stories.
+stories that matter.
+&lt;/p&gt;
+&lt;p&gt;
+guests come to share their story,
+we dive into the life lessons learned.
+i share my personal stories, the challenges
+and growth that came with it.
+&lt;/p&gt;
+&lt;p&gt;
+for more content and training on personal story
+go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
+&lt;/p&gt;
     </itunes:summary>
     <itunes:type>episodic</itunes:type>
     <itunes:owner>
@@ -307,10 +306,8 @@
       <title><![CDATA[[trailer]story.legacy]]></title>
       <itunes:author>ramiro.me</itunes:author>
       <itunes:summary>
-        &lt;p&gt;story.legacy
-        &lt;br&gt;&lt;br&gt;here at &lt;a href=&quot;http://ramiro.me/&quot;&gt;ramiro.me&lt;/a&gt;
-        &lt;br&gt;&lt;br&gt;a show for people who want to tell their story, make an impact and leave a legacy.
-        &lt;/p&gt;
+        &lt;p&gt;story.legacy at &lt;a href=&quot;http://ramiro.me/&quot;&gt;ramiro.me&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;a show for people who want to tell their story, make an impact and leave a legacy.&lt;/p&gt;
         &lt;p&gt;learn how to tell stories that matter.
         &lt;br&gt;personal stories from people just like you,
         &lt;br&gt;who have gone through
@@ -327,44 +324,60 @@
         &lt;p&gt;for more content and training on personal story go to &lt;a href=&quot;http://ramiro.me/show&quot;&gt;ramiro.me/show&lt;/a&gt;&lt;/p&gt;
       </itunes:summary>
       <description><![CDATA[
-        <p>story.legacy
-          <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
-          <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
+        <p>story.legacy at <a href="http://ramiro.me/">ramiro.me</a></p>
+        <p>a show for people who want to tell their story,
+          <br>make an impact and leave a legacy.
         </p>
+        <br><br>
         <p>learn how to tell stories that matter.
           <br>personal stories from people just like you,
           <br>who have gone through,
           <br>tough shit, and came out with,
           <br>a story to tell.
         </p>
-        <p>i am ramiro, creator of story.legacy, your story guide.
+        <br><br>
+        <p>i am ramiro, creator of story.legacy,
+          <br>your story guide.
           <br>on this show, i show how to tell better stories.
           <br>stories that matter.
         </p>
-        <p>guests share their story. we dive into the life lessons learned from those experiences.
-          <br>i share my personal stories, the challenges and growth that came with it.
+        <br><br>
+        <p>guests share their story. we dive into the
+          <br>life lessons learned.
+          <br>i share my personal stories, the challenges
+          <br>and growth that came with it.
         </p>
-        <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
+        <br><br>
+        <p>for more content and training on personal story
+          <br>go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
       </description>
       <content:encoded><![CDATA[
-        <p>story.legacy
-          <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
-          <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
+        <p>story.legacy at <a href="http://ramiro.me/">ramiro.me</a></p>
+        <p>a show for people who want to tell their story,
+          <br>make an impact and leave a legacy.
         </p>
+        <br><br>
         <p>learn how to tell stories that matter.
           <br>personal stories from people just like you,
           <br>who have gone through,
           <br>tough shit, and came out with,
           <br>a story to tell.
         </p>
-        <p>i am ramiro, creator of story.legacy, your story guide.
+        <br><br>
+        <p>i am ramiro, creator of story.legacy,
+          <br>your story guide.
           <br>on this show, i show how to tell better stories.
           <br>stories that matter.
         </p>
-        <p>guests share their story. we dive into the life lessons learned from those experiences.
-          <br>i share my personal stories, the challenges and growth that came with it.
+        <br><br>
+        <p>guests share their story. we dive into the
+          <br>life lessons learned.
+          <br>i share my personal stories, the challenges
+          <br>and growth that came with it.
         </p>
-        <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
+        <br><br>
+        <p>for more content and training on personal story
+          <br>go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
       </content:encoded>
       <enclosure length="1230053" type="audio/mpeg" url="https://stream.redcircle.com/episodes/5ab374d9-02df-4fd9-81ae-0742c7da373d/stream.mp3"/>
       <guid isPermaLink="false">bfe44401-e8b4-43ac-b9c7-fd4c0e24543f</guid>
