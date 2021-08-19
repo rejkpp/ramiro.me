@@ -76,24 +76,24 @@
         <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
       </description>
       <content:encoded><![CDATA[
-      <p>story.legacy
+        <p>story.legacy
         <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
         <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
-      </p>
-      <p>learn how to tell stories that matter.
+        </p>
+        <p>learn how to tell stories that matter.
         <br>personal stories from people just like you,
         <br>who have gone through,
         <br>tough shit, and came out with,
         <br>a story to tell.
-      </p>
-      <p>i am ramiro, creator of story.legacy, your story guide.
+        </p>
+        <p>i am ramiro, creator of story.legacy, your story guide.
         <br>on this show, i show how to tell better stories.
         <br>stories that matter.
-      </p>
-      <p>guests share their story. we dive into the life lessons learned from those experiences.
+        </p>
+        <p>guests share their story. we dive into the life lessons learned from those experiences.
         <br>i share my personal stories, the challenges and growth that came with it.
-      </p>
-      <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
+        </p>
+        <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
       </content:encoded>
       <enclosure length="33805792" type="audio/mpeg" url="https://stream.redcircle.com/episodes/c088cbad-365c-44d1-a10b-1397bf71ef76/stream.mp3"/>
       <guid isPermaLink="false">aac8d35d-ba6a-4d81-a5d7-280eca3d30ef</guid>
@@ -184,6 +184,8 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:title>[trailer]story.legacy</itunes:title>
       <title><![CDATA[[trailer]story.legacy]]></title>
+      <itunes:episode>00</itunes:episode>
+      <itunes:season>00</itunes:season>
       <itunes:author>ramiro.me</itunes:author>
       <itunes:summary>
         &lt;p&gt;story.legacy
