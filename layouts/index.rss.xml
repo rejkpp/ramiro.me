@@ -67,6 +67,8 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
 
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
+      <itunes:episodeType>{{ .episodeType}}</itunes:episodeType>
+
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
