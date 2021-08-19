@@ -68,7 +68,7 @@ go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
-      <itunes:title>'[s' {{ .Params.season }} 'e' {{ .Params.episode}} ']' '[' {{ .Params.episodeType }} ']' {{ .Title }}</itunes:title>
+      <itunes:title>'[s' {{ .Params.season }} 'e' {{ .Params.episode}} ']' "]"+{{ .Params.episodeType }}+"]"+{{ .Title }}</itunes:title>
 
       <description>{{ .Content | html }}</description>
 
