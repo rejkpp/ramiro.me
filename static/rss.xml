@@ -3,10 +3,7 @@
   <channel>
     <title><![CDATA[story legacy at ramiro.me]]></title>
     <description><![CDATA[
-      <p>story.legacy
-        <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
-        <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
-      </p>
+      <p>description a show for people who want to tell their story, make an impact and leave a legacy.</p>
       <p>learn how to tell stories that matter.
         <br>personal stories from people just like you,
         <br>who have gone through,
@@ -33,7 +30,7 @@
     <language><![CDATA[en]]></language>
     <itunes:author>ramiro.me</itunes:author>
     <itunes:summary>
-      &lt;p&gt;story.legacy
+      &lt;p&gt;itunes summary story.legacy
       &lt;br&gt;&lt;br&gt;here at &lt;a href=&quot;http://ramiro.me/&quot;>ramiro.me&lt;/a&gt;
       &lt;br&gt;&lt;br&gt;a show for people who want to tell their story, make an impact and leave a legacy.
       &lt;/p&gt;
@@ -68,12 +65,13 @@
     <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
     <item>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:title>[s0103][guest]suraj.kulkarni.be.a.human</itunes:title>
-      <title><![CDATA[[s0103][guest]suraj.kulkarni.be.a.human]]></title>
+      <itunes:title>[s01e03][guest]suraj.kulkarni.be.a.human</itunes:title>
+      <title><![CDATA[[s01e03][guest]suraj.kulkarni.be.a.human]]></title>
       <itunes:episode>03</itunes:episode>
       <itunes:season>01</itunes:season>
       <itunes:author>ramiro.me</itunes:author>
       <itunes:summary>
+        itunes s01e03
         &lt;p&gt;story.legacy
         &lt;br&gt;&lt;br&gt;here at &lt;a href=&quot;http://ramiro.me/&quot;>ramiro.me&lt;/a&gt;
         &lt;br&gt;&lt;br&gt;a show for people who want to tell their story, make an impact and leave a legacy.
@@ -95,7 +93,7 @@
         &lt;p&gt;&lt;br&gt;&lt;br&gt;for more content and training on personal story go to &lt;a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show&lt;/a&gt;&lt;/p&gt;
       </itunes:summary>
       <description><![CDATA[
-        <p>story.legacy
+        <p>description s01e03 story.legacy
           <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
           <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
         </p>
@@ -115,6 +113,7 @@
         <p>for more content and training on personal story go to <a href="http://ramiro.me/show">ramiro.me/show</a></p>]]>
       </description>
       <content:encoded><![CDATA[
+        content.encoded s01e03
         <p>story.legacy
           <br><br>here at <a href="http://ramiro.me/">ramiro.me</a>
           <br><br>a show for people who want to tell their story, make an impact and leave a legacy.
@@ -143,11 +142,10 @@
       <itunes:duration>1970</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
     </item>
-
     <item>
       <itunes:episodeType>full</itunes:episodeType>
-      <itunes:title>[s0102][guest]nevena.bazalac.be.happy.be.joyful.keep.creating</itunes:title>
-      <title><![CDATA[[s0102][guest]nevena.bazalac.be.happy.be.joyful.keep.creating]]></title>
+      <itunes:title>[s01e02][guest]nevena.bazalac.be.happy.be.joyful.keep.creating</itunes:title>
+      <title><![CDATA[[s01e02][guest]nevena.bazalac.be.happy.be.joyful.keep.creating]]></title>
       <itunes:episode>02</itunes:episode>
       <itunes:season>01</itunes:season>
       <itunes:author>ramiro.me</itunes:author>
