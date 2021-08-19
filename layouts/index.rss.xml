@@ -23,22 +23,19 @@
       <title>story legacy at ramiro.me</title>
       <link>https://ramiro.me/show</link>
     </image>
+    <lastBuildDate>Thu, 19 Aug 2021 02:00:00 -0300</lastBuildDate>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- with .OutputFormats.Get "RSS" -}}
 
-    {{ with .Site.Author.email }}
-    <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}
 
-    {{ with .Site.Author.email }}
-    <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}
+
     {{ with .Site.Copyright }}
     <copyright>{{.}}</copyright>{{end}}
 
-    {{ if not .Date.IsZero }}
-
-    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
-    {{- with .OutputFormats.Get "RSS" -}}
 
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
+    
     {{ range $pages }}
     <item>
       <title>{{ .Title }}</title>
