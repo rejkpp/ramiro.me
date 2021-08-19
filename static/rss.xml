@@ -30,7 +30,7 @@
     <atom:link href="https://ramiro.me/rss.xml" rel="self" type="application/rss+xml"/>
     <author><![CDATA[ramiro.me]]></author>
     <copyright><![CDATA[© 2021 ramiro. all rights reserved.]]></copyright>
-    <language><![CDATA[en nl]]></language>
+    <language><![CDATA[en]]></language>
     <itunes:author>ramiro.me</itunes:author>
     <itunes:summary>
       &lt;p&gt;story.legacy
