@@ -70,7 +70,7 @@
       <itunes:duration>{{ .Params.duration }}</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
       <itunes:summary>
-        {{ if isset .Params "itunesSummary"}}
+        {{ if isset .Params "itunessummary"}}
           {{ .Params.itunesSummary}}
         {{else}}
           {{ range where .Site.Pages "Type" "descr" }}
