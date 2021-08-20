@@ -14,8 +14,7 @@ guid: bfe44401-e8b4-43ac-b9c7-fd4c0e24543f
 Date: "2021-08-01T20:00:00.00+00:00"
 duration: 74
 customLink: https://ramiro.me/show
-itunesSummary: "
-&lt;p&gt;story.legacy at &lt;a href=&quot;http://ramiro.me/&quot;&gt;ramiro.me&lt;/a&gt;&lt;/p&gt;
+itunesSummary: "&lt;p&gt;story.legacy at &lt;a href=&quot;http://ramiro.me/&quot;&gt;ramiro.me&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&mdash;a show for people who want to tell their story, make an impact and leave a legacy.&lt;/p&gt;
 &lt;p&gt;learn how to tell stories that matter.
 personal stories from people just like you,
