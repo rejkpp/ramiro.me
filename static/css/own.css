@@ -1,5 +1,5 @@
 .bars{
-	font-family: courier,"courier new", monospace;
+	font-family: "courier prime sans", "courier new", courier, monospace;
   position: fixed;
 	left: 0;
 	width: 100%;
@@ -36,7 +36,7 @@ a{
 }
 .checkoutButton{
 	font-size:4em;
-	font-family: courier,"courier new", monospace;
+	font-family: "courier prime sans", "courier new", courier, monospace;
 	background-color:#c03a44;
 	color:#fffafa;
 	padding:0.5em 2em;
