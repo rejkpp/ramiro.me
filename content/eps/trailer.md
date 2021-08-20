@@ -3,7 +3,7 @@ author: ramiro.me
 title: story.legacy
 type: ep
 
-season: "00"
+season: "01"
 episode: "00"
 episodeType: trailer
 TepisodeType: trailer
