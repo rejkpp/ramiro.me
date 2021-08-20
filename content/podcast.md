@@ -2,6 +2,6 @@
 
 ---
 # story.legacy
-## select your podcast player
+### click the button below to listen
 
 {{< partial "podcast/button/apple-button.html" >}}
