@@ -29,7 +29,6 @@ stories that matter.
 &lt;p&gt;guests come to share their story and we dive into the life lessons learned from those personal experiences
 i share my personal stories, the challenges and growth that came with it.
 &lt;/p&gt;
-&lt;p&gt;for more content and training on personal story go to &lt;a href=&quot;http://ramiro.me/show&quot;&gt;ramiro.me/show&lt;/a&gt;&lt;/p&gt;
-"
+&lt;p&gt;for more content and training on personal story go to &lt;a href=&quot;http://ramiro.me/show&quot;&gt;ramiro.me/show&lt;/a&gt;&lt;/p&gt;"
 ---
 {{< partial "podcast/description/trailer.html" >}}
