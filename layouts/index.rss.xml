@@ -16,12 +16,8 @@
     <title>story legacy at ramiro.me</title>
     <link>https://ramiro.me/show</link>
       {{ range where .Site.Pages "Type" "descr" }}
-      <description>
-        {{ .Content | html }}
-      </description>
-      <itunes:summary>
-        {{ .Params.itunesSummary}}
-      </itunes:summary>
+      <description>{{ .Content | html }}</description>
+      <itunes:summary>{{ .Params.itunesSummary}}</itunes:summary>
       {{ end }}
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -54,10 +50,10 @@
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
         {{ if eq .Params.TepisodeType "trailer"}}
           <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
-          <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
+                 <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
         {{else}}
           <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
-          <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
+                 <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
         {{end}}
       <itunes:episode>{{ .Params.episode }}</itunes:episode>
       <itunes:season>{{ .Params.season }}</itunes:season>
@@ -69,21 +65,9 @@
       <dc:creator>{{ .Params.author}}</dc:creator>
       <itunes:duration>{{ .Params.duration }}</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
-      <itunes:summary>
-        {{ if eq .Params.itunesSummary 0}}
-          {{ range where .Site.Pages "Type" "descr" }}
-            {{ .Params.itunesSummary2}}
-            {{ end }}
-        {{else}}
-          {{ .Params.itunesSummary}}
-        {{end}}
-      </itunes:summary>
-      <description>
-        {{ .Content | html }}
-      </description>
-      <content:encoded>
-        {{ .Content | html }}
-      </content:encoded>
+      <itunes:summary>{{ if eq .Params.itunesSummary 0}}{{ range where .Site.Pages "Type" "descr" }}{{ .Params.itunesSummary2}}{{ end }}{{else}}{{ .Params.itunesSummary}}{{end}}</itunes:summary>
+      <description>{{ .Content | html }}</description>
+      <content:encoded>{{ .Content | html }}</content:encoded>
     </item>
     {{ end }}
 
