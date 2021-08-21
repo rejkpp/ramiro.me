@@ -1,0 +1,75 @@
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := slice -}}
+{{- if or $.IsHome $.IsSection -}}
+{{- $pages = $pctx.RegularPages -}}
+{{- else -}}
+{{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+{{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>story legacy at ramiro.me</title>
+    <link>https://ramiro.me/show</link>
+      {{ range where .Site.Pages "Type" "descr" }}
+      <description>{{ .Content | html }}</description>
+      <itunes:summary>{{ .Params.itunesSummaryMain}}</itunes:summary>
+      {{ end }}
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <image>
+      <url>https://ramiro.me/img/podcast.cover.jpg</url>
+      <title>story legacy at ramiro.me</title>
+      <link>https://ramiro.me/show</link>
+    </image>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    <author>ramiro.me</author>
+    <copyright>© 2021 ramiro. all rights reserved.</copyright>
+    <atom:link href="https://ramiro.me/index.xml" rel="self" type="application/rss+xml"/>
+    <itunes:author>ramiro.me</itunes:author>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>ramiro.me</itunes:name>
+      <itunes:email>help@ramiro.me</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>Yes</itunes:explicit>
+    <itunes:category text="Education">
+      <itunes:category text="Self-Improvement"/>
+    </itunes:category>
+    <itunes:category text="Arts">
+      <itunes:category text="Performing Arts"/>
+    </itunes:category>
+    <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
+
+    {{ range where .Site.Pages "Type" "ep" }}
+    <item>
+      <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
+        {{ if eq .Params.TepisodeType "trailer"}}
+          <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+                 <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
+        {{else}}
+          <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+                 <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
+        {{end}}
+      <itunes:episode>{{ .Params.episode }}</itunes:episode>
+      <itunes:season>{{ .Params.season }}</itunes:season>
+      <itunes:author>{{ .Params.author}}</itunes:author>
+      <link>{{ .Params.customLink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <guid isPermaLink="false">{{ .Params.Guid }}</guid>
+      <enclosure length="{{ .Params.Length }}" type="audio/mpeg" url= "https://stream.redcircle.com/episodes/{{ .Params.mp3url }}/stream.mp3"/>
+      <dc:creator>{{ .Params.author}}</dc:creator>
+      <itunes:duration>{{ .Params.duration }}</itunes:duration>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>{{ if eq .Params.itunesSummary 0}}{{ range where .Site.Pages "Type" "descr" }}{{ .Params.itunesSummaryEpisode}}{{ end }}{{else}}{{ .Params.itunesSummary}}{{end}}</itunes:summary>
+      <description>{{ .Content | html }}</description>
+      <content:encoded>{{ .Content | html }}</content:encoded>
+    </item>
+    {{ end }}
+
+  </channel>
+</rss>
