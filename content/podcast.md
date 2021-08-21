@@ -10,7 +10,7 @@ podcast:
 
 ---
 # story.legacy
-### a show for people who want to tell their story, make an impact, and leave a legacy.
+### a show for people who want to tell their story, make an impact, and leave a legacy..
 
 {{< partial "podcast/player/embed-trailer.html" >}}
 

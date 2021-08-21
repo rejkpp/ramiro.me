@@ -11,3 +11,7 @@
 {{ $resource := resources.Get .src }}{{ $size := "250x" }}{{ with .width }}{{ $size = (add (string .) "x") }}{{ end }}{{ $image := $resource.Resize $size -}}
 <figure class="image {{ .class | default "right" }}"><img src="{{ $image.RelPermalink }}" width="{{ .width | default "250" }}" alt="{{ .alt }}"></figure>
 {{ end -}}
+
+<div class="">
+
+</div>
