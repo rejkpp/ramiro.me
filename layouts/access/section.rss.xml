@@ -29,7 +29,7 @@
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     <author>ramiro.me</author>
     <copyright>© 2021 ramiro. all rights reserved.</copyright>
-    <atom:link href="https://ramiro.me/index.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ramiro.me/access/index.xml" rel="self" type="application/rss+xml"/>
     <itunes:author>ramiro.me</itunes:author>
     <itunes:type>serial</itunes:type>
     <itunes:owner>

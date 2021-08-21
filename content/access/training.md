@@ -1,7 +1,7 @@
 ---
 
 ---
-#@ why, what, how on personal story
+# why, what, how on personal story
 
 ### why telling your story matters
 {{< partial "podcast/player/trailer.html" >}}
