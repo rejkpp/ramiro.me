@@ -1,0 +1,13 @@
+function redcircleIframe() {
+    let iframe = document && document.createElement && document.createElement("iframe");
+    iframe.setAttribute("style","border: none;max-width: 100%;width:1px;min-width:100%;");
+    iframe.setAttribute("height", 170);
+    iframe.setAttribute("scrolling", "no");
+    iframe.setAttribute("src", "https://redcircle.com/embedded-player/sh/938d15ef-fb10-46c7-a068-c86c11366733/ep/5ab374d9-02df-4fd9-81ae-0742c7da373d");
+    Array.prototype.forEach.call(document.getElementsByClassName("redcirclePlayer-5ab374d9-02df-4fd9-81ae-0742c7da373d"), el => {
+        if (!el.hasChildNodes()){
+            el.appendChild(iframe)
+        }
+    })
+}
+document.addEventListener("DOMContentLoaded", redcircleIframe)
