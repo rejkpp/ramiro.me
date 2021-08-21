@@ -10,8 +10,5 @@
 
 {{ $js := slice $jQuery $scrollex $scrolly $browser $breakpoints $util $main $demo | resources.Concat "assets/js/bundle.js" | minify }}
 
-{{ $json := "assets/json/audio-player.json" | minify }}
-
 <!-- Scripts -->
 <script src='{{ $js.RelPermalink }}'></script>
-<script src='{{ $json.RelPermalink }}'></script>
