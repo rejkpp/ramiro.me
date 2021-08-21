@@ -7,12 +7,12 @@ episodeType: training
 season: ""
 episode: "03"
 title: how.to.tell.it.to.make.an.impact
-Date: "2021-08-04T17:02:00.00+00:00"
+Date: "2021-08-20T05:45:00.00+00:00"
 
-length: 31476506
-mp3url: 24e0a99e-add9-46f6-9c2d-32b75860d642
-guid: 6b85c483-14c7-4b82-9c8c-d0b7d3fd8758
-duration: 1967
+length: 1187004
+mp3url: 772b0f88-a419-474a-88d0-31dc8b418d45
+guid: 90a412bd-2fb6-4104-a4ec-9f9fba827920
+duration: 74
 
 customLink: https://ramiro.me/show
 itunesSummary: 0

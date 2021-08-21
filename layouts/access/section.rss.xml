@@ -52,8 +52,8 @@
           <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
                  <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
         {{else}}
-          <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
-                 <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
+          <itunes:title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+                 <title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
         {{end}}
       <itunes:episode>{{ .Params.episode }}</itunes:episode>
       <itunes:season>{{ .Params.season }}</itunes:season>

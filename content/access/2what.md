@@ -7,12 +7,12 @@ episodeType: training
 season: ""
 episode: "02"
 title: what.your.story.really.is
-Date: "2021-08-04T15:56:00.00+00:00"
+Date: "2021-08-20T05:45:00.00+00:00"
 
-length: 33735993
-mp3url: c088cbad-365c-44d1-a10b-1397bf71ef76
-guid: aac8d35d-ba6a-4d81-a5d7-280eca3d30ef
-duration: 2108
+length: 1187004
+mp3url: 3905f133-1d11-4262-9ed6-d8e7ec0a0b5c
+guid: 88c0edf5-5499-43a3-afe0-ce5f641f919d
+duration: 74
 
 customLink: https://ramiro.me/show
 itunesSummary: 0
