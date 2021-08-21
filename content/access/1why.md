@@ -15,7 +15,7 @@ guid: 7bab0c81-0185-46fb-b15d-e210bf2dbfc2
 duration: 74
 
 customLink: https://ramiro.me/show
-itunesSummary: 0
+itunesSummary: "why"
 
 ---
 {{< partial "podcast/description/episode.html" >}}
