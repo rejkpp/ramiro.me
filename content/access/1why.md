@@ -33,4 +33,4 @@ and growth that came with it.</p>
 go to <a href=&quot;http://ramiro.me/show&quot;>ramiro.me/show</a></p>"
 
 ---
-{{< partial "podcast/description/episode.html" >}}
+{{< partial "podcast/description/training.html" >}}
