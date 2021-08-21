@@ -44,6 +44,7 @@
       <itunes:category text="Performing Arts"/>
     </itunes:category>
     <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
+    <itunes:block>yes</itunes:block>
 
     {{ range where .Site.Pages "Type" "tr1" }}
     <item>
