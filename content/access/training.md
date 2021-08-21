@@ -7,12 +7,12 @@
 
 ### {{< partial "br.html" >}}
 ### [01] why telling your story matters
-{{< partial "podcast/player/trailer.html" >}}
+{{< partial "podcast/player/[1]why.html" >}}
 
 ### {{< partial "br.html" >}}
 ### [02] what your story really is
-{{< partial "podcast/player/trailer.html" >}}
+{{< partial "podcast/player/[2]what.html" >}}
 
 ### {{< partial "br.html" >}}
 ### [03] how to tell it to make an impact
-{{< partial "podcast/player/trailer.html" >}}
+{{< partial "podcast/player/[3]how.html" >}}
