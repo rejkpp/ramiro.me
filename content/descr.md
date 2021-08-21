@@ -10,6 +10,8 @@ itunesSummaryEpisode: "for more content and training on personal story,<br>go to
 
 itunesSummaryTraining: "for a free 1on1 session (valued at €121)<br>go to <a href=&quot;https://ramiro.me/free&quot;>ramiro.me/free</a><p>topics i specialise in are,<br>— story<br>— creativity<br>— clarity<br></p><p>i normally charge €121 for a session.<br>but because you're here,<br>it tells me that you invest in your growth.<br></p><p>that's why i want to give it to you for free.<br>my gift to you ツ</p><p>cherries<br>—ramiro</p>"
 
+itunesSummaryMainTraining: "fundamental training on personal story<p>[01] why telling your story matters<br>[02] what your story really is<br>[03] how to tell it to make an impact <br></p><p>be inspired to tell your story.<br>your story matters.</p><p>for a free 1on1 session (valued at €121)<br>go to <a href=&quot;https://ramiro.me/free&quot;>ramiro.me/free</a></p>"
+
 ---
 
 {{< partial "podcast/description/main.html" >}}
