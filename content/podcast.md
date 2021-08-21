@@ -8,6 +8,8 @@
 tough shit, and came out with,
 {{< partial "podcast/button/apple-button.html" >}}
 ### a story to tell
-### click the button below to listen
 
+{{< partial "podcast/player/audio-player.html" >}}
+
+### click the button below to listen
 {{< partial "podcast/button/apple-button.html" >}}
