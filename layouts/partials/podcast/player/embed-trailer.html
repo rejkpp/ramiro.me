@@ -1,17 +1,5 @@
-{{ $src := (.Params.podcast.mp3 | absURL) -}}
-{{ if .Site.Params.Podcast.cdn -}}
-{{ $src = add $.Site.Params.Podcast.cdn (.Params.podcast.mp3 | relURL) -}}
-{{ end -}}
-
 <figure class="podcast">
-<audio controls preload="none"><source src="{{ $src }}" type="audio/mpeg"></audio>
-<figcaption><a href="{{ $src }}">{{ .Title }}</a></figcaption>
+<audio controls preload="none"><source src="https://stream.redcircle.com/episodes/5ab374d9-02df-4fd9-81ae-0742c7da373d/stream.mp3" type="audio/mpeg"></audio>
+<figcaption><a href="https://stream.redcircle.com/episodes/5ab374d9-02df-4fd9-81ae-0742c7da373d/stream.mp3">trailer</a></figcaption>
 </figure>
-{{ with .Params.podcast.image }}
-{{ $resource := resources.Get .src }}{{ $size := "250x" }}{{ with .width }}{{ $size = (add (string .) "x") }}{{ end }}{{ $image := $resource.Resize $size -}}
-<figure class="image {{ .class | default "right" }}"><img src="{{ $image.RelPermalink }}" width="{{ .width | default "250" }}" alt="{{ .alt }}"></figure>
-{{ end -}}
-
-<div class="">
-
-</div>
+<figure class="right" }}"><img src="https://ramiro.me/img/podcast.cover.jpg" width="250" }}"></figure>
