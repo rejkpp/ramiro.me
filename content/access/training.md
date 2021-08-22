@@ -24,5 +24,3 @@
 ### {{< partial "br.html" >}}
 ### [gift] for being here
 {{< partial "podcast/player/[4]gift.html" >}}
-
-{{< partial "custom/link/podcast-js-links.html" >}}
