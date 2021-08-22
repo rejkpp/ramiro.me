@@ -1,5 +1,5 @@
 {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
-{{ range where .Site.Pages "Type" "tr1" }}
+{{ range where .Site.Pages.Reverse "Type" "tr1" }}
 
   {{ partial "custom/css/player-css.html" . }}
 
