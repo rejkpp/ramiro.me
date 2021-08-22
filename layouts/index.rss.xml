@@ -22,7 +22,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <image>
-      <url>https://ramiro.me/img/podcast.cover.jpg</url>
+      <url>https://ramiro.me/img/podcast.cover.ramiro.jpg</url>
       <title>story legacy at ramiro.me</title>
       <link>https://ramiro.me/show</link>
     </image>
@@ -43,20 +43,21 @@
     <itunes:category text="Arts">
       <itunes:category text="Performing Arts"/>
     </itunes:category>
-    <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
+    <itunes:image href="https://ramiro.me/img/podcast.cover.ramiro.jpg"/>
 
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
-        {{ if eq .Params.TepisodeType "trailer"}}
-          <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
-                 <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
-        {{else}}
-          <itunes:title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
-                 <title>[s{{ .Params.season }}e{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
+      <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+      <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
+
+        {{ if isset .Params "episode" }}
+          <itunes:episode>{{ .Params.episode }}</itunes:episode>
         {{end}}
-      <itunes:episode>{{ .Params.episode }}</itunes:episode>
-      <itunes:season>{{ .Params.season }}</itunes:season>
+        {{ if isset .Params "season" }}
+          <itunes:season>{{ .Params.season }}</itunes:season>
+        {{end}}
+
       <itunes:author>{{ .Params.author}}</itunes:author>
       <link>{{ .Params.customLink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
@@ -65,7 +66,15 @@
       <dc:creator>{{ .Params.author}}</dc:creator>
       <itunes:duration>{{ .Params.duration }}</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
-      <itunes:summary>{{ if eq .Params.itunesSummary 0}}{{ range where .Site.Pages "Type" "descr" }}{{ .Params.itunesSummaryEpisode}}{{ end }}{{else}}{{ .Params.itunesSummary}}{{end}}</itunes:summary>
+      <itunes:summary>
+        {{ if isset .Params "itunesSummary" }}
+          {{ .Params.itunesSummary}}
+        {{else}}
+          {{ range where .Site.Pages "Type" "descr" }}
+            {{ .Params.itunesSummaryEpisode}}
+            {{ end }}
+        {{end}}
+      </itunes:summary>
       <description>{{ .Content | html }}</description>
       <content:encoded>{{ .Content | html }}</content:encoded>
     </item>
