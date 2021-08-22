@@ -17,7 +17,7 @@
     <link>https://ramiro.me/show</link>
       {{ range where .Site.Pages "Type" "descr" }}
       <description>{{ .Params.itunesSummaryMain}}</description>
-      <itunes:summary>{{ .Params.itunesSummaryMain}} launched on aug 23 2021</itunes:summary>
+      <itunes:summary>{{ .Params.itunesSummaryMain}}launched on 23 august 2021</itunes:summary>
       {{ end }}
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
