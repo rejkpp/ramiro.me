@@ -3,19 +3,19 @@
 {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
 {{ range where .Site.Pages "Type" "tr1" }}
 
-<h3><title>[{{ .Params.episodeType }}]{{ .Title }}</h3>
-<div class="container">
-  <div class="podcast">
-    <!-- <h4 class="podcast__episode_title">[trailer]story.legacy</h4> -->
-    <!-- <h5 class="podcast__title"></h5> -->
-    <!-- <div class="podcast__meta"> -->
+  {{ if isset .Params "episode" }}
+    <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
+  {{ else}}
+    <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
+  {{end}}
+  <div class="container">
+    <div class="podcast">
       <audio controls width="100%">
-        <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString}}/stream.mp3">
+        <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
         Your browser does not support the audio tag.
       </audio>
-    <!-- </div> -->
+    </div>
   </div>
-</div>
 {{ end }}
 
 {{ partial "custom/link/podcast-js-links.html" . }}
