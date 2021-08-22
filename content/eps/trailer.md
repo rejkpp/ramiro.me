@@ -4,7 +4,7 @@ title: story.legacy
 type: ep
 
 season: "01"
-episode: "00"
+episode: 
 episodeType: trailer
 TepisodeType: trailer
 

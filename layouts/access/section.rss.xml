@@ -22,7 +22,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <image>
-      <url>https://ramiro.me/img/podcast.cover.jpg</url>
+      <url>https://ramiro.me/img/podcast.cover.why.what.how.jpg</url>
       <title>story legacy at ramiro.me</title>
       <link>https://ramiro.me/show</link>
     </image>
@@ -43,7 +43,7 @@
     <itunes:category text="Arts">
       <itunes:category text="Performing Arts"/>
     </itunes:category>
-    <itunes:image href="https://ramiro.me/img/podcast.cover.jpg"/>
+    <itunes:image href="https://ramiro.me/img/podcast.cover.why.what.how.jpg"/>
     <itunes:block>yes</itunes:block>
 
     {{ range where .Site.Pages "Type" "tr1" }}
