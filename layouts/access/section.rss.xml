@@ -16,8 +16,8 @@
     <title>why, what, how on personal story</title>
     <link>https://ramiro.me/show</link>
       {{ range where .Site.Pages "Type" "descr" }}
-      <description>{{ .Params.itunesSummaryMainTraining}}</description>
-      <itunes:summary>{{ .Params.itunesSummaryMainTraining}}</itunes:summary>
+      <description>{{ .Params.itunesSummaryMainTraining }}</description>
+      <itunes:summary>{{ .Params.itunesSummaryMainTraining }}</itunes:summary>
       {{ end }}
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
