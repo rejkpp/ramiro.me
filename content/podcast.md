@@ -6,4 +6,4 @@
 
 ## launching 23 aug 2021
 {{< partial "podcast/player/trailer.html" >}}
-{{< partial "podcast/button/apple-button.html" >}}
+<!-- {{< partial "podcast/button/apple-button.html" >}} -->
