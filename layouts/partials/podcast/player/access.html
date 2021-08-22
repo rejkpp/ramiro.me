@@ -4,9 +4,9 @@
       <img src="https://ramiro.me/img/podcast.cover.why.what.how.jpg" width="40%">
       <div class="player-title">
         {{ if eq .Params.TepisodeType "bonus" }}
-          <h4>[{{ .Params.episodeType }}]<br>{{ .Title }}</h4>
+        <h4>[{{ .Params.episodeType }}]<br>{{ .Title }}</h4>
           {{else}}
-          <h4>[{{ .Params.episode }}]<br>{{ .Title }}</h4>
+        <h4>[{{ .Params.episode }}]<br>{{ .Title }}</h4>
         {{end}}
         <audio controls width="100%" preload="metadata">
             <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
