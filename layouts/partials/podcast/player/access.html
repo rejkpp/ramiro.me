@@ -1,7 +1,8 @@
+{{ partial "custom/css/player-css.html" . }}
+
 {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
 {{ range where .Site.Pages.Reverse "Type" "tr1" }}
 
-  {{ partial "custom/css/player-css.html" . }}
 
   {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
     <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>

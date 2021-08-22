@@ -1,2 +1,17 @@
-<script async defer onload="redcircleIframe();" src="https://api.podcache.net/embedded-player/sh/938d15ef-fb10-46c7-a068-c86c11366733/ep/3905f133-1d11-4262-9ed6-d8e7ec0a0b5c"></script>
-    <div class="redcirclePlayer-3905f133-1d11-4262-9ed6-d8e7ec0a0b5c"></div>
+{{ partial "custom/css/player-css.html" . }}
+
+{{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
+{{ range where .Site.Pages.Reverse "Type" "tr1" }}
+  {{ if eq .Params.episode "02" }}
+  <div class="container">
+    <div class="podcast">
+      <audio controls width="100%">
+          <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
+            Your browser does not support the audio tag.
+      </audio>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
+
+{{ partial "custom/link/podcast-js-links.html" . }}
