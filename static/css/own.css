@@ -55,5 +55,9 @@ a{
 	align-items: flex-end;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.player-title{
+	display: flex;
+	align-content: space-around;
 
 }
