@@ -59,5 +59,6 @@ a{
 .player-title{
 	display: flex;
 	align-content: space-around;
-
+	justify-content: flex-start;
+	
 }
