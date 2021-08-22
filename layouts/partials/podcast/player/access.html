@@ -2,7 +2,7 @@
 {{ range where .Site.Pages.Reverse "Type" "tr1" }}
     <div class="player">
       <img src="https://ramiro.me/img/podcast.cover.why.what.how.jpg" width="40%">
-      <div class="flex">
+      <div class="player-title">
         {{ if eq .Params.TepisodeType "bonus" }}
           <h4>[{{ .Params.episodeType }}]{{ .Title }}</h4>
           {{else}}
