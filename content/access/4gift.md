@@ -4,8 +4,8 @@ type: tr1
 TepisodeType: bonus
 episodeType: gift
 
-season: ""
-episode: ""
+season:
+episode: 
 title: for.being.here
 Date: "2021-08-20T05:45:04.00+00:00"
 

@@ -56,7 +56,9 @@
           <itunes:title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
                  <title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
         {{end}}
+      {{ if isset .Params "episode") }}
       <itunes:episode>{{ .Params.episode }}</itunes:episode>
+      {{end}}
       <!-- <itunes:season>{{ .Params.season }}</itunes:season> -->
       <itunes:author>{{ .Params.author}}</itunes:author>
       <link>{{ .Params.customLink }}</link>
