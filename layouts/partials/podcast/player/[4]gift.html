@@ -4,7 +4,7 @@
   {{ if eq .Params.episodeType "gift" }}
   <div class="container">
     <div class="podcast">
-      <audio controls width="100%">
+      <audio controls width="100%" preload="metadata">
           <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
             Your browser does not support the audio tag.
       </audio>
