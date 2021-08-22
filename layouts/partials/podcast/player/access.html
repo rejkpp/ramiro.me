@@ -1,22 +1,19 @@
-{{ partial "custom/css/player-css.html" . }}
-
 {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
 {{ range where .Site.Pages.Reverse "Type" "tr1" }}
+    <div class="player">
+      <img src="https://ramiro.me/img/podcast.cover.jpg" width="40%">
+      <div class="">
+        {{ if eq .Params.TepisodeType "bonus" }}
+          <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
+          {{else}}
+          <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
+        {{end}}
+        <audio controls width="100%" preload="metadata">
+            <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
+              Your browser does not support the audio tag.
+        </audio>
+      </div>
 
-
-  {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
-    <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
-  {{else}}
-    <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
-  {{end}}
-  <div class="container">
-    <div class="podcast">
-      <audio controls width="100%">
-          <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
-            Your browser does not support the audio tag.
-      </audio>
     </div>
-  </div>
+  {{ end }}
 {{ end }}
-
-{{ partial "custom/link/podcast-js-links.html" . }}

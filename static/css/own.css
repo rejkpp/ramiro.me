@@ -50,4 +50,7 @@ a{
 .player{
 	border: 1px solid lightgrey;
 	border-radius: 0.4rem;
+	margin: 4rem 0;
+	padding: 1rem 0;
+	display: flex;
 }
