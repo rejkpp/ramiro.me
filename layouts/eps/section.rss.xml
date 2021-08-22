@@ -16,8 +16,8 @@
     <title>story legacy at ramiro.me</title>
     <link>https://ramiro.me/show</link>
       {{ range where .Site.Pages "Type" "descr" }}
-      <description>{{ .Params.itunesSummaryMain}} cherries</description>
-      <itunes:summary>{{ .Params.itunesSummaryMain}} ramiro</itunes:summary>
+      <description>{{ .Params.itunesSummaryMain}}</description>
+      <itunes:summary>{{ .Params.itunesSummaryMain}} launched on aug 23</itunes:summary>
       {{ end }}
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
