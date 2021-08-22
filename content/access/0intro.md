@@ -1,11 +1,11 @@
 ---
 author: ramiro.me
 type: tr1
-TepisodeType: trailer
+TepisodeType: bonus
 episodeType: intro
 
 season:
-episode: 
+episode:
 title: why.what.how.on.personal.story
 Date: "2021-08-20T05:45:00.00+00:00"
 
