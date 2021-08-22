@@ -3,10 +3,11 @@
 {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
 {{ range where .Site.Pages "Type" "tr1" }}
 
-  {{ if isset .Params "episode" }}
-    <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
-  {{ else}}
+
+  {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
     <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
+  {{else}}
+    <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
   {{end}}
   <div class="container">
     <div class="podcast">
@@ -16,6 +17,5 @@
       </audio>
     </div>
   </div>
+  {{ partial "custom/link/podcast-js-links.html" . }}
 {{ end }}
-
-{{ partial "custom/link/podcast-js-links.html" . }}
