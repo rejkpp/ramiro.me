@@ -1,7 +1,7 @@
 ---
 author: ramiro.me
 type: tr1
-TepisodeType: trailer
+TepisodeType: bonus
 episodeType: intro
 
 season:
