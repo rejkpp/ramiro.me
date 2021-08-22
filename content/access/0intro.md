@@ -15,7 +15,7 @@ guid: 443a28e8-ae3d-4ee3-99db-b7fdf4474c8f
 duration: 74
 
 customLink: https://ramiro.me/show
-itunesSummary: 0
+itunesSummary: 
 
 ---
 {{< partial "podcast/description/training.html" >}}
