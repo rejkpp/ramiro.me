@@ -2,11 +2,11 @@
 {{ range where .Site.Pages.Reverse "Type" "tr1" }}
     <div class="player">
       <img src="https://ramiro.me/img/podcast.cover.jpg" width="40%">
-      <div class="">
+      <div class="flex">
         {{ if eq .Params.TepisodeType "bonus" }}
-          <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
+          <h4>[{{ .Params.episodeType }}]{{ .Title }}</h4>
           {{else}}
-          <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
+          <h4>[{{ .Params.episode }}]{{ .Title }}</h4>
         {{end}}
         <audio controls width="100%" preload="metadata">
             <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
