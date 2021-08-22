@@ -3,28 +3,19 @@
 
   {{ partial "custom/css/player-css.html" . }}
 
+  {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
+    <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
+  {{else}}
+    <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
+  {{end}}
   <div class="container">
     <div class="podcast">
-      {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
-        <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
-      {{else}}
-        <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
-      {{end}}
       <audio controls width="100%">
           <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
             Your browser does not support the audio tag.
       </audio>
     </div>
   </div>
-  {{ partial "custom/link/podcast-js-links.html" . }}
 {{ end }}
 
-
-
-{{ range where .Site.Pages "Type" "tr1" }}
-  {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
-    <h3>[{{ .Params.episodeType }}]{{ .Title }}</h3>
-  {{else}}
-    <h3>[{{ .Params.episode }}]{{ .Title }}</h3>
-  {{end}}
-{{ end }}
+{{ partial "custom/link/podcast-js-links.html" . }}
