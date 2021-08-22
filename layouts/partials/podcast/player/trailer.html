@@ -5,25 +5,16 @@
 
     <div class="container">
       <div class="podcast">
-        <h3 class="podcast__episode_title">Debugging Tools + Tips</h3>
-        <h5 class="podcast__title">
-          <i>Episode 152</i>
-        </h5>
+        <h4 class="podcast__episode_title">[trailer]story.legacy</h4>
+        <!-- <h5 class="podcast__title"></h5> -->
 
         <div class="podcast__meta">
           <audio controls width="100%">
             <source src="https://stream.redcircle.com/private-episodes/5ab374d9-02df-4fd9-81ae-0742c7da373d/rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6/stream.mp3">
             Your browser does not support the audio tag.
           </audio>
-          <a href="#" class="artwork">
-            <img src="https://ramiro.me/img/podcast.cover.why.what.how.jpg" alt="">
-          </a>
         </div>
       </div>
     </div>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js'></script>
-  <script src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
-  <script src="https://ramiro.me/js/podcast.js"></script>
+    {{ partial "custom/link/podcast-js-links.html" . }}
