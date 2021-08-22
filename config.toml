@@ -77,7 +77,6 @@ disableHugoGeneratorInject = false
   customCSS = [""]
   customJS  = ["js/own.js"]
 
-
 [menu]
   # [[menu.main]]
   #   name       = "resources"
