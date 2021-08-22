@@ -49,8 +49,13 @@
     {{ range where .Site.Pages "Type" "tr1" }}
     <item>
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
-      <itunes:title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
-      <title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
+        {{ if or  (eq .Params.TepisodeType "trailer") (eq .Params.TepisodeType "bonus") }}
+          <itunes:title>[{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+                 <title>[{{ .Params.episodeType }}]{{ .Title }}</title>
+        {{else}}
+          <itunes:title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</itunes:title>
+                 <title>[{{ .Params.episode}}][{{ .Params.episodeType }}]{{ .Title }}</title>
+        {{end}}
       <itunes:episode>{{ .Params.episode }}</itunes:episode>
       <!-- <itunes:season>{{ .Params.season }}</itunes:season> -->
       <itunes:author>{{ .Params.author}}</itunes:author>
