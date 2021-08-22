@@ -7,7 +7,7 @@ episodeType: training
 season: ""
 episode: "03"
 title: how.to.tell.it.to.make.an.impact
-Date: "2021-08-20T05:45:00.00+00:00"
+Date: "2021-08-20T05:45:03.00+00:00"
 
 length: 1187004
 mp3url: 772b0f88-a419-474a-88d0-31dc8b418d45
