@@ -9,6 +9,6 @@ title:
 
 {{< partial "podcast/button/ramirome-button-story-training.html" >}}
 
-{{< partial "br.html" >}}
+### {{< partial "br.html" >}}
 
 {{< partial "podcast/button/apple-button-story-training.html" >}}
