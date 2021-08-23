@@ -1,14 +1,14 @@
 {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
 {{ range where .Site.Pages.Reverse "Type" "tr1" }}
     <div class="player">
-      <img src="https://ramiro.me/img/podcast.cover.why.what.how.jpg" width="40%">
+      <img src="https://ramiro.me/img/podcast.cover.why.what.how.jpg" width="23%">
       <div class="player-title">
         {{ if eq .Params.TepisodeType "bonus" }}
-        <h4>[{{ .Params.episodeType }}]<br>{{ .Title }}</h4>
+        <h4 width="77%">[{{ .Params.episodeType }}]<br>{{ .Title }}</h4>
           {{else}}
-        <h4>[{{ .Params.episode }}]<br>{{ .Title }}</h4>
+        <h4 width="77%">[{{ .Params.episode }}]<br>{{ .Title }}</h4>
         {{end}}
-        <audio controls width="100%" preload="metadata">
+        <audio controls width="77%" preload="metadata">
             <source src="https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString }}/stream.mp3">
               Your browser does not support the audio tag.
         </audio>
