@@ -1,18 +1,19 @@
 ---
 author: ramiro.me
-title: story.legacy
 type: ep
+TepisodeType: trailer
+episodeType: trailer
 
 season: "01"
-episode: 
-episodeType: trailer
-TepisodeType: trailer
+episode:
+title: story.legacy
+Date: "2021-08-01T20:00:00.00+00:00"
 
-length: 1187004
 mp3url: 5ab374d9-02df-4fd9-81ae-0742c7da373d
 guid: bfe44401-e8b4-43ac-b9c7-fd4c0e24543f
-Date: "2021-08-01T20:00:00.00+00:00"
+length: 1187004
 duration: 74
+
 customLink: https://ramiro.me/show
 itunesSummary: "&lt;p&gt;story.legacy at &lt;a href=&quot;http://ramiro.me/&quot;&gt;ramiro.me&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&mdash;a show for people who want to tell their story, make an impact and leave a legacy.&lt;/p&gt;
