@@ -120,6 +120,12 @@
 		}
 	}
 	#footer.wrapper.style2 {
+			> .inner {
+				> .hush {
+					color: _palette(bg);
+				}	
+			}
+
 			&.invert {
 				&:not(.color1):not(.color2):not(.color3):not(.color4):not(.color5):not(.color6):not(.color7) {
 					background-color: _palette(invert, bg-alt);
@@ -129,16 +135,9 @@
 				> .inner {
 					background-color: _palette(invert, bg);
 					color: _palette(invert, fg);
+					> .hush{
+						color: _palette(invert, bg);
+					}
 				}
 			}
 		}
-
-	.hush {
-		color: _palette(bg);
-
-		&.invert {
-			&:not(.color1):not(.color2):not(.color3):not(.color4):not(.color5):not(.color6):not(.color7) {
-				color: _palette(invert, bg);
-			}
-		}
-	}
