@@ -163,3 +163,12 @@
 					}
 				}
 			}
+
+		mark {
+		  background-color: _palette(bg);
+		  color: _palette(fg);
+			&.invert {
+				background-color: _palette(invert,bg);
+			  color: _palette(invert,fg);				
+			}
+		}
