@@ -10,7 +10,7 @@ contentAlign: content-align-left
 - life lessons learned
 - message for future generations
 
-### flow + structure of story legacy podcast
+### flow + structure
 1. we'll be on zoom (video and audio) and live on facebook
 2. i’ll hit record and we’ll start right away
 3. i do the show intro + introduce you
