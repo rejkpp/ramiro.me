@@ -1,6 +1,6 @@
 ---
 
-invert: off
+invert: 
 contentAlign: content-align-left
 
 
