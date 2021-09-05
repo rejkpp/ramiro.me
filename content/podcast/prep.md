@@ -23,3 +23,7 @@ contentAlign: content-align-left
 10. end fb live + quick defrief (depending on what time we end)
 
 #### everything 1-10 will be at max. 60 min.
+
+### questions for me to know before our call
+1. are there any questions off-limits, that you are not okay with me asking? (i dare to ask questions a 5-year-old would ask)
+2. do you have any questions for me before we do our interview?
