@@ -3,10 +3,10 @@
 contentAlign: content-align-left
 
 ---
-## guide to the story legacy podcast
+### guide to the story legacy podcast
 #### a show for people who want to tell their story, make an impact, and leave a legacy.
 
-### my intention is to have a fun insightful conversation
+#### my intention is to have a fun insightful conversation
 #### you'll get to share
 - your story
 - life lessons learned
@@ -16,9 +16,7 @@ contentAlign: content-align-left
 1. we'll be on zoom (video and audio) and live on facebook
 2. i’ll hit record and we’ll start right away
 3. i do the show intro + introduce you
-4. opening question i might ask:
-  - “what’s the biggest challenge you’ve faced so far?”
-  - “what’s the most important lesson you’ve learned thus far?”
+4. opening question i might ask:{{< partial "br.html" >}}- “what’s the biggest challenge you’ve faced so far?”- “what’s the most important lesson you’ve learned thus far?”
 5. free flow space (20-30 min. human conversation, based on what you shared)
 6. closing question:
   - “what message do you have for people today, tomorrow, and 1000 years from now?”
