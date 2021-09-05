@@ -164,17 +164,11 @@
 				}
 			}
 
-			#wrapper {
-				> .wrapper.style2 {
-					> mark {
-					  background-color: _palette(bg);
-					  color: _palette(fg);
-					}
-					&.invert {
-						> mark {
-							background-color: _palette(invert,bg);
-							color: _palette(invert,fg);
-						}
-					}
-				}
+		mark {
+		  background-color: _palette(bg);
+		  color: _palette(fg);
+			&.invert {
+				background-color: _palette(invert,bg);
+			  color: _palette(invert,fg);
 			}
+		}
