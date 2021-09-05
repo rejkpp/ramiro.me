@@ -1,6 +1,8 @@
 ---
 
+invert:
 contentAlign: content-align-left
+
 
 ---
 ### {{< partial "mrk.html" >}}guide to the story legacy podcast{{< partial "mrk2.html" >}}
