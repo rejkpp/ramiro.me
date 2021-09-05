@@ -1,5 +1,6 @@
 ---
 
+contentAlign: content-align-left
 ---
 ## guide to the story legacy podcast
 #### a show for people who want to tell their story, make an impact, and leave a legacy.

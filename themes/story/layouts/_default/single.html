@@ -3,7 +3,11 @@
 <div id="wrapper" class="divided">
 
 <!-- Banner -->
+{{ if isset .Params "contentAlign" }}
+<section class="banner invert style2 orient-center {{ .Params.contentAlign }} image-position-center fullscreen onload-image-fade-in onload-content-fade-in">
+{{else}}
 <section class="banner invert style2 orient-center content-align-center image-position-center fullscreen onload-image-fade-in onload-content-fade-in">
+{{end}}
   <div class="content">
 		{{ .Content }}
   </div>
