@@ -1,18 +1,18 @@
 ---
 
-invert: 
+
 contentAlign: content-align-left
 
 
 ---
-### {{< partial "mrki.html" >}}guide to the story legacy podcast{{< partial "mrk2.html" >}}
+### {{< partial "mrk.html" >}}guide to the story legacy podcast{{< partial "mrk2.html" >}}
 #### my intention is to have a fun insightful conversation
 #### you'll get to share:
 - your story
 - life lessons learned
 - message for future generations
 
-### {{< partial "mrki.html" >}}flow + structure{{< partial "mrk2.html" >}}
+### {{< partial "mrk.html" >}}flow + structure{{< partial "mrk2.html" >}}
 1. we'll be on zoom (video and audio) and live on facebook
 2. i’ll hit record and we’ll start right away
 3. i do the show intro + introduce you
@@ -26,6 +26,6 @@ contentAlign: content-align-left
 
 #### everything 1-10 will be at max. 60 min.
 {{< partial "br.html" >}}
-### {{< partial "mrki.html" >}}questions right now{{< partial "mrk2.html" >}}
+### {{< partial "mrk.html" >}}questions right now{{< partial "mrk2.html" >}}
 1. are there any questions off-limits, that you are not okay with me asking? (i dare to ask questions a 5-year-old would ask)
 2. do you have any questions for me before we do our interview?
