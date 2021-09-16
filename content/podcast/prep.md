@@ -27,4 +27,5 @@ contentAlign: content-align-left
 #### everything 1-10 will be 60 to 90 min. max.
 {{< partial "br.html" >}}
 ### {{< partial "mrk.html" >}}questions right now{{< partial "mrk2.html" >}}
-1. do you have any questions for me before we do our interview?
+1. are there any questions off limits? {{< partial "br.html" >}} *i dare ask questions a 5 year old would*
+2. do you have any questions for me before we do our interview?
