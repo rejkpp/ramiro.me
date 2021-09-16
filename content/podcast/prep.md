@@ -13,7 +13,7 @@ contentAlign: content-align-left
 - message for future generations
 
 ### {{< partial "mrk.html" >}}flow + structure{{< partial "mrk2.html" >}}
-1. access the virtual studio (streamyard) via browser {{< partial "br.html" >}}{{< partial "br.html" >}}https://ramiro.me/podcast/studio. {{< partial "br.html" >}}{{< partial "br.html" >}}i'll send a unique streamyard link in case that link goes to the wrong broadcast
+1. access the virtual studio (streamyard) via browser {{< partial "br.html" >}}{{< partial "br.html" >}} https://ramiro.me/podcast/studio {{< partial "br.html" >}}{{< partial "br.html" >}}i'll send a unique streamyard link in case that link goes to the wrong broadcast
 2. the moment i hit 'go live' we'll be live on facebook and youtube (video and audio). the live broadcast will become the episode for the audio platforms (spotify, apple etc.)
 3. i do the show intro + introduce you
 4. opening question i might ask:{{< partial "br.html" >}}— “what’s the biggest challenge you’ve faced so far?”{{< partial "br.html" >}}— “what’s the most important lesson you’ve learned thus far?”
