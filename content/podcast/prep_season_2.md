@@ -26,7 +26,7 @@ contentAlign: content-align-left
 10. stop live broadcast
 11. after show wrap up
 
-#### everything 1-11 will be 60 to 90 min.
+#### everything 1-11 will be 60 to 90 min. max.
 {{< partial "br.html" >}}
 ### {{< partial "mrk.html" >}}questions right now{{< partial "mrk2.html" >}}
 1. are there any questions off limits? {{< partial "br.html" >}} *i dare ask questions a 5 year old would*
