@@ -5,8 +5,8 @@ contentAlign: content-align-left
 
 
 ---
-### {{< partial "mrk.html" >}}guide to the story legacy podcast{{< partial "mrk2.html" >}}
 ### {{< partial "mrk.html" >}}season 2 — music edition{{< partial "mrk2.html" >}}
+### {{< partial "mrk.html" >}}guide to the story legacy podcast{{< partial "mrk2.html" >}}
 #### my intention is to have a fun insightful conversation
 #### you'll get to share:
 - your story about music
