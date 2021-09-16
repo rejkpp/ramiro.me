@@ -24,7 +24,7 @@ contentAlign: content-align-left
 9. stop live broadcast
 10. after show wrap up
 
-#### everything 1-10 will be 60 to 90 min.
+#### everything 1-10 will be 60 to 90 min. max.
 {{< partial "br.html" >}}
 ### {{< partial "mrk.html" >}}questions right now{{< partial "mrk2.html" >}}
 1. do you have any questions for me before we do our interview?
