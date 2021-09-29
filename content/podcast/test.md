@@ -10,7 +10,7 @@ Date: "2021-09-28T22:40:00.00+00:00"
 #### there are two studio booths
 #### each links to a broadcast on streamyard
 #### studio links last updated on
-{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}
+{{< partial "date.html" >}}
 
 
 {{< partial "br.html" >}}
