@@ -12,12 +12,8 @@ contentAlign: content-align-left
 
 
 {{< partial "br.html" >}}
-### {{< partial "mrk.html" >}}
-studio 1 — karen
-{{< partial "mrk2.html" >}}
+### {{< partial "mrk.html" >}}studio 1 — karen{{< partial "mrk2.html" >}}
 https://streamyard.com/5mnxu2efjm
 
-### {{< partial "mrk.html" >}}
-studio 2 — kelly
-{{< partial "mrk2.html" >}}
+### {{< partial "mrk.html" >}}studio 2 — kelly{{< partial "mrk2.html" >}}
 https://streamyard.com/wsmvajrsdj
