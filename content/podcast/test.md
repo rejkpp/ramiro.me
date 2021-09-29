@@ -9,7 +9,9 @@ Date: "2021-09-28T22:40:00.00+00:00"
 ### {{< partial "mrk.html" >}}welcome to the virtual studio at ramiro.me{{< partial "mrk2.html" >}}
 #### there are two studio booths
 #### each links to a broadcast on streamyard
-#### studio links last updated on {{ .Date }}
+#### studio links last updated on
+{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}
+
 
 {{< partial "br.html" >}}
 ### {{< partial "mrk.html" >}}studio 1{{< partial "mrk2.html" >}}
