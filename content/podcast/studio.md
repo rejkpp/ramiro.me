@@ -6,7 +6,7 @@ contentAlign: content-align-left
 
 ---
 ### {{< partial "mrk.html" >}}welcome to the virtual studio at ramiro.me{{< partial "mrk2.html" >}}
-#### there are two studio booths. each links to a broadcast on streamyard. enter the studio that has your name behind it.
+#### enter the studio that has your name behind it.
 #### studio links last updated on *29 sep 2021*
 
 {{< partial "br.html" >}}
