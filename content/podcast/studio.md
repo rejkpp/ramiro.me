@@ -15,8 +15,8 @@ https://streamyard.com/k9feshtx7x
 
 
 {{< partial "br.html" >}}
-### {{< partial "mrk.html" >}}studio 2 — michael onabolu{{< partial "mrk2.html" >}}
-https://streamyard.com/hq2d3tekfq
+### {{< partial "mrk.html" >}}studio 2 — elvira hopper{{< partial "mrk2.html" >}}
+https://streamyard.com/g29rq4hpfm
 
 <!-- {{< partial "br.html" >}}
 ### {{< partial "mrk.html" >}}studio 3 — susan friedman{{< partial "mrk2.html" >}}
