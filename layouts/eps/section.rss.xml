@@ -46,6 +46,7 @@
     <itunes:image href="https://ramiro.me/img/podcast.cover.ramiro.jpg"/>
 
     {{ $channelString := "rct_a29fc57d-4ae0-485c-b38e-71d5bd712ba6"}}
+
     {{ range where .Site.Pages "Type" "ep" }}
     <item>
       <itunes:episodeType>{{ .Params.TepisodeType }}</itunes:episodeType>
@@ -63,7 +64,7 @@
       <link>{{ .Params.customLink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       <guid isPermaLink="false">{{ .Params.Guid }}</guid>
-      <enclosure length="{{ .Params.Length }}" type="audio/mpeg" url= "https://stream.redcircle.com/private-episodes/{{ .Params.mp3url }}/{{ $channelString}}/stream.mp3"/>
+      <enclosure length="{{ .Params.Length }}" type="audio/mpeg" url= "https://audio4.redcircle.com/episodes/{{ .Params.mp3url }}/stream.mp3"/>
       <dc:creator>{{ .Params.author}}</dc:creator>
       <itunes:duration>{{ .Params.duration }}</itunes:duration>
       <itunes:explicit>yes</itunes:explicit>
