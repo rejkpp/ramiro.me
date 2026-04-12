@@ -1,0 +1,68 @@
+package pages
+
+import "github.com/rejkpp/ramiro.me/templates/layout"
+
+templ Projects() {
+	@layout.Base("Projects") {
+		<section class="py-12">
+			<h1 class="font-heading text-4xl md:text-5xl font-bold text-text mb-4">
+				Projects
+			</h1>
+			<p class="font-body text-lg text-text-muted">
+				Things I've built
+			</p>
+		</section>
+		<section class="py-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				@projectCard(
+					"[Project One]",
+					"AI",
+					"[Project description placeholder. What it does and why it matters.]",
+					[]string{"Go", "Python", "PyTorch"},
+				)
+				@projectCard(
+					"[Project Two]",
+					"Trading",
+					"[Project description placeholder. What it does and why it matters.]",
+					[]string{"Rust", "TimescaleDB"},
+				)
+				@projectCard(
+					"[Project Three]",
+					"Venture",
+					"[Project description placeholder. What it does and why it matters.]",
+					[]string{"TypeScript", "Next.js"},
+				)
+				@projectCard(
+					"[Project Four]",
+					"AI",
+					"[Project description placeholder. What it does and why it matters.]",
+					[]string{"Go", "Templ", "HTMX"},
+				)
+			</div>
+		</section>
+	}
+}
+
+templ projectCard(title string, category string, description string, tags []string) {
+	<div class="bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors">
+		<div class="font-heading text-xs text-accent uppercase tracking-wide mb-2">
+			{ category }
+		</div>
+		<h3 class="font-heading text-xl md:text-2xl font-semibold text-text mb-3">
+			{ title }
+		</h3>
+		<p class="font-body text-text-muted text-sm mb-4">
+			{ description }
+		</p>
+		<div class="flex flex-wrap gap-2 mb-4">
+			for _, tag := range tags {
+				<span class="bg-bg border border-bg-border text-text-muted text-xs font-body rounded-full px-3 py-1">
+					{ tag }
+				</span>
+			}
+		</div>
+		<a href="#" class="font-body text-accent hover:text-accent-light text-sm transition-colors">
+			View →
+		</a>
+	</div>
+}

@@ -4,40 +4,55 @@ import "github.com/rejkpp/ramiro.me/templates/layout"
 
 templ Home() {
 	@layout.Base("Home") {
-		<section class="py-12">
-			<h1 class="font-heading text-4xl md:text-6xl font-bold text-text mb-4">
-				Ramiro
+		<section class="py-16 md:py-24 text-center">
+			<h1 class="font-heading text-5xl md:text-7xl font-bold text-text mb-6 leading-tight">
+				Intuition, Intelligence, Impact
 			</h1>
-			<p class="font-body text-lg text-text-muted max-w-2xl">
-				Welcome. This site is being rebuilt.
+			<p class="font-body text-lg md:text-xl text-text-muted max-w-2xl mx-auto mb-8">
+				[One sentence about what you do]
 			</p>
+			<a
+				href="/contact"
+				class="inline-block bg-accent hover:bg-accent-light text-bg font-heading font-semibold px-8 py-3 rounded-lg transition-colors"
+			>
+				Get in touch
+			</a>
+		</section>
+		<section class="py-12">
+			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-8 text-center">
+				What I do
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				@identityCard("AI", "AI Developer", "[description placeholder]")
+				@identityCard("TR", "Algorithmic Trader", "[description placeholder]")
+				@identityCard("EN", "Entrepreneur", "[description placeholder]")
+				@identityCard("MT", "Meditation Teacher", "[description placeholder]")
+				@identityCard("PG", "Polyglot", "[description placeholder]")
+			</div>
+		</section>
+		<section class="py-12">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-4">
+				Featured
+			</h2>
+			<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+				<p class="font-body text-text-muted">
+					[Placeholder for featured content/latest work]
+				</p>
+			</div>
 		</section>
 	}
 }
 
-templ About() {
-	@layout.Base("About") {
-		<section class="py-12">
-			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">About</h2>
-			<p class="font-body text-text-muted">About page placeholder.</p>
-		</section>
-	}
-}
-
-templ Projects() {
-	@layout.Base("Projects") {
-		<section class="py-12">
-			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">Projects</h2>
-			<p class="font-body text-text-muted">Projects page placeholder.</p>
-		</section>
-	}
-}
-
-templ Contact() {
-	@layout.Base("Contact") {
-		<section class="py-12">
-			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">Contact</h2>
-			<p class="font-body text-text-muted">Contact page placeholder.</p>
-		</section>
-	}
+templ identityCard(icon string, title string, description string) {
+	<div class="bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors">
+		<div class="w-12 h-12 rounded-lg bg-bg border border-bg-border flex items-center justify-center mb-4 font-heading font-bold text-accent">
+			{ icon }
+		</div>
+		<h3 class="font-heading text-xl font-semibold text-text mb-2">
+			{ title }
+		</h3>
+		<p class="font-body text-text-muted text-sm">
+			{ description }
+		</p>
+	</div>
 }

@@ -10,7 +10,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import "github.com/rejkpp/ramiro.me/templates/layout"
 
-func Home() templ.Component {
+func Projects() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -43,37 +43,53 @@ func Home() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"py-16 md:py-24 text-center\"><h1 class=\"font-heading text-5xl md:text-7xl font-bold text-text mb-6 leading-tight\">Intuition, Intelligence, Impact</h1><p class=\"font-body text-lg md:text-xl text-text-muted max-w-2xl mx-auto mb-8\">[One sentence about what you do]</p><a href=\"/contact\" class=\"inline-block bg-accent hover:bg-accent-light text-bg font-heading font-semibold px-8 py-3 rounded-lg transition-colors\">Get in touch</a></section><section class=\"py-12\"><h2 class=\"font-heading text-3xl md:text-4xl font-bold text-text mb-8 text-center\">What I do</h2><div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"py-12\"><h1 class=\"font-heading text-4xl md:text-5xl font-bold text-text mb-4\">Projects</h1><p class=\"font-body text-lg text-text-muted\">Things I've built</p></section><section class=\"py-8\"><div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = identityCard("AI", "AI Developer", "[description placeholder]").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = projectCard(
+				"[Project One]",
+				"AI",
+				"[Project description placeholder. What it does and why it matters.]",
+				[]string{"Go", "Python", "PyTorch"},
+			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = identityCard("TR", "Algorithmic Trader", "[description placeholder]").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = projectCard(
+				"[Project Two]",
+				"Trading",
+				"[Project description placeholder. What it does and why it matters.]",
+				[]string{"Rust", "TimescaleDB"},
+			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = identityCard("EN", "Entrepreneur", "[description placeholder]").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = projectCard(
+				"[Project Three]",
+				"Venture",
+				"[Project description placeholder. What it does and why it matters.]",
+				[]string{"TypeScript", "Next.js"},
+			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = identityCard("MT", "Meditation Teacher", "[description placeholder]").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = projectCard(
+				"[Project Four]",
+				"AI",
+				"[Project description placeholder. What it does and why it matters.]",
+				[]string{"Go", "Templ", "HTMX"},
+			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = identityCard("PG", "Polyglot", "[description placeholder]").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div></section><section class=\"py-12\"><h2 class=\"font-heading text-2xl md:text-3xl font-bold text-text mb-4\">Featured</h2><div class=\"bg-bg-surface border border-bg-border rounded-lg p-6\"><p class=\"font-body text-text-muted\">[Placeholder for featured content/latest work]</p></div></section>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div></section>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = layout.Base("Home").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layout.Base("Projects").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -81,7 +97,7 @@ func Home() templ.Component {
 	})
 }
 
-func identityCard(icon string, title string, description string) templ.Component {
+func projectCard(title string, category string, description string, tags []string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -102,46 +118,69 @@ func identityCard(icon string, title string, description string) templ.Component
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<div class=\"bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors\"><div class=\"w-12 h-12 rounded-lg bg-bg border border-bg-border flex items-center justify-center mb-4 font-heading font-bold text-accent\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<div class=\"bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors\"><div class=\"font-heading text-xs text-accent uppercase tracking-wide mb-2\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var4 string
-		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(icon)
+		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(category)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 49, Col: 9}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 49, Col: 13}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</div><h3 class=\"font-heading text-xl font-semibold text-text mb-2\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</div><h3 class=\"font-heading text-xl md:text-2xl font-semibold text-text mb-3\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 52, Col: 10}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 52, Col: 10}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</h3><p class=\"font-body text-text-muted text-sm\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</h3><p class=\"font-body text-text-muted text-sm mb-4\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(description)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 55, Col: 16}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 55, Col: 16}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</p></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</p><div class=\"flex flex-wrap gap-2 mb-4\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		for _, tag := range tags {
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<span class=\"bg-bg border border-bg-border text-text-muted text-xs font-body rounded-full px-3 py-1\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var7 string
+			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
+			if templ_7745c5c3_Err != nil {
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 60, Col: 10}
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</span>")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "</div><a href=\"#\" class=\"font-body text-accent hover:text-accent-light text-sm transition-colors\">View →</a></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
