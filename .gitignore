@@ -1,3 +1,6 @@
 
 static/.DS_Store
 .DS_Store
+bin/
+static/css/app.css
+tailwindcss
