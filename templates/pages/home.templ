@@ -1,0 +1,74 @@
+package pages
+
+templ Home() {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<title>Ramiro</title>
+			<script src="/static/js/htmx.min.js"></script>
+		</head>
+		<body>
+			<header>
+				<h1>Ramiro</h1>
+				<nav>
+					<a href="/">Home</a>
+					<a href="/about">About</a>
+					<a href="/projects">Projects</a>
+					<a href="/contact">Contact</a>
+				</nav>
+			</header>
+			<main>
+				<p>Welcome. This site is being rebuilt.</p>
+			</main>
+		</body>
+	</html>
+}
+
+templ About() {
+	@layout("About") {
+		<h2>About</h2>
+		<p>About page placeholder.</p>
+	}
+}
+
+templ Projects() {
+	@layout("Projects") {
+		<h2>Projects</h2>
+		<p>Projects page placeholder.</p>
+	}
+}
+
+templ Contact() {
+	@layout("Contact") {
+		<h2>Contact</h2>
+		<p>Contact page placeholder.</p>
+	}
+}
+
+templ layout(title string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<title>{ title } — Ramiro</title>
+			<script src="/static/js/htmx.min.js"></script>
+		</head>
+		<body>
+			<header>
+				<h1>Ramiro</h1>
+				<nav>
+					<a href="/">Home</a>
+					<a href="/about">About</a>
+					<a href="/projects">Projects</a>
+					<a href="/contact">Contact</a>
+				</nav>
+			</header>
+			<main>
+				{ children... }
+			</main>
+		</body>
+	</html>
+}
