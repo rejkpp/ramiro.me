@@ -1,74 +1,43 @@
 package pages
 
+import "github.com/rejkpp/ramiro.me/templates/layout"
+
 templ Home() {
-	<!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<meta charset="utf-8"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1"/>
-			<title>Ramiro</title>
-			<script src="/static/js/htmx.min.js"></script>
-		</head>
-		<body>
-			<header>
-				<h1>Ramiro</h1>
-				<nav>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="/projects">Projects</a>
-					<a href="/contact">Contact</a>
-				</nav>
-			</header>
-			<main>
-				<p>Welcome. This site is being rebuilt.</p>
-			</main>
-		</body>
-	</html>
+	@layout.Base("Home") {
+		<section class="py-12">
+			<h1 class="font-heading text-4xl md:text-6xl font-bold text-text mb-4">
+				Ramiro
+			</h1>
+			<p class="font-body text-lg text-text-muted max-w-2xl">
+				Welcome. This site is being rebuilt.
+			</p>
+		</section>
+	}
 }
 
 templ About() {
-	@layout("About") {
-		<h2>About</h2>
-		<p>About page placeholder.</p>
+	@layout.Base("About") {
+		<section class="py-12">
+			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">About</h2>
+			<p class="font-body text-text-muted">About page placeholder.</p>
+		</section>
 	}
 }
 
 templ Projects() {
-	@layout("Projects") {
-		<h2>Projects</h2>
-		<p>Projects page placeholder.</p>
+	@layout.Base("Projects") {
+		<section class="py-12">
+			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">Projects</h2>
+			<p class="font-body text-text-muted">Projects page placeholder.</p>
+		</section>
 	}
 }
 
 templ Contact() {
-	@layout("Contact") {
-		<h2>Contact</h2>
-		<p>Contact page placeholder.</p>
+	@layout.Base("Contact") {
+		<section class="py-12">
+			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">Contact</h2>
+			<p class="font-body text-text-muted">Contact page placeholder.</p>
+		</section>
 	}
-}
-
-templ layout(title string) {
-	<!DOCTYPE html>
-	<html lang="en">
-		<head>
-			<meta charset="utf-8"/>
-			<meta name="viewport" content="width=device-width, initial-scale=1"/>
-			<title>{ title } — Ramiro</title>
-			<script src="/static/js/htmx.min.js"></script>
-		</head>
-		<body>
-			<header>
-				<h1>Ramiro</h1>
-				<nav>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="/projects">Projects</a>
-					<a href="/contact">Contact</a>
-				</nav>
-			</header>
-			<main>
-				{ children... }
-			</main>
-		</body>
-	</html>
 }

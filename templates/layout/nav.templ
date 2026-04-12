@@ -1,0 +1,32 @@
+package layout
+
+templ Nav() {
+	<header class="sticky top-0 z-40 bg-bg-surface border-b border-bg-border">
+		<div class="w-full max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+			<a href="/" class="font-heading text-xl font-bold text-text hover:text-accent-light transition-colors">
+				ramiro.me
+			</a>
+			<nav class="hidden md:flex items-center gap-6 font-body text-text-muted">
+				<a href="/" class="hover:text-accent-light transition-colors">Home</a>
+				<a href="/about" class="hover:text-accent-light transition-colors">About</a>
+				<a href="/projects" class="hover:text-accent-light transition-colors">Projects</a>
+				<a href="/contact" class="hover:text-accent-light transition-colors">Contact</a>
+			</nav>
+			<button
+				type="button"
+				class="md:hidden text-text hover:text-accent-light transition-colors"
+				aria-label="Toggle menu"
+				hx-get="/partials/mobile-menu"
+				hx-target="#mobile-menu"
+				hx-swap="innerHTML"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="3" y1="6" x2="21" y2="6"></line>
+					<line x1="3" y1="12" x2="21" y2="12"></line>
+					<line x1="3" y1="18" x2="21" y2="18"></line>
+				</svg>
+			</button>
+		</div>
+		<div id="mobile-menu" class="md:hidden"></div>
+	</header>
+}
