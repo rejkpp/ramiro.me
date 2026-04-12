@@ -1,6 +1,13 @@
 
 static/.DS_Store
 .DS_Store
+
+# Build artifacts
 bin/
 static/css/app.css
 tailwindcss
+
+# Ephemeral spec files
+.spec/SPEC.md
+.spec/tasks/
+.spec/.last_activity

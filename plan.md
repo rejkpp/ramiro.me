@@ -370,10 +370,10 @@ theme: {
 
 ## Open Questions
 
-1. **Hosting**: Render.com, Fly.io, or DigitalOcean droplet?
-2. **Podcast RSS**: Need to verify RedCircle private RSS feed status. Are the mp3 UUIDs still valid?
+1. **Hosting**: Render.com
+2. **Podcast RSS**: Need to verify RedCircle private RSS feed status. Are the mp3 UUIDs still valid? LATER, when we get to that part.
 3. **Tagline**: "Intuition, Intelligence, Impact" as primary. Where (if anywhere) to use "helping the crazy ones be as FUCKING crazy as they can be"?
-4. **Member onboarding**: At $10k/year, should there be a personal vetting step (call with Ramiro) before payment, or direct checkout?
+4. **Member onboarding**: At $10k/year, should there be a personal vetting step (call with Ramiro) before payment, or direct checkout? YES
 
 ## Resolved Decisions
 
