@@ -37,8 +37,13 @@ func main() {
 	pub := handler.NewPublic()
 	r.Get("/", pub.Home)
 	r.Get("/about", pub.About)
-	r.Get("/contact", pub.Contact)
+	r.Get("/booking", pub.Booking)
 	r.Get("/projects", pub.Projects)
+	r.Get("/brand", pub.Brand)
+
+	// HTMX partials
+	r.Get("/partials/menu", pub.Menu)
+	r.Get("/partials/menu-close", pub.MenuClose)
 
 	srv := &http.Server{
 		Addr:              addr,

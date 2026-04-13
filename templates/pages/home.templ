@@ -3,56 +3,134 @@ package pages
 import "github.com/rejkpp/ramiro.me/templates/layout"
 
 templ Home() {
-	@layout.Base("Home") {
-		<section class="py-16 md:py-24 text-center">
-			<h1 class="font-heading text-5xl md:text-7xl font-bold text-text mb-6 leading-tight">
-				Intuition, Intelligence, Impact
-			</h1>
-			<p class="font-body text-lg md:text-xl text-text-muted max-w-2xl mx-auto mb-8">
-				[One sentence about what you do]
+	@layout.Base("Home", "/") {
+
+		<!-- Hero -->
+		<section class="py-20 px-12 max-w-3xl md:py-20 md:px-12 py-10 px-6">
+			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+			<p class="text-xs uppercase tracking-widest text-accent mb-4">
+				Intelligence &middot; Intuition &middot; Impact
 			</p>
-			<a
-				href="/contact"
-				class="inline-block bg-accent hover:bg-accent-light text-bg font-heading font-semibold px-8 py-3 rounded-lg transition-colors"
-			>
-				Get in touch
-			</a>
-		</section>
-		<section class="py-12">
-			<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-8 text-center">
-				What I do
-			</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				@identityCard("AI", "AI Developer", "[description placeholder]")
-				@identityCard("TR", "Algorithmic Trader", "[description placeholder]")
-				@identityCard("EN", "Entrepreneur", "[description placeholder]")
-				@identityCard("MT", "Meditation Teacher", "[description placeholder]")
-				@identityCard("PG", "Polyglot", "[description placeholder]")
+			<h1 class="text-2xl md:text-4xl font-medium leading-tight text-text mb-4">
+				Helping founders <br> ship fast and stay sane.
+			</h1>
+			<p class="text-base text-text-muted leading-relaxed max-w-xl mb-8">
+				AI integrations, trading algorithms, SaaS development, <br> breathwork and clairvoyant meditation.
+			</p>
+			<div class="flex flex-wrap gap-4">
+				<a
+					href="/booking"
+					class="bg-accent text-bg px-7 py-3 rounded-lg text-sm font-medium hover:bg-accent-light transition-colors"
+				>
+					Book a call
+				</a>
+				<a
+					href="/about"
+					class="border border-accent/40 text-accent px-7 py-3 rounded-lg text-sm font-medium hover:border-accent hover:bg-accent/10 transition-colors"
+				>
+					About
+				</a>
 			</div>
 		</section>
-		<section class="py-12">
-			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-4">
-				Featured
-			</h2>
-			<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
-				<p class="font-body text-text-muted">
-					[Placeholder for featured content/latest work]
+		<!-- Gradient divider -->
+		<div
+			class="h-px mx-12"
+			style="background: linear-gradient(90deg, #1e1e2e, #f59e0b, #ec4899, #1e1e2e)"
+		></div>
+		<!-- Cards -->
+		<section class="py-12 px-12 md:px-12 px-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				@homeCard(homeCardProps{
+					Title:       "AI and agents",
+					Description: "Multi-agent orchestration, LLM pipelines, and autonomous systems. Building custom AI tooling for real-world workflows.",
+					LinkText:    "Explore AI work",
+					LinkHref:    "/projects",
+					Variant:     "amber",
+				})
+				@homeCard(homeCardProps{
+					Title:       "Algorithmic trading",
+					Description: "Systematic trading strategies. Backtesting frameworks using blind forward testing, signal generation, and execution infrastructure.",
+					LinkText:    "See trading projects",
+					LinkHref:    "/projects",
+					Variant:     "amber",
+				})
+				@homeCard(homeCardProps{
+					Title:       "Accounting software",
+					Description: "Purpose-built accounting and invoicing software for businesses in Suriname. Local tax compliance, multi-currency support and local exchange rates.",
+					LinkText:    "Learn more",
+					LinkHref:    "/projects",
+					Variant:     "amber",
+				})
+				@homeCard(homeCardProps{
+					Title:       "Clairvoyant Meditation",
+					Description: "Clairvoyant meditation techniques for the modern world. Tools for developing intuition, reading energy, and navigating life from a place of clarity.",
+					LinkText:    "Discover meditation",
+					LinkHref:    "/projects",
+					Variant:     "pink",
+				})
+			</div>
+		</section>
+		<!-- Featured project -->
+		<section class="py-12 px-12 md:px-12 px-6">
+			<div class="bg-bg-surface rounded-[10px] p-7 border border-bg-border relative overflow-hidden">
+				<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent to-accent-2"></div>
+				<p class="text-[11px] uppercase tracking-wide text-accent-2 mb-2">Currently building</p>
+				<h2 class="text-xl font-medium text-text mb-2">
+					ORC — Open-source multi-agent orchestration
+				</h2>
+				<p class="text-sm text-text-muted leading-relaxed mb-4">
+					A framework for coordinating autonomous AI agents. Plan, delegate,
+					and verify — with structured task management and parallel execution.
 				</p>
+				<a href="https://github.com/rejkpp" class="text-xs text-accent-2 hover:text-accent-2-light transition-colors">
+					View on GitHub &rarr;
+				</a>
+			</div>
+		</section>
+		<!-- Bio card -->
+		<section class="py-12 px-12 md:px-12 px-6">
+			<div class="bg-bg-surface rounded-[10px] p-7 border border-bg-border">
+				<div class="flex items-center gap-4 mb-4">
+					<img src="/static/img/avatar.jpg" alt="Ramiro" class="w-20 h-20 rounded-full object-cover" />
+					<div>
+						<h3 class="text-lg font-medium text-text">Ramiro</h3>
+						<p class="text-sm text-text-muted">
+							Developer, entrepreneur, and meditation teacher based in Colombia.
+						</p>
+					</div>
+				</div>
+				<div class="flex flex-wrap gap-2">
+					<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">AI integrations</span>
+					<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">Trading Algos</span>
+					<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">SaaS development</span>
+					<span class="bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full">Meditation</span>
+					<span class="bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full">Breathwork</span>
+				</div>
 			</div>
 		</section>
 	}
 }
 
-templ identityCard(icon string, title string, description string) {
-	<div class="bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors">
-		<div class="w-12 h-12 rounded-lg bg-bg border border-bg-border flex items-center justify-center mb-4 font-heading font-bold text-accent">
-			{ icon }
-		</div>
-		<h3 class="font-heading text-xl font-semibold text-text mb-2">
-			{ title }
-		</h3>
-		<p class="font-body text-text-muted text-sm">
-			{ description }
-		</p>
-	</div>
+type homeCardProps struct {
+	Title       string
+	Description string
+	LinkText    string
+	LinkHref    string
+	Variant     string
+}
+
+templ homeCard(props homeCardProps) {
+	if props.Variant == "pink" {
+		<a href={ templ.SafeURL(props.LinkHref) } class="bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent-2">
+			<h3 class="text-[17px] font-medium text-text mb-2">{ props.Title }</h3>
+			<p class="text-[13px] text-text-muted leading-relaxed mb-4">{ props.Description }</p>
+			<span class="text-xs text-accent-2">{ props.LinkText } &rarr;</span>
+		</a>
+	} else {
+		<a href={ templ.SafeURL(props.LinkHref) } class="bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent">
+			<h3 class="text-[17px] font-medium text-text mb-2">{ props.Title }</h3>
+			<p class="text-[13px] text-text-muted leading-relaxed mb-4">{ props.Description }</p>
+			<span class="text-xs text-accent">{ props.LinkText } &rarr;</span>
+		</a>
+	}
 }

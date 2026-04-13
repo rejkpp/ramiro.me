@@ -1,32 +1,96 @@
 package layout
 
-templ Nav() {
+templ Nav(path string) {
 	<header class="sticky top-0 z-40 bg-bg-surface border-b border-bg-border">
 		<div class="w-full max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-			<a href="/" class="font-heading text-xl font-bold text-text hover:text-accent-light transition-colors">
-				ramiro.me
-			</a>
-			<nav class="hidden md:flex items-center gap-6 font-body text-text-muted">
-				<a href="/" class="hover:text-accent-light transition-colors">Home</a>
-				<a href="/about" class="hover:text-accent-light transition-colors">About</a>
-				<a href="/projects" class="hover:text-accent-light transition-colors">Projects</a>
-				<a href="/contact" class="hover:text-accent-light transition-colors">Contact</a>
-			</nav>
-			<button
-				type="button"
-				class="md:hidden text-text hover:text-accent-light transition-colors"
-				aria-label="Toggle menu"
-				hx-get="/partials/mobile-menu"
-				hx-target="#mobile-menu"
-				hx-swap="innerHTML"
-			>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<line x1="3" y1="6" x2="21" y2="6"></line>
-					<line x1="3" y1="12" x2="21" y2="12"></line>
-					<line x1="3" y1="18" x2="21" y2="18"></line>
-				</svg>
-			</button>
+			<div class="flex items-center gap-2">
+				<a href="/" class="font-heading text-xl font-bold text-text hover:text-accent-light transition-colors">
+					ramiro.me
+				</a>
+				if path != "/" && path != "" {
+					<a href={ templ.SafeURL(path) } class="font-heading text-lg text-text-muted hover:text-accent-light transition-colors">
+						{ path }
+					</a>
+				}
+			</div>
+			<div id="nav-controls" class="flex items-center gap-4">
+				<button
+					type="button"
+					id="menu-btn"
+					class="text-text hover:text-accent-light transition-colors"
+					aria-label="Open menu"
+					hx-get="/partials/menu"
+					hx-target="#menu-container"
+					hx-swap="innerHTML"
+				>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
+				<a
+					id="nav-cta"
+					href="/booking"
+					class="bg-accent text-bg px-4 py-2 rounded-lg text-sm font-medium hover:bg-accent-light transition-colors"
+				>
+					Book a call
+				</a>
+			</div>
 		</div>
-		<div id="mobile-menu" class="md:hidden"></div>
+		<div id="menu-container"></div>
 	</header>
+}
+
+templ Menu() {
+	<!-- OOB swap: replace hamburger with X close button -->
+	<button
+		id="menu-btn"
+		hx-swap-oob="true"
+		type="button"
+		class="text-text hover:text-accent-light transition-colors"
+		aria-label="Close menu"
+		hx-get="/partials/menu-close"
+		hx-target="#menu-container"
+		hx-swap="innerHTML"
+	>
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<line x1="18" y1="6" x2="6" y2="18"></line>
+			<line x1="6" y1="6" x2="18" y2="18"></line>
+		</svg>
+	</button>
+	<!-- Overlay: click outside to close menu -->
+	<div
+		id="menu-overlay"
+		class="fixed inset-0 z-30"
+		hx-get="/partials/menu-close"
+		hx-target="#menu-container"
+		hx-swap="innerHTML"
+	></div>
+	<nav class="relative z-40 bg-bg-surface border-t border-bg-border">
+		<div class="w-full max-w-5xl mx-auto px-4 py-6 flex flex-col gap-4 font-body text-sm tracking-wide">
+			<a href="/about" class="text-text hover:text-accent-light transition-colors py-2">about</a>
+			<a href="/projects" class="text-text hover:text-accent-light transition-colors py-2">projects</a>
+		</div>
+	</nav>
+}
+
+templ MenuClose() {
+	<!-- OOB swap: restore hamburger icon -->
+	<button
+		id="menu-btn"
+		hx-swap-oob="true"
+		type="button"
+		class="text-text hover:text-accent-light transition-colors"
+		aria-label="Open menu"
+		hx-get="/partials/menu"
+		hx-target="#menu-container"
+		hx-swap="innerHTML"
+	>
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<line x1="3" y1="6" x2="21" y2="6"></line>
+			<line x1="3" y1="12" x2="21" y2="12"></line>
+			<line x1="3" y1="18" x2="21" y2="18"></line>
+		</svg>
+	</button>
 }

@@ -89,7 +89,7 @@ func Projects() templ.Component {
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = layout.Base("Projects").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layout.Base("Projects", "/projects").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -118,7 +118,7 @@ func projectCard(title string, category string, description string, tags []strin
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<div class=\"bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors\"><div class=\"font-heading text-xs text-accent uppercase tracking-wide mb-2\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<div class=\"bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors\"><span class=\"inline-block bg-accent-subtle font-heading text-xs text-accent uppercase tracking-wide mb-2 px-2 py-0.5 rounded\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -131,7 +131,7 @@ func projectCard(title string, category string, description string, tags []strin
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</div><h3 class=\"font-heading text-xl md:text-2xl font-semibold text-text mb-3\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</span><h3 class=\"font-heading text-xl md:text-2xl font-semibold text-text mb-3\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

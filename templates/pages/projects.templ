@@ -3,7 +3,7 @@ package pages
 import "github.com/rejkpp/ramiro.me/templates/layout"
 
 templ Projects() {
-	@layout.Base("Projects") {
+	@layout.Base("Projects", "/projects") {
 		<section class="py-12">
 			<h1 class="font-heading text-4xl md:text-5xl font-bold text-text mb-4">
 				Projects
@@ -45,9 +45,9 @@ templ Projects() {
 
 templ projectCard(title string, category string, description string, tags []string) {
 	<div class="bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors">
-		<div class="font-heading text-xs text-accent uppercase tracking-wide mb-2">
+		<span class="inline-block bg-accent-subtle font-heading text-xs text-accent uppercase tracking-wide mb-2 px-2 py-0.5 rounded">
 			{ category }
-		</div>
+		</span>
 		<h3 class="font-heading text-xl md:text-2xl font-semibold text-text mb-3">
 			{ title }
 		</h3>

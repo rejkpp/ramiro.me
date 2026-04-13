@@ -1,6 +1,6 @@
 package layout
 
-templ Base(title string) {
+templ Base(title string, path string) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -9,9 +9,10 @@ templ Base(title string) {
 			<title>{ title } — ramiro.me</title>
 			<link rel="stylesheet" href="/static/css/app.css"/>
 			<script src="/static/js/htmx.min.js"></script>
+			<script src="/static/js/color-switcher.js"></script>
 		</head>
 		<body class="bg-bg text-text font-body min-h-screen flex flex-col">
-			@Nav()
+			@Nav(path)
 			<main class="flex-1 w-full max-w-5xl mx-auto px-4 py-8">
 				{ children... }
 			</main>
