@@ -1,0 +1,78 @@
+package pages
+
+import "github.com/rejkpp/ramiro.me/templates/layout"
+
+templ About() {
+	@layout.Base("About", "/about") {
+		<section class="py-12">
+			<h1 class="font-heading text-4xl md:text-5xl font-bold text-text mb-4">
+				About
+			</h1>
+			<p class="font-body text-lg text-text-muted">
+				[One line intro placeholder]
+			</p>
+		</section>
+		<section class="py-8 max-w-3xl">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-6">
+				Bio
+			</h2>
+			<div class="space-y-4 font-body text-text leading-relaxed">
+				<p>
+					[Placeholder paragraph one. Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+					magna aliqua.]
+				</p>
+				<p>
+					[Placeholder paragraph two. Ut enim ad minim veniam, quis nostrud
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]
+				</p>
+				<p>
+					[Placeholder paragraph three. Duis aute irure dolor in reprehenderit
+					in voluptate velit esse cillum dolore eu fugiat nulla pariatur.]
+				</p>
+			</div>
+		</section>
+		<section class="py-12">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-8">
+				Journey
+			</h2>
+			<div class="relative pl-8 border-l-2 border-bg-border space-y-6">
+				@milestoneCard("2018", "[Milestone description placeholder]")
+				@milestoneCard("2020", "[Milestone description placeholder]")
+				@milestoneCard("2023", "[Milestone description placeholder]")
+				@milestoneCard("2026", "[Milestone description placeholder]")
+			</div>
+		</section>
+		<section class="py-12">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-6">
+				Languages
+			</h2>
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+				@languageBadge("English")
+				@languageBadge("Spanish")
+				@languageBadge("Portuguese")
+				@languageBadge("French")
+				@languageBadge("Italian")
+				@languageBadge("German")
+			</div>
+		</section>
+	}
+}
+
+templ milestoneCard(year string, description string) {
+	<div class="relative bg-bg-surface border border-bg-border rounded-lg p-5">
+		<div class="absolute -left-[2.3rem] top-5 w-4 h-4 rounded-full bg-accent border-2 border-bg"></div>
+		<div class="font-heading text-accent text-sm font-semibold uppercase mb-1">
+			{ year }
+		</div>
+		<div class="font-body text-text">
+			{ description }
+		</div>
+	</div>
+}
+
+templ languageBadge(name string) {
+	<div class="bg-bg-surface border border-bg-border rounded-lg px-4 py-3 text-center font-body text-text-muted hover:text-accent-light hover:border-accent transition-colors">
+		{ name }
+	</div>
+}

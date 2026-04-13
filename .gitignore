@@ -1,3 +1,19 @@
 
 static/.DS_Store
 .DS_Store
+
+# Build artifacts
+bin/
+tmp/
+.tmp/
+static/css/app.css
+tailwindcss
+.air.toml
+
+# Screenshots
+Screenshot*.png
+
+# Ephemeral spec files
+.spec/SPEC.md
+.spec/tasks/
+.spec/.last_activity

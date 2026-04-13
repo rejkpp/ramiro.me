@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Dark theme */
+  --color-bg: #0a0a0f;
+  --color-bg-surface: #141420;
+  --color-bg-border: #1e1e2e;
+
+  --color-accent: #f59e0b;
+  --color-accent-light: #fbbf24;
+  --color-accent-subtle: rgba(245, 158, 11, 0.15);
+
+  --color-accent-2: #ec4899;
+  --color-accent-2-light: #f472b6;
+  --color-accent-2-subtle: rgba(236, 72, 153, 0.15);
+
+  --gradient: linear-gradient(135deg, #f59e0b, #ec4899);
+  --gradient-h: linear-gradient(90deg, #f59e0b, #ec4899);
+
+  --color-text: #f0f0f5;
+  --color-text-muted: #9090a0;
+
+  /* Fonts */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Radii */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-pill: 99px;
+}
+
+/* Base styles - headings use heading font automatically */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}

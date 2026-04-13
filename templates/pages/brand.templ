@@ -1,0 +1,268 @@
+package pages
+
+import "github.com/rejkpp/ramiro.me/templates/layout"
+
+templ Brand() {
+	@layout.Base("Brand", "/brand") {
+		<section class="py-12">
+			<h1 class="font-heading text-4xl md:text-5xl font-bold text-text mb-4">
+				Brand Playbook
+			</h1>
+			<p class="font-body text-lg text-text-muted">
+				Design tokens, colors, typography, and usage reference.
+			</p>
+		</section>
+		<!-- Section 1: Color System -->
+		<section class="py-8">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-8">
+				Color System
+			</h2>
+			<!-- Base Colors -->
+			<h3 class="font-heading text-lg font-semibold text-text mb-4">
+				Base
+			</h3>
+			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-10">
+				@colorSwatch("bg", "#0a0a0f", "bg-bg")
+				@colorSwatch("bg-surface", "#141420", "bg-bg-surface")
+				@colorSwatch("bg-border", "#1e1e2e", "bg-bg-border")
+				@colorSwatchInline("text", "#f0f0f5")
+				@colorSwatchInline("text-muted", "#9090a0")
+			</div>
+			<!-- Primary Accent (Amber) -->
+			<h3 class="font-heading text-lg font-semibold text-accent mb-4">
+				Primary Accent (Amber)
+			</h3>
+			<div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-10">
+				@colorSwatch("accent", "#f59e0b", "bg-accent")
+				@colorSwatch("accent-light", "#fbbf24", "bg-accent-light")
+				@colorSwatchRgba("accent-subtle", "rgba(245,158,11,0.15)", "bg-accent-subtle")
+			</div>
+			<!-- Secondary Accent (Pink) -->
+			<h3 class="font-heading text-lg font-semibold text-accent-2 mb-4">
+				Secondary Accent (Pink)
+			</h3>
+			<div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-10">
+				@colorSwatch("accent-2", "#ec4899", "bg-accent-2")
+				@colorSwatch("accent-2-light", "#f472b6", "bg-accent-2-light")
+				@colorSwatchRgba("accent-2-subtle", "rgba(236,72,153,0.15)", "bg-accent-2-subtle")
+			</div>
+			<!-- Gradient -->
+			<h3 class="font-heading text-lg font-semibold text-text mb-4">
+				Gradient
+			</h3>
+			<div class="mb-10">
+				<div class="h-16 rounded-lg" style="background: linear-gradient(135deg, #f59e0b, #ec4899)"></div>
+				<div class="mt-2 font-mono text-xs text-text-muted">
+					linear-gradient(135deg, #f59e0b, #ec4899)
+				</div>
+			</div>
+		</section>
+		<!-- Section 2: Usage Rules -->
+		<section class="py-8">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-6">
+				Usage Rules
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<h3 class="font-heading text-lg font-semibold text-accent mb-3">
+						Amber (Primary)
+					</h3>
+					<ul class="space-y-2 font-body text-sm text-text-muted">
+						<li>Buttons, CTAs, links, active states</li>
+						<li>Key headings, focus rings</li>
+						<li>Primary category badges</li>
+						<li>More amber than pink on every page</li>
+					</ul>
+				</div>
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<h3 class="font-heading text-lg font-semibold text-accent-2 mb-3">
+						Pink (Secondary)
+					</h3>
+					<ul class="space-y-2 font-body text-sm text-text-muted">
+						<li>Metadata labels, decorative accents</li>
+						<li>Secondary tags, supporting elements</li>
+						<li>Consciousness-related identity cards</li>
+						<li>Never on primary CTA buttons</li>
+					</ul>
+				</div>
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<h3 class="font-heading text-lg font-semibold text-text mb-3">
+						Gradient
+					</h3>
+					<ul class="space-y-2 font-body text-sm text-text-muted">
+						<li>Hero accents, decorative dividers</li>
+						<li>Use sparingly for high-impact moments</li>
+						<li>Never for full backgrounds</li>
+					</ul>
+				</div>
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<h3 class="font-heading text-lg font-semibold text-text mb-3">
+						Borders
+					</h3>
+					<ul class="space-y-2 font-body text-sm text-text-muted">
+						<li>Default: bg-border (#1e1e2e)</li>
+						<li>Accent only for left-edge strips or focus rings</li>
+						<li>Hover states: border-accent or border-accent-2</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- Section 3: Typography -->
+		<section class="py-8">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-8">
+				Typography
+			</h2>
+			<!-- Font Samples -->
+			<h3 class="font-heading text-lg font-semibold text-text mb-4">
+				Samples
+			</h3>
+			<div class="space-y-8">
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<div class="font-body text-xs text-accent uppercase tracking-wide mb-3">
+						Heading -- Space Grotesk
+					</div>
+					<h3 class="font-heading text-3xl md:text-4xl font-bold text-text">
+						The quick brown fox jumps over the lazy dog
+					</h3>
+				</div>
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<div class="font-body text-xs text-accent uppercase tracking-wide mb-3">
+						Body -- Inter
+					</div>
+					<p class="font-body text-base text-text leading-relaxed">
+						The quick brown fox jumps over the lazy dog. Pack my box with five
+						dozen liquor jugs. How vexingly quick daft zebras jump. The five
+						boxing wizards jump quickly. Sphinx of black quartz, judge my vow.
+					</p>
+				</div>
+				<div class="bg-bg-surface border border-bg-border rounded-lg p-6">
+					<div class="font-body text-xs text-accent uppercase tracking-wide mb-3">
+						Mono -- JetBrains Mono
+					</div>
+					<pre class="font-mono text-sm text-text leading-relaxed overflow-x-auto"><code>func main() &#123;
+    fmt.Println("Hello, world!")
+&#125;</code></pre>
+				</div>
+			</div>
+		</section>
+		<!-- Section 4: Usage Examples -->
+		<section class="py-8">
+			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-8">
+				Usage Examples
+			</h2>
+			<div class="space-y-8">
+				<!-- Buttons -->
+				<div>
+					<h3 class="font-heading text-lg font-semibold text-text mb-4">
+						Buttons
+					</h3>
+					<div class="flex flex-wrap gap-4">
+						<button class="bg-accent hover:bg-accent-light text-bg font-heading font-semibold px-6 py-2.5 rounded-lg transition-colors">
+							Primary (Amber)
+						</button>
+						<button class="bg-bg-surface border border-accent hover:border-accent-light text-accent font-heading font-semibold px-6 py-2.5 rounded-lg transition-colors">
+							Secondary (Amber border)
+						</button>
+						<button class="bg-bg-surface border border-bg-border hover:border-accent text-text font-heading font-semibold px-6 py-2.5 rounded-lg transition-colors">
+							Tertiary
+						</button>
+					</div>
+				</div>
+				<!-- Tags / Pills -->
+				<div>
+					<h3 class="font-heading text-lg font-semibold text-text mb-4">
+						Tags / Pills
+					</h3>
+					<div class="flex flex-wrap gap-3">
+						<span class="bg-accent-subtle text-accent text-xs font-body rounded-full px-3 py-1">
+							AI
+						</span>
+						<span class="bg-accent-subtle text-accent text-xs font-body rounded-full px-3 py-1">
+							Trading
+						</span>
+						<span class="bg-accent-2-subtle text-accent-2 text-xs font-body rounded-full px-3 py-1">
+							Meditation
+						</span>
+						<span class="bg-accent-2-subtle text-accent-2 text-xs font-body rounded-full px-3 py-1">
+							Consciousness
+						</span>
+					</div>
+				</div>
+				<!-- Card -->
+				<div>
+					<h3 class="font-heading text-lg font-semibold text-text mb-4">
+						Card
+					</h3>
+					<div class="bg-bg-surface border border-bg-border rounded-lg p-6 max-w-md hover:border-accent transition-colors">
+						<h4 class="font-heading text-xl font-semibold text-text mb-2">
+							Card Title
+						</h4>
+						<p class="font-body text-text-muted text-sm">
+							Card description text in muted color. This shows the surface
+							background with the border color.
+						</p>
+					</div>
+				</div>
+				<!-- Links -->
+				<div>
+					<h3 class="font-heading text-lg font-semibold text-text mb-4">
+						Links
+					</h3>
+					<p class="font-body text-text">
+						This is body text with an
+						<a href="#" class="text-accent hover:text-accent-light transition-colors underline">
+							amber link
+						</a>
+						and a
+						<a href="#" class="text-accent-2 hover:text-accent-2-light transition-colors underline">
+							pink link
+						</a>
+						used as supporting context.
+					</p>
+				</div>
+			</div>
+		</section>
+	}
+}
+
+templ colorSwatch(name string, hex string, bgClass string) {
+	<div class="flex flex-col items-center gap-2">
+		<div class={ "w-20 h-20 rounded-lg border border-bg-border", bgClass }></div>
+		<div class="text-center">
+			<div class="font-mono text-sm text-text">
+				{ hex }
+			</div>
+			<div class="font-body text-xs text-text-muted">
+				{ name }
+			</div>
+		</div>
+	</div>
+}
+
+templ colorSwatchRgba(name string, rgba string, bgClass string) {
+	<div class="flex flex-col items-center gap-2">
+		<div class={ "w-20 h-20 rounded-lg border border-bg-border", bgClass }></div>
+		<div class="text-center">
+			<div class="font-mono text-xs text-text">
+				{ rgba }
+			</div>
+			<div class="font-body text-xs text-text-muted">
+				{ name }
+			</div>
+		</div>
+	</div>
+}
+
+templ colorSwatchInline(name string, hex string) {
+	<div class="flex flex-col items-center gap-2">
+		<div class="w-20 h-20 rounded-lg border border-bg-border" style={ "background-color: " + hex }></div>
+		<div class="text-center">
+			<div class="font-mono text-sm text-text">
+				{ hex }
+			</div>
+			<div class="font-body text-xs text-text-muted">
+				{ name }
+			</div>
+		</div>
+	</div>
+}
