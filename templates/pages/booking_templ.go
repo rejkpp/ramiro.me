@@ -47,14 +47,14 @@ func Booking() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"py-16 px-6 md:px-12 max-w-3xl\"><div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div><h1 class=\"text-3xl md:text-5xl font-medium text-text mb-4\">Book a call</h1><p class=\"text-base md:text-lg text-text-muted leading-relaxed max-w-2xl\">No discovery calls. No follow-up sequences. Just a focused session where we solve something together.</p></section><section class=\"px-6 md:px-12 pb-12\"><div class=\"grid grid-cols-1 md:grid-cols-3 gap-6\"><!-- 30-minute option --><div class=\"bg-bg-surface rounded-[10px] border border-bg-border p-6 flex flex-col\"><p class=\"text-xs uppercase tracking-wide text-accent mb-2\">Quick hit</p><h2 class=\"text-2xl font-medium text-text mb-1\">30 minutes</h2><p class=\"text-lg font-medium text-accent mb-4\">$150 USD</p><p class=\"text-sm text-text-muted leading-relaxed mb-4\">One problem, one session.</p><ul class=\"text-sm text-text-muted space-y-2 mb-6 flex-1\"><li class=\"flex items-start gap-2\"><span class=\"text-accent\">—</span> <span>AI integration unblock</span></li><li class=\"flex items-start gap-2\"><span class=\"text-accent\">—</span> <span>Trading logic review</span></li><li class=\"flex items-start gap-2\"><span class=\"text-accent\">—</span> <span>Architecture sanity check</span></li></ul><a href=\"")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"py-16 px-6 md:px-12 max-w-3xl\"><div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div><h1 class=\"text-3xl md:text-5xl font-medium text-text mb-4\">Book a call</h1><p class=\"text-base md:text-lg text-text-muted leading-relaxed max-w-2xl\">Let's talk about what you want.</p></section><section class=\"px-6 md:px-12 pb-12\"><div class=\"grid grid-cols-1 md:grid-cols-3 gap-6\"><!-- 30-minute option --><div class=\"bg-bg-surface rounded-[10px] border border-bg-border p-6 flex flex-col\"><p class=\"text-xs uppercase tracking-wide text-accent mb-2\">Quick hit</p><h2 class=\"text-2xl font-medium text-text mb-1\">30 minutes</h2><p class=\"text-lg font-medium text-accent mb-4\">$150 USD</p><p class=\"text-sm text-text-muted leading-relaxed mb-4\">One problem, one session.</p><ul class=\"text-sm text-text-muted space-y-2 mb-6 flex-1\"><li class=\"flex items-start gap-2\"><span class=\"text-accent\">—</span> <span>AI integration unblock</span></li><li class=\"flex items-start gap-2\"><span class=\"text-accent\">—</span> <span>Trading logic review</span></li><li class=\"flex items-start gap-2\"><span class=\"text-accent\">—</span> <span>Architecture sanity check</span></li></ul><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var3 templ.SafeURL
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(bookingLink30Min))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/booking.templ`, Line: 46, Col: 44}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/booking.templ`, Line: 45, Col: 44}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
@@ -67,7 +67,7 @@ func Booking() templ.Component {
 			var templ_7745c5c3_Var4 templ.SafeURL
 			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(bookingLink60Min))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/booking.templ`, Line: 77, Col: 44}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/booking.templ`, Line: 76, Col: 44}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 			if templ_7745c5c3_Err != nil {
@@ -80,7 +80,7 @@ func Booking() templ.Component {
 			var templ_7745c5c3_Var5 templ.SafeURL
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(bookingLinkReading))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/booking.templ`, Line: 104, Col: 46}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/booking.templ`, Line: 103, Col: 46}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
