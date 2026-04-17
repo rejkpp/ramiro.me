@@ -4,8 +4,8 @@
 | --- | --- |
 | Project | ramiro.me |
 | Created | 2026-04-11 21:01 |
-| Last Updated | 2026-04-11 21:01 |
-| Stage | Planning |
+| Last Updated | 2026-04-17 08:55 |
+| Stage | Development |
 
 ## Goals
 
@@ -33,7 +33,7 @@ Preserves the existing podcast (80 episodes, RedCircle-hosted, RSS feed URLs and
 
 <!-- Behavioral preferences — not architecture decisions. Loaded at session start via hook. -->
 - Go preferred over Node.js
-- Accent color: electric violet (`#7c3aed`)
+- Accent color: amber primary (`#f59e0b`) + pink secondary (`#ec4899`)
 - Dark theme by default, mobile-first
 - Minimal dependencies; favor stdlib
 
@@ -64,6 +64,11 @@ This is how Patreon/Supercast work. Full control, no third-party dependency.
 
 Reverse chronological. Format: `YYYY-MM-DD — [Decision] — [Rationale]`
 
+- 2026-04-17 — Enable Goldmark Typographer extension — authors write `---`, `...`, straight quotes in markdown; renderer produces proper em-dashes, ellipses, and smart quotes without special keyboard input
+- 2026-04-17 — Goldmark markdown content pipeline — prose lives in `content/**/*.md`, loaded + cached at startup via `//go:embed`, rendered into templ pages via `@content.MustGet(key)`. Structured UI (timelines, language bars, place badges, pricing tables) stays in templ; only prose moves to markdown
+- 2026-04-13 — Paid booking flow: 30min ($150), 60min ($250), Clairvoyant reading ($300) — Calendly integration, no free discovery calls
+- 2026-04-13 — Contact page → Booking page — simplified user flow, remove email from site
+- 2026-04-12 — Dual-accent color system: amber (#f59e0b) primary + pink (#ec4899) secondary — amber for tech/action elements, pink for consciousness/decorative, gradient for hero moments. Replaces electric violet.
 - 2026-04-11 — Self-host RSS feeds from Go app — eliminates RedCircle 2-account workaround, gives full RSS control, no yearly renewal
 - 2026-04-11 — Rename default branch `master` → `main` — modernize 2021-era repo
 - 2026-04-11 — Membership: $10,000/year, cap at 89 members + Ramiro = 90 — premium inner-circle positioning
