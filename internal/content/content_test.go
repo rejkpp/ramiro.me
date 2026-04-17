@@ -188,6 +188,39 @@ func TestInit_EmptyFS(t *testing.T) {
 	}
 }
 
+func TestInit_TypographerExtension(t *testing.T) {
+	fs := fstest.MapFS{
+		"content/typo.md": &fstest.MapFile{
+			Data: []byte(`This is --- wait... "really?"`),
+		},
+	}
+
+	resetCache()
+	if err := Init(fs); err != nil {
+		t.Fatalf("Init returned error: %v", err)
+	}
+
+	html := cache["typo"]
+
+	// em-dash: --- becomes &mdash;
+	if !strings.Contains(html, "&mdash;") {
+		t.Errorf("expected em-dash (&mdash;), got: %s", html)
+	}
+
+	// ellipsis: ... becomes &hellip;
+	if !strings.Contains(html, "&hellip;") {
+		t.Errorf("expected ellipsis (&hellip;), got: %s", html)
+	}
+
+	// smart quotes: "really?" becomes &ldquo;really?&rdquo;
+	if !strings.Contains(html, "&ldquo;") {
+		t.Errorf("expected left smart quote (&ldquo;), got: %s", html)
+	}
+	if !strings.Contains(html, "&rdquo;") {
+		t.Errorf("expected right smart quote (&rdquo;), got: %s", html)
+	}
+}
+
 func TestInit_NestedDirectories(t *testing.T) {
 	fs := fstest.MapFS{
 		"content/a/b/deep.md": &fstest.MapFile{

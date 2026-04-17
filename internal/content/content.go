@@ -20,7 +20,7 @@ import (
 var cache = make(map[string]string)
 
 // md is the Goldmark instance with GFM extensions enabled.
-var md = goldmark.New(goldmark.WithExtensions(extension.GFM))
+var md = goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Typographer))
 
 // Init walks the embedded filesystem under "content/", reads every *.md file,
 // renders it to HTML via Goldmark, and stores the result in the package-level
