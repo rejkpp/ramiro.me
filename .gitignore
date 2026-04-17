@@ -8,6 +8,7 @@ tmp/
 .tmp/
 static/css/app.css
 tailwindcss
+/server
 
 # Screenshots
 Screenshot*.png
@@ -16,3 +17,4 @@ Screenshot*.png
 .spec/SPEC.md
 .spec/tasks/
 .spec/.last_activity
+.spec/hand-offs/
