@@ -1,6 +1,9 @@
 package pages
 
-import "github.com/rejkpp/ramiro.me/templates/layout"
+import (
+	"github.com/rejkpp/ramiro.me/internal/content"
+	"github.com/rejkpp/ramiro.me/templates/layout"
+)
 
 templ Home() {
 	@layout.Base("Home", "/") {
@@ -42,28 +45,28 @@ templ Home() {
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 				@homeCard(homeCardProps{
 					Title:       "AI and agents",
-					Description: "Multi-agent orchestration, LLM pipelines, and autonomous systems. Building custom AI tooling for real-world workflows.",
+					Description: content.MustGet("home/cards/ai"),
 					LinkText:    "Explore AI work",
 					LinkHref:    "/projects",
 					Variant:     "amber",
 				})
 				@homeCard(homeCardProps{
 					Title:       "Algorithmic trading",
-					Description: "Systematic trading strategies. Backtesting frameworks using blind forward testing, signal generation, and execution infrastructure.",
+					Description: content.MustGet("home/cards/trading"),
 					LinkText:    "See trading projects",
 					LinkHref:    "/projects",
 					Variant:     "amber",
 				})
 				@homeCard(homeCardProps{
 					Title:       "Accounting software",
-					Description: "Purpose-built accounting and invoicing software for businesses in Suriname. Local tax compliance, multi-currency support and local exchange rates.",
+					Description: content.MustGet("home/cards/accounting"),
 					LinkText:    "Learn more",
 					LinkHref:    "/projects",
 					Variant:     "amber",
 				})
 				@homeCard(homeCardProps{
 					Title:       "Clairvoyant Meditation",
-					Description: "Clairvoyant meditation techniques for the modern world. Tools for developing intuition, reading energy, and navigating life from a place of clarity.",
+					Description: content.MustGet("home/cards/meditation"),
 					LinkText:    "Discover meditation",
 					LinkHref:    "/projects",
 					Variant:     "pink",
@@ -78,10 +81,9 @@ templ Home() {
 				<h2 class="text-xl font-medium text-text mb-2">
 					ORC — Open-source multi-agent orchestration
 				</h2>
-				<p class="text-sm text-text-muted leading-relaxed mb-4">
-					A framework for coordinating autonomous AI agents. Plan, delegate,
-					and verify — with structured task management and parallel execution.
-				</p>
+				<div class="text-sm text-text-muted leading-relaxed mb-4">
+					@content.MustGet("home/featured")
+				</div>
 				<a href="https://github.com/rejkpp" target="_blank" rel="noopener noreferrer" class="text-xs text-accent-2 hover:text-accent-2-light transition-colors">
 					View on GitHub &rarr;
 				</a>
@@ -113,7 +115,7 @@ templ Home() {
 
 type homeCardProps struct {
 	Title       string
-	Description string
+	Description templ.Component
 	LinkText    string
 	LinkHref    string
 	Variant     string
@@ -123,13 +125,17 @@ templ homeCard(props homeCardProps) {
 	if props.Variant == "pink" {
 		<a href={ templ.SafeURL(props.LinkHref) } class="bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent-2">
 			<h3 class="text-[17px] font-medium text-text mb-2">{ props.Title }</h3>
-			<p class="text-[13px] text-text-muted leading-relaxed mb-4">{ props.Description }</p>
+			<div class="text-[13px] text-text-muted leading-relaxed mb-4">
+				@props.Description
+			</div>
 			<span class="text-xs text-accent-2">{ props.LinkText } &rarr;</span>
 		</a>
 	} else {
 		<a href={ templ.SafeURL(props.LinkHref) } class="bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent">
 			<h3 class="text-[17px] font-medium text-text mb-2">{ props.Title }</h3>
-			<p class="text-[13px] text-text-muted leading-relaxed mb-4">{ props.Description }</p>
+			<div class="text-[13px] text-text-muted leading-relaxed mb-4">
+				@props.Description
+			</div>
 			<span class="text-xs text-accent">{ props.LinkText } &rarr;</span>
 		</a>
 	}

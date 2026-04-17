@@ -21,6 +21,21 @@ func TestMain(m *testing.M) {
 		"content/about/closing.md": &fstest.MapFile{
 			Data: []byte("Who am I?"),
 		},
+		"content/home/cards/ai.md": &fstest.MapFile{
+			Data: []byte("Multi-agent orchestration, LLM pipelines, and autonomous systems."),
+		},
+		"content/home/cards/trading.md": &fstest.MapFile{
+			Data: []byte("Systematic trading strategies."),
+		},
+		"content/home/cards/accounting.md": &fstest.MapFile{
+			Data: []byte("Purpose-built accounting and invoicing software."),
+		},
+		"content/home/cards/meditation.md": &fstest.MapFile{
+			Data: []byte("Clairvoyant meditation techniques for the modern world."),
+		},
+		"content/home/featured.md": &fstest.MapFile{
+			Data: []byte("A framework for coordinating autonomous AI agents."),
+		},
 	}
 	if err := content.Init(fs); err != nil {
 		panic("content init: " + err.Error())

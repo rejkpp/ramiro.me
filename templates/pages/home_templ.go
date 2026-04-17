@@ -8,7 +8,10 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/rejkpp/ramiro.me/templates/layout"
+import (
+	"github.com/rejkpp/ramiro.me/internal/content"
+	"github.com/rejkpp/ramiro.me/templates/layout"
+)
 
 func Home() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
@@ -49,7 +52,7 @@ func Home() templ.Component {
 			}
 			templ_7745c5c3_Err = homeCard(homeCardProps{
 				Title:       "AI and agents",
-				Description: "Multi-agent orchestration, LLM pipelines, and autonomous systems. Building custom AI tooling for real-world workflows.",
+				Description: content.MustGet("home/cards/ai"),
 				LinkText:    "Explore AI work",
 				LinkHref:    "/projects",
 				Variant:     "amber",
@@ -59,7 +62,7 @@ func Home() templ.Component {
 			}
 			templ_7745c5c3_Err = homeCard(homeCardProps{
 				Title:       "Algorithmic trading",
-				Description: "Systematic trading strategies. Backtesting frameworks using blind forward testing, signal generation, and execution infrastructure.",
+				Description: content.MustGet("home/cards/trading"),
 				LinkText:    "See trading projects",
 				LinkHref:    "/projects",
 				Variant:     "amber",
@@ -69,7 +72,7 @@ func Home() templ.Component {
 			}
 			templ_7745c5c3_Err = homeCard(homeCardProps{
 				Title:       "Accounting software",
-				Description: "Purpose-built accounting and invoicing software for businesses in Suriname. Local tax compliance, multi-currency support and local exchange rates.",
+				Description: content.MustGet("home/cards/accounting"),
 				LinkText:    "Learn more",
 				LinkHref:    "/projects",
 				Variant:     "amber",
@@ -79,7 +82,7 @@ func Home() templ.Component {
 			}
 			templ_7745c5c3_Err = homeCard(homeCardProps{
 				Title:       "Clairvoyant Meditation",
-				Description: "Clairvoyant meditation techniques for the modern world. Tools for developing intuition, reading energy, and navigating life from a place of clarity.",
+				Description: content.MustGet("home/cards/meditation"),
 				LinkText:    "Discover meditation",
 				LinkHref:    "/projects",
 				Variant:     "pink",
@@ -87,7 +90,15 @@ func Home() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div></section><!-- Featured project --> <section class=\"py-12 px-12 md:px-12 px-6\"><div class=\"bg-bg-surface rounded-[10px] p-7 border border-bg-border relative overflow-hidden\"><div class=\"absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent to-accent-2\"></div><p class=\"text-[11px] uppercase tracking-wide text-accent-2 mb-2\">Currently building</p><h2 class=\"text-xl font-medium text-text mb-2\">ORC — Open-source multi-agent orchestration</h2><p class=\"text-sm text-text-muted leading-relaxed mb-4\">A framework for coordinating autonomous AI agents. Plan, delegate, and verify — with structured task management and parallel execution.</p><a href=\"https://github.com/rejkpp\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs text-accent-2 hover:text-accent-2-light transition-colors\">View on GitHub &rarr;</a></div></section><!-- Bio card --> <section class=\"py-12 px-12 md:px-12 px-6\"><div class=\"bg-bg-surface rounded-[10px] p-7 border border-bg-border\"><div class=\"flex items-center gap-4 mb-4\"><img src=\"/static/img/ramiro_profile_200x200.jpg\" alt=\"Ramiro\" class=\"w-20 h-20 rounded-full object-cover\"><div><h3 class=\"text-lg font-medium text-text\">Ramiro</h3><p class=\"text-sm text-text-muted\">Developer, entrepreneur, and meditation teacher based in Colombia.</p></div></div><div class=\"flex flex-wrap gap-2\"><span class=\"bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full\">AI integrations</span> <span class=\"bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full\">Trading Algos</span> <span class=\"bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full\">SaaS development</span> <span class=\"bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full\">Meditation</span> <span class=\"bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full\">Breathwork</span></div></div></section>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div></section><!-- Featured project --> <section class=\"py-12 px-12 md:px-12 px-6\"><div class=\"bg-bg-surface rounded-[10px] p-7 border border-bg-border relative overflow-hidden\"><div class=\"absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent to-accent-2\"></div><p class=\"text-[11px] uppercase tracking-wide text-accent-2 mb-2\">Currently building</p><h2 class=\"text-xl font-medium text-text mb-2\">ORC — Open-source multi-agent orchestration</h2><div class=\"text-sm text-text-muted leading-relaxed mb-4\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = content.MustGet("home/featured").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</div><a href=\"https://github.com/rejkpp\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs text-accent-2 hover:text-accent-2-light transition-colors\">View on GitHub &rarr;</a></div></section><!-- Bio card --> <section class=\"py-12 px-12 md:px-12 px-6\"><div class=\"bg-bg-surface rounded-[10px] p-7 border border-bg-border\"><div class=\"flex items-center gap-4 mb-4\"><img src=\"/static/img/ramiro_profile_200x200.jpg\" alt=\"Ramiro\" class=\"w-20 h-20 rounded-full object-cover\"><div><h3 class=\"text-lg font-medium text-text\">Ramiro</h3><p class=\"text-sm text-text-muted\">Developer, entrepreneur, and meditation teacher based in Colombia.</p></div></div><div class=\"flex flex-wrap gap-2\"><span class=\"bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full\">AI integrations</span> <span class=\"bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full\">Trading Algos</span> <span class=\"bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full\">SaaS development</span> <span class=\"bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full\">Meditation</span> <span class=\"bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full\">Breathwork</span></div></div></section>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -103,7 +114,7 @@ func Home() templ.Component {
 
 type homeCardProps struct {
 	Title       string
-	Description string
+	Description templ.Component
 	LinkText    string
 	LinkHref    string
 	Variant     string
@@ -131,116 +142,106 @@ func homeCard(props homeCardProps) templ.Component {
 		}
 		ctx = templ.ClearChildren(ctx)
 		if props.Variant == "pink" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<a href=\"")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var4 templ.SafeURL
 			templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(props.LinkHref))
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 124, Col: 41}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 126, Col: 41}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\" class=\"bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent-2\"><h3 class=\"text-[17px] font-medium text-text mb-2\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "\" class=\"bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent-2\"><h3 class=\"text-[17px] font-medium text-text mb-2\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var5 string
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(props.Title)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 125, Col: 67}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 127, Col: 67}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</h3><p class=\"text-[13px] text-text-muted leading-relaxed mb-4\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</h3><div class=\"text-[13px] text-text-muted leading-relaxed mb-4\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = props.Description.Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "</div><span class=\"text-xs text-accent-2\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var6 string
-			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(props.Description)
+			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(props.LinkText)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 126, Col: 82}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 131, Col: 55}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</p><span class=\"text-xs text-accent-2\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, " &rarr;</span></a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			var templ_7745c5c3_Var7 string
-			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(props.LinkText)
+		} else {
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "<a href=\"")
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 127, Col: 55}
+				return templ_7745c5c3_Err
+			}
+			var templ_7745c5c3_Var7 templ.SafeURL
+			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(props.LinkHref))
+			if templ_7745c5c3_Err != nil {
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 134, Col: 41}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, " &rarr;</span></a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "\" class=\"bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent\"><h3 class=\"text-[17px] font-medium text-text mb-2\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "<a href=\"")
+			var templ_7745c5c3_Var8 string
+			templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(props.Title)
 			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			var templ_7745c5c3_Var8 templ.SafeURL
-			templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinURLErrs(templ.SafeURL(props.LinkHref))
-			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 130, Col: 41}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 135, Col: 67}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "\" class=\"bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent\"><h3 class=\"text-[17px] font-medium text-text mb-2\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "</h3><div class=\"text-[13px] text-text-muted leading-relaxed mb-4\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = props.Description.Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "</div><span class=\"text-xs text-accent\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var9 string
-			templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(props.Title)
+			templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(props.LinkText)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 131, Col: 67}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 139, Col: 53}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "</h3><p class=\"text-[13px] text-text-muted leading-relaxed mb-4\">")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			var templ_7745c5c3_Var10 string
-			templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(props.Description)
-			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 132, Col: 82}
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "</p><span class=\"text-xs text-accent\">")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			var templ_7745c5c3_Var11 string
-			templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinStringErrs(props.LinkText)
-			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/home.templ`, Line: 133, Col: 53}
-			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, " &rarr;</span></a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, " &rarr;</span></a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
