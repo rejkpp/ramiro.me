@@ -4,7 +4,7 @@
 | --- | --- |
 | Project | ramiro.me |
 | Created | 2026-04-11 21:01 |
-| Last Updated | 2026-04-17 08:55 |
+| Last Updated | 2026-04-17 09:30 |
 | Stage | Development |
 
 ## Goals
@@ -64,6 +64,7 @@ This is how Patreon/Supercast work. Full control, no third-party dependency.
 
 Reverse chronological. Format: `YYYY-MM-DD — [Decision] — [Rationale]`
 
+- 2026-04-17 — Migrate Home page prose to markdown — 4 card descriptions + featured project blurb live in `content/home/**/*.md`; structured UI (cards, bio, tags) stays in templ. Projects/Booking skipped (placeholders + pricing one-liners don't benefit)
 - 2026-04-17 — Enable Goldmark Typographer extension — authors write `---`, `...`, straight quotes in markdown; renderer produces proper em-dashes, ellipses, and smart quotes without special keyboard input
 - 2026-04-17 — Goldmark markdown content pipeline — prose lives in `content/**/*.md`, loaded + cached at startup via `//go:embed`, rendered into templ pages via `@content.MustGet(key)`. Structured UI (timelines, language bars, place badges, pricing tables) stays in templ; only prose moves to markdown
 - 2026-04-13 — Paid booking flow: 30min ($150), 60min ($250), Clairvoyant reading ($300) — Calendly integration, no free discovery calls
