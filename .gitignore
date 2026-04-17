@@ -8,7 +8,6 @@ tmp/
 .tmp/
 static/css/app.css
 tailwindcss
-.air.toml
 
 # Screenshots
 Screenshot*.png

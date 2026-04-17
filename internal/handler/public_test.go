@@ -3,9 +3,30 @@ package handler
 import (
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"strings"
 	"testing"
+	"testing/fstest"
+
+	"github.com/rejkpp/ramiro.me/internal/content"
 )
+
+// TestMain initialises the content cache so that handlers using
+// content.MustGet do not panic during test execution.
+func TestMain(m *testing.M) {
+	fs := fstest.MapFS{
+		"content/about/intro.md": &fstest.MapFile{
+			Data: []byte("Multi-cultural, multi-disciplined, multi-lingual."),
+		},
+		"content/about/closing.md": &fstest.MapFile{
+			Data: []byte("Who am I?"),
+		},
+	}
+	if err := content.Init(fs); err != nil {
+		panic("content init: " + err.Error())
+	}
+	os.Exit(m.Run())
+}
 
 // newTestRequest constructs an httptest request for the given path.
 func newTestRequest(t *testing.T, path string) *http.Request {
@@ -37,14 +58,13 @@ func TestPublic_Home(t *testing.T) {
 		t.Errorf("body missing htmx script reference")
 	}
 
-	// New homepage sections
+	// Homepage sections
 	for _, want := range []string{
 		"Intelligence",
 		"Intuition",
 		"Impact",
-		"I build software that thinks",
-		"Book a session",
-		"See my work",
+		"ship fast and stay sane",
+		"Book a call",
 		"AI and agents",
 		"Algorithmic trading",
 		"Accounting software",
@@ -97,13 +117,13 @@ func TestPublic_Booking(t *testing.T) {
 	}
 	body := rr.Body.String()
 	for _, want := range []string{
-		"Book a paid call",
-		"30-minute call",
-		"60-minute call",
+		"Book a call",
+		"30 minutes",
+		"60 minutes",
 		"CALENDLY_PLACEHOLDER_30_MIN",
 		"CALENDLY_PLACEHOLDER_60_MIN",
-		"Book 30 minutes",
-		"Book 60 minutes",
+		"Book a session",
+		"Clairvoyant reading",
 	} {
 		if !strings.Contains(body, want) {
 			t.Errorf("booking body missing %q", want)
