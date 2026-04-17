@@ -12,6 +12,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 
 	ramirome "github.com/rejkpp/ramiro.me"
+	"github.com/rejkpp/ramiro.me/internal/content"
 	"github.com/rejkpp/ramiro.me/internal/handler"
 )
 
@@ -27,6 +28,10 @@ func main() {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 	r.Use(middleware.Timeout(30 * time.Second))
+
+	if err := content.Init(ramirome.ContentFS); err != nil {
+		log.Fatalf("content init: %v", err)
+	}
 
 	staticRoot, err := fs.Sub(ramirome.StaticFS, "static")
 	if err != nil {

@@ -1,69 +1,81 @@
 package pages
 
-import "github.com/rejkpp/ramiro.me/templates/layout"
+import (
+	"fmt"
+
+	"github.com/rejkpp/ramiro.me/internal/content"
+	"github.com/rejkpp/ramiro.me/templates/layout"
+)
 
 templ About() {
 	@layout.Base("About", "/about") {
-		<section class="py-12">
-			<h1 class="font-heading text-4xl md:text-5xl font-bold text-text mb-4">
+		<section class="py-16 px-6 md:px-12 max-w-3xl">
+			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+			<h1 class="text-3xl md:text-5xl font-medium text-text mb-4">
 				About
 			</h1>
-			<p class="font-body text-lg text-text-muted">
-				[One line intro placeholder]
+			<p class="text-base md:text-lg text-text-muted leading-relaxed italic">
+				I found belonging when I stopped looking.
 			</p>
 		</section>
-		<section class="py-8 max-w-3xl">
-			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-6">
-				Bio
-			</h2>
+		<section class="px-6 md:px-12 pb-12 max-w-3xl">
 			<div class="space-y-4 font-body text-text leading-relaxed">
-				<p>
-					[Placeholder paragraph one. Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-					magna aliqua.]
-				</p>
-				<p>
-					[Placeholder paragraph two. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.]
-				</p>
-				<p>
-					[Placeholder paragraph three. Duis aute irure dolor in reprehenderit
-					in voluptate velit esse cillum dolore eu fugiat nulla pariatur.]
-				</p>
+				@content.MustGet("about/intro")
+			</div>
+			<div class="text-text-muted italic pt-4">
+				@content.MustGet("about/closing")
 			</div>
 		</section>
-		<section class="py-12">
-			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-8">
+		<section class="px-6 md:px-12 py-12">
+			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+			<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
 				Journey
 			</h2>
-			<div class="relative pl-8 border-l-2 border-bg-border space-y-6">
-				@milestoneCard("2018", "[Milestone description placeholder]")
-				@milestoneCard("2020", "[Milestone description placeholder]")
-				@milestoneCard("2023", "[Milestone description placeholder]")
-				@milestoneCard("2026", "[Milestone description placeholder]")
+			<div class="relative pl-8 border-l-2 border-bg-border space-y-6 max-w-3xl">
+				@milestoneCard("Belonging", "Born between the Caribbean and Europe. Never quite fitting anywhere. The search for identity became the obstacle to finding it.")
+				@milestoneCard("Heartbreak", "A love that cracked me open. Learning that presence matters more than permanence.")
+				@milestoneCard("Losing Dad", "His death came before I was ready. But readiness is a myth\u2014we just meet what comes.")
+				@milestoneCard("Family Lawsuit", "Money and inheritance revealed shadows. Mine included. Choosing integrity over winning.")
 			</div>
 		</section>
-		<section class="py-12">
-			<h2 class="font-heading text-2xl md:text-3xl font-bold text-text mb-6">
-				Languages
+		<section class="px-6 md:px-12 py-12">
+			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+			<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
+				Polyglot
 			</h2>
-			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-				@languageBadge("English")
-				@languageBadge("Spanish")
-				@languageBadge("Portuguese")
-				@languageBadge("French")
-				@languageBadge("Italian")
-				@languageBadge("German")
+			<div class="space-y-4 max-w-md">
+				@languageBar("English", 99)
+				@languageBar("Dutch", 99)
+				@languageBar("Surinamese", 97)
+				@languageBar("Spanish", 95)
+				@languageBar("Papiamentu", 60)
+				@languageBar("Mandarin", 10)
+			</div>
+		</section>
+		<section class="px-6 md:px-12 py-12 pb-16">
+			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+			<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
+				Places Lived
+			</h2>
+			<div class="flex flex-wrap gap-3 max-w-3xl">
+				@placeBadge("Paramaribo", "SR")
+				@placeBadge("Rotterdam", "NL")
+				@placeBadge("The Hague", "NL")
+				@placeBadge("Leiden", "NL")
+				@placeBadge("Almere", "NL")
+				@placeBadge("Medell\u00edn", "CO")
+				@placeBadge("Guatap\u00e9", "CO")
+				@placeBadge("San Rafael", "CO")
 			</div>
 		</section>
 	}
 }
 
-templ milestoneCard(year string, description string) {
+templ milestoneCard(title string, description string) {
 	<div class="relative bg-bg-surface border border-bg-border rounded-lg p-5">
 		<div class="absolute -left-[2.3rem] top-5 w-4 h-4 rounded-full bg-accent border-2 border-bg"></div>
 		<div class="font-heading text-accent text-sm font-semibold uppercase mb-1">
-			{ year }
+			{ title }
 		</div>
 		<div class="font-body text-text">
 			{ description }
@@ -71,8 +83,59 @@ templ milestoneCard(year string, description string) {
 	</div>
 }
 
-templ languageBadge(name string) {
-	<div class="bg-bg-surface border border-bg-border rounded-lg px-4 py-3 text-center font-body text-text-muted hover:text-accent-light hover:border-accent transition-colors">
-		{ name }
+templ languageBar(name string, percent int) {
+	<div class="space-y-1">
+		<div class="flex justify-between text-sm">
+			<span class="font-body text-text">{ name }</span>
+			<span class="font-mono text-text-muted">{ percentStr(percent) }</span>
+		</div>
+		<div class="h-2 bg-bg-surface rounded-full overflow-hidden">
+			<div
+				class="h-full bg-gradient-to-r from-accent to-accent-2 rounded-full"
+				style={ "width: " + percentStr(percent) }
+			></div>
+		</div>
 	</div>
+}
+
+func percentStr(p int) string {
+	return fmt.Sprintf("%d%%", p)
+}
+
+templ placeBadge(city string, country string) {
+	<div class="bg-bg-surface border border-bg-border rounded-lg px-4 py-2 font-body flex items-center gap-2">
+		@flagCircle(country)
+		<span class="text-text">{ city }</span>
+	</div>
+}
+
+templ flagCircle(country string) {
+	<svg width="20" height="20" viewBox="0 0 20 20" class="flex-shrink-0">
+		<clipPath id={ "clip-" + country }>
+			<circle cx="10" cy="10" r="10"></circle>
+		</clipPath>
+		<g clip-path={ "url(#clip-" + country + ")" }>
+			if country == "SR" {
+				<!-- Suriname: green, white, red (large), white, green -->
+				<rect x="0" y="0" width="20" height="4" fill="#377E3F"></rect>
+				<rect x="0" y="4" width="20" height="2" fill="#FFFFFF"></rect>
+				<rect x="0" y="6" width="20" height="8" fill="#B40A2D"></rect>
+				<rect x="0" y="14" width="20" height="2" fill="#FFFFFF"></rect>
+				<rect x="0" y="16" width="20" height="4" fill="#377E3F"></rect>
+				<!-- Yellow star -->
+				<polygon points="10,7 11,9.3 13.5,9.3 11.5,10.9 12.3,13.5 10,11.8 7.7,13.5 8.5,10.9 6.5,9.3 9,9.3" fill="#ECC81D"></polygon>
+			} else if country == "NL" {
+				<!-- Netherlands: red, white, blue -->
+				<rect x="0" y="0" width="20" height="7" fill="#AE1C28"></rect>
+				<rect x="0" y="7" width="20" height="6" fill="#FFFFFF"></rect>
+				<rect x="0" y="13" width="20" height="7" fill="#21468B"></rect>
+			} else if country == "CO" {
+				<!-- Colombia: yellow (half), blue, red -->
+				<rect x="0" y="0" width="20" height="10" fill="#FCD116"></rect>
+				<rect x="0" y="10" width="20" height="5" fill="#003893"></rect>
+				<rect x="0" y="15" width="20" height="5" fill="#CE1126"></rect>
+			}
+		</g>
+		<circle cx="10" cy="10" r="9.5" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></circle>
+	</svg>
 }
