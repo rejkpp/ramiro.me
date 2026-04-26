@@ -41,6 +41,10 @@ func main() {
 
 // generate renders all pages and partials to outDir, and copies static assets.
 func generate(outDir string) error {
+	if err := os.RemoveAll(outDir); err != nil {
+		return fmt.Errorf("clear out dir: %w", err)
+	}
+
 	// Initialize markdown content (required by Home, About pages).
 	if err := content.Init(ramirome.ContentFS); err != nil {
 		return fmt.Errorf("content init: %w", err)
