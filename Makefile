@@ -1,6 +1,6 @@
 .PHONY: css templ build dev gen static clean
 
-TAILWIND_BIN := ./tailwindcss
+TAILWIND_BIN := ./tailwindcss-darwin-arm64
 TAILWIND_URL := https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64
 
 css:
@@ -28,4 +28,5 @@ static: css gen
 clean:
 	rm -rf bin/ public/
 	rm -f static/css/app.css
+	rm -f tailwindcss-darwin-arm64 tailwindcss-linux-x64
 	find . -name "*_templ.go" -type f -delete

@@ -7,6 +7,28 @@ import (
 	"testing"
 )
 
+func TestGenerateRemovesStaleFiles(t *testing.T) {
+	outDir := t.TempDir()
+
+	// Pre-create a stale file that should not survive a fresh generate.
+	staleDir := filepath.Join(outDir, "stale")
+	if err := os.MkdirAll(staleDir, 0o755); err != nil {
+		t.Fatalf("create stale dir: %v", err)
+	}
+	stalePath := filepath.Join(staleDir, "index.html")
+	if err := os.WriteFile(stalePath, []byte("<html>stale</html>"), 0o644); err != nil {
+		t.Fatalf("write stale file: %v", err)
+	}
+
+	if err := generate(outDir); err != nil {
+		t.Fatalf("generate(%q): %v", outDir, err)
+	}
+
+	if _, err := os.Stat(stalePath); !os.IsNotExist(err) {
+		t.Errorf("stale file %s should have been removed, but still exists", stalePath)
+	}
+}
+
 func TestGenerate(t *testing.T) {
 	outDir := t.TempDir()
 
