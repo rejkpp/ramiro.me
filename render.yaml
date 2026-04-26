@@ -2,7 +2,7 @@ services:
   - type: web
     name: ramiro-me
     runtime: static
-    buildCommand: bash build.sh
+    buildCommand: make static
     staticPublishPath: ./public
     envVars:
       - key: GO_VERSION

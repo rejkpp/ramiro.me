@@ -9,21 +9,37 @@ import (
 
 templ About() {
 	@layout.Base("About", "/about") {
-		<section class="py-16 px-6 md:px-12 max-w-3xl">
-			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
-			<h1 class="text-3xl md:text-5xl font-medium text-text mb-4">
-				About
-			</h1>
-			<p class="text-base md:text-lg text-text-muted leading-relaxed italic">
-				I found belonging when I stopped looking.
-			</p>
-		</section>
-		<section class="px-6 md:px-12 pb-12 max-w-3xl">
-			<div class="space-y-4 font-body text-text leading-relaxed">
-				@content.MustGet("about/intro")
-			</div>
-			<div class="text-text-muted italic pt-4">
-				@content.MustGet("about/closing")
+		<section class="px-6 md:px-12 py-12 md:py-16">
+			<div class="grid gap-10 lg:grid-cols-[15rem_minmax(0,1fr)] max-w-5xl">
+				<aside class="lg:sticky lg:top-28 self-start">
+					<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+					<div class="flex items-center gap-4 mb-6">
+						<img src="/static/img/ramiro_profile_200x200.jpg" alt="Ramiro" class="w-20 h-20 rounded-full object-cover"/>
+						<div>
+							<h1 class="text-2xl font-medium text-text">
+								Ramiro
+							</h1>
+							<p class="text-sm text-text-muted leading-relaxed">
+								Developer, entrepreneur, and meditation teacher based in Colombia.
+							</p>
+						</div>
+					</div>
+					<div class="flex flex-wrap gap-2 text-xs">
+						<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">AI integrations</span>
+						<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">Trading Algos</span>
+						<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">SaaS development</span>
+						<span class="bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full">Meditation</span>
+						<span class="bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full">Breathwork</span>
+					</div>
+					<p class="mt-6 border-t border-bg-border pt-5 text-sm italic leading-relaxed text-text-muted">
+						I found belonging when I stopped looking.
+					</p>
+				</aside>
+				<div class="max-w-3xl">
+					<div class="about-story">
+						@content.MustGet("about/intro")
+					</div>
+				</div>
 			</div>
 		</section>
 		<section class="px-6 md:px-12 py-12">
@@ -32,10 +48,11 @@ templ About() {
 				Journey
 			</h2>
 			<div class="relative pl-8 border-l-2 border-bg-border space-y-6 max-w-3xl">
-				@milestoneCard("Belonging", "Born between the Caribbean and Europe. Never quite fitting anywhere. The search for identity became the obstacle to finding it.")
-				@milestoneCard("Heartbreak", "A love that cracked me open. Learning that presence matters more than permanence.")
-				@milestoneCard("Losing Dad", "His death came before I was ready. But readiness is a myth\u2014we just meet what comes.")
-				@milestoneCard("Family Lawsuit", "Money and inheritance revealed shadows. Mine included. Choosing integrity over winning.")
+				@milestoneCard("Building", "AI systems, trading algorithms, SaaS software, businesses, and meditation.")
+				@milestoneCard("Personal Challenges", "Heartbreak, losing my dad, and family conflict around inheritance.")
+				@milestoneCard("Early Work", "My mom's supermarket, the register, admin, fireworks sales, and learning business from the inside.")
+				@milestoneCard("Training", "Swimming, tae kwon do, basketball, ping pong, kung fu, keyboard, and vocals. Different ways of learning discipline, timing, and focus.")
+				@milestoneCard("Growing Up", "Suriname, Dutch school, Chinese roots, a Colombian mom, Caribbean culture, American cartoons, Japanese video games, and a silent dad.")
 			</div>
 		</section>
 		<section class="px-6 md:px-12 py-12">
