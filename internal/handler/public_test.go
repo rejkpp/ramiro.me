@@ -135,8 +135,8 @@ func TestPublic_Booking(t *testing.T) {
 		"Book a call",
 		"30 minutes",
 		"60 minutes",
-		"CALENDLY_PLACEHOLDER_30_MIN",
-		"CALENDLY_PLACEHOLDER_60_MIN",
+		"calendly.com/ramiro_/b",
+		"calendly.com/ramiro_/a",
 		"Book a session",
 		"Clairvoyant reading",
 	} {
