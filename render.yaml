@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ramiro-me
+    runtime: static
+    buildCommand: bash build.sh
+    staticPublishPath: ./public
+    envVars:
+      - key: GO_VERSION
+        value: "1.24.3"
