@@ -1,0 +1,8 @@
+services:
+  - type: web
+    runtime: go
+    name: ramiro-me
+    plan: free
+    buildCommand: make build
+    startCommand: ./bin/server
+    healthCheckPath: /

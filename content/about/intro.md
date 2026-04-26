@@ -1,7 +1,37 @@
-Multi-cultural, multi-disciplined, multi-lingual. Not Chinese enough to be Chinese, too Chinese to be Surinamese, too Surinamese to be Colombian. I never fit into one group, one label. Who am I? A question I have asked many times over and continue to ask daily.
+These days I live on a mountain, hike with my dogs, build AI systems, trading algorithms, run and build businesses, and teach meditation.
 
-I grew up between worlds. Born in the Caribbean, raised across languages and cultures, I never quite fit anywhere. That outsider feeling became my constant companion---and eventually, my teacher.
+## Who am I?
 
-Life broke me open in the ways it needed to: a heartbreak that rewired how I love, losing my father before I was ready, a family lawsuit that forced me to choose who I wanted to become. Each breaking point became a doorway.
+A question I have asked many times over and continue to answer daily.
 
-Now I build AI systems, trade algorithms, teach meditation, and guide people through their own doorways. I've stopped trying to fit into one box. The integration of all my parts---developer, trader, teacher, mystic---is the whole point.
+I’m a character in a movie.
+
+I’m a player in a game.
+
+I’m a spirit in a body.
+
+I never fit into one group, one label.  
+Multi-cultural, multi-disciplined, multi-lingual.  
+Not Chinese enough to be Chinese,  
+too Chinese to be Surinamese,  
+too Surinamese to be Colombian.  
+Too rich to be poor, too poor to be rich. 
+
+I was born in Suriname, influenced by a Colombian mom, Dutch education, American cartoons, Japanese video games, Caribbean culture, Chinese roots, and a silent dad.
+
+Work started early. Helping in my mom's supermarket,  
+working the register, doing admin, selling fireworks.  
+It was pretty ghetto.  
+One time I saw one of the employees swing a machete at a customer. 
+
+In a past life,  
+I made mojitos behind bars,  
+was part of a cult,  
+danced at bachata festivals across Europe,  
+fell in love and got my heart broken.
+
+I lost my dad, and my half-siblings took me to court.
+
+I basically needed a LOT of therapy, coaching, and healing.
+
+Connecting to spirit keeps me grounded.
