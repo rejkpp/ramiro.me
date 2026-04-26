@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TAILWIND_BIN="./tailwindcss"
+TAILWIND_BIN="./tailwindcss-linux-x64"
 TAILWIND_URL="https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64"
 
 # Download Tailwind CLI if not present.
