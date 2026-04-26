@@ -1,9 +1,10 @@
 # Timesheet
 
-**Total: 47h 57m**
+**Total: 49h 8m**
 
 | # | Branch | Description | Started | Ended | Duration |
 |---|--------|-------------|---------|-------|----------|
+| 10 | feat/static-export | Static export pipeline for Render Static Site deploy | 2026-04-25 21:32 | 2026-04-25 22:43 | 1h 11m |
 | 9 | main | Goldmark markdown content pipeline + typographer | 2026-04-17 02:36 | 2026-04-17 03:55 | 1h 19m |
 | 8 | main | — | 2026-04-17 01:45 | 2026-04-17 02:27 | 0h 42m |
 | 7 | main | — | 2026-04-14 22:24 | 2026-04-15 00:57 | 2h 33m |

@@ -4,10 +4,13 @@ static/.DS_Store
 
 # Build artifacts
 bin/
+public/
 tmp/
 .tmp/
 static/css/app.css
 tailwindcss
+tailwindcss-darwin-arm64
+tailwindcss-linux-x64
 /server
 
 # Screenshots

@@ -2,9 +2,9 @@ package pages
 
 import "github.com/rejkpp/ramiro.me/templates/layout"
 
-const bookingLink30Min = "https://calendly.com/CALENDLY_PLACEHOLDER_30_MIN"
-const bookingLink60Min = "https://calendly.com/CALENDLY_PLACEHOLDER_60_MIN"
-const bookingLinkReading = "https://calendly.com/CALENDLY_PLACEHOLDER_READING"
+const bookingLink30Min = "https://calendly.com/ramiro_/b"
+const bookingLink60Min = "https://calendly.com/ramiro_/a"
+const bookingLinkReading = "https://calendly.com/ramiro_/c"
 
 templ Booking() {
 	@layout.Base("Booking", "/booking") {
@@ -21,7 +21,7 @@ templ Booking() {
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<!-- 30-minute option -->
 				<div class="bg-bg-surface rounded-[10px] border border-bg-border p-6 flex flex-col">
-					<p class="text-xs uppercase tracking-wide text-accent mb-2">Quick hit</p>
+					<p class="text-xs uppercase tracking-wide text-accent mb-2">Quick solution</p>
 					<h2 class="text-2xl font-medium text-text mb-1">30 minutes</h2>
 					<p class="text-lg font-medium text-accent mb-4">$150 USD</p>
 					<p class="text-sm text-text-muted leading-relaxed mb-4">
@@ -38,7 +38,7 @@ templ Booking() {
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-accent">—</span>
-							<span>Architecture sanity check</span>
+							<span>SaaS check</span>
 						</li>
 					</ul>
 					<a
@@ -69,7 +69,7 @@ templ Booking() {
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-accent">—</span>
-							<span>SaaS architecture planning</span>
+							<span>SaaS strategy</span>
 						</li>
 					</ul>
 					<a
@@ -87,7 +87,7 @@ templ Booking() {
 					<h2 class="text-2xl font-medium text-text mb-1">Clairvoyant reading</h2>
 					<p class="text-lg font-medium text-accent-2 mb-4">$300 USD</p>
 					<p class="text-sm text-text-muted leading-relaxed mb-4">
-						60-minute session.
+						Hello to your spirit
 					</p>
 					<ul class="text-sm text-text-muted space-y-2 mb-6 flex-1">
 						<li class="flex items-start gap-2">
@@ -97,6 +97,10 @@ templ Booking() {
 						<li class="flex items-start gap-2">
 							<span class="text-accent-2">—</span>
 							<span>Clarity on a next step</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-accent-2">—</span>
+							<span>Not telling your future</span>
 						</li>
 					</ul>
 					<a
@@ -148,7 +152,7 @@ templ Booking() {
 					</div>
 					<p class="font-heading text-sm font-medium text-accent mb-2">3. Attend Your Session</p>
 					<p class="font-body text-xs text-text-muted leading-relaxed">
-						Connect via your preferred platform and take a step.
+						Call via whatsapp and take a step.
 					</p>
 				</div>
 			</div>

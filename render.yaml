@@ -1,8 +1,9 @@
 services:
   - type: web
-    runtime: go
     name: ramiro-me
-    plan: free
-    buildCommand: make build
-    startCommand: ./bin/server
-    healthCheckPath: /
+    runtime: static
+    buildCommand: make static
+    staticPublishPath: ./public
+    envVars:
+      - key: GO_VERSION
+        value: "1.24.3"

@@ -1,4 +1,4 @@
-.PHONY: css templ build dev clean
+.PHONY: css templ build dev gen static clean
 
 TAILWIND_BIN := ./tailwindcss
 TEMPL_VERSION := v0.3.1001
@@ -34,7 +34,13 @@ build: templ css
 dev: build
 	./bin/server
 
+gen:
+	go run ./cmd/gen
+
+static: templ css gen
+
 clean:
-	rm -rf bin/
+	rm -rf bin/ public/
 	rm -f static/css/app.css
+	rm -f tailwindcss tailwindcss-darwin-arm64 tailwindcss-linux-x64
 	find . -name "*_templ.go" -type f -delete
