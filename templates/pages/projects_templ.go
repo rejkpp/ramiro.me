@@ -43,42 +43,51 @@ func Projects() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"py-12\"><h1 class=\"font-heading text-4xl md:text-5xl font-bold text-text mb-4\">Projects</h1><p class=\"font-body text-lg text-text-muted\">Things I've built</p></section><section class=\"py-8\"><div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"py-12\"><h1 class=\"font-heading text-4xl md:text-5xl font-bold text-text mb-4\">Projects</h1><p class=\"font-body text-lg text-text-muted\">Things I'm building</p></section><section class=\"py-8\"><div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			templ_7745c5c3_Err = projectCard(
-				"[Project One]",
-				"AI",
-				"[Project description placeholder. What it does and why it matters.]",
-				[]string{"Go", "Python", "PyTorch"},
+				"Pradisi",
+				"Wellness",
+				"A retreat and education project focused on meditation, breathwork, yoga, and inner development. Pradisi exists to help people reset, deepen their practice, and reconnect through retreats and courses.",
+				[]string{"Meditation", "Breathwork", "Yoga", "Retreats"},
 			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			templ_7745c5c3_Err = projectCard(
-				"[Project Two]",
+				"Suriname Legal AI",
+				"AI",
+				"An AI project exploring how legal information from Suriname can become more accessible. The goal is to build a system that understands Surinamese law and helps people navigate legal questions more clearly.",
+				[]string{"AI", "Legal", "NLP"},
+			).Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = projectCard(
+				"Algo Trading",
 				"Trading",
-				"[Project description placeholder. What it does and why it matters.]",
-				[]string{"Rust", "TimescaleDB"},
+				"A learning and research track where I'm studying algorithmic trading, strategy design, and trading systems. This also supports more technical client work in the trading space.",
+				[]string{"Research", "Strategy"},
 			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			templ_7745c5c3_Err = projectCard(
-				"[Project Three]",
-				"Venture",
-				"[Project description placeholder. What it does and why it matters.]",
-				[]string{"TypeScript", "Next.js"},
+				"Client Algo Trading Bot",
+				"Trading",
+				"A software project focused on implementing a client's trading strategy as an automated bot. It combines backend engineering, trading logic, testing, and reliable execution.",
+				[]string{"Backend", "Automation"},
 			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			templ_7745c5c3_Err = projectCard(
-				"[Project Four]",
+				"Multiagent System",
 				"AI",
-				"[Project description placeholder. What it does and why it matters.]",
-				[]string{"Go", "Templ", "HTMX"},
+				"A workflow project for using multiple AI agents to plan, build, research, review, and execute work more effectively across projects.",
+				[]string{"Multi-agent", "Workflow"},
 			).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
@@ -125,7 +134,7 @@ func projectCard(title string, category string, description string, tags []strin
 		var templ_7745c5c3_Var4 string
 		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(category)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 49, Col: 13}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 55, Col: 13}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
@@ -138,7 +147,7 @@ func projectCard(title string, category string, description string, tags []strin
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 52, Col: 10}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 58, Col: 10}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
@@ -151,7 +160,7 @@ func projectCard(title string, category string, description string, tags []strin
 		var templ_7745c5c3_Var6 string
 		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(description)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 55, Col: 16}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 61, Col: 16}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 		if templ_7745c5c3_Err != nil {
@@ -169,7 +178,7 @@ func projectCard(title string, category string, description string, tags []strin
 			var templ_7745c5c3_Var7 string
 			templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(tag)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 60, Col: 10}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/projects.templ`, Line: 66, Col: 10}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 			if templ_7745c5c3_Err != nil {
