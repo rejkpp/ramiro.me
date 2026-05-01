@@ -10,7 +10,6 @@ I’m a player in a game.
 
 I’m a spirit in a body.
 
-I never fit into one group, one label.  
 Multi-cultural, multi-disciplined, multi-lingual.  
 Not Chinese enough to be Chinese,  
 too Chinese to be Surinamese,  
@@ -19,10 +18,9 @@ Too rich to be poor, too poor to be rich.
 
 I was born in Suriname, influenced by a Colombian mom, Dutch education, American cartoons, Japanese video games, Caribbean culture, Chinese roots, and a silent dad.
 
-Work started early. Helping in my mom's supermarket,  
-working the register, doing admin, selling fireworks.  
+I grew up behind the counter at my mom's supermarket, ringing people up, helping with admin, and selling fireworks.  
 It was pretty ghetto.  
-One time I saw one of the employees swing a machete at a customer. 
+One time, I saw one of the employees swing a machete at a customer. 
 
 In a past life,  
 I made mojitos behind bars,  

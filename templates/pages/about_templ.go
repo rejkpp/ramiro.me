@@ -68,7 +68,7 @@ func About() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = milestoneCard("Early Work", "My mom's supermarket, the register, admin, fireworks sales, and learning business from the inside.").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = milestoneCard("Behind the Counter", "My mom's supermarket, working the register, doing admin, selling fireworks, learning business early on.").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
