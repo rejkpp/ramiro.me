@@ -4,7 +4,7 @@
 | --- | --- |
 | Project | ramiro.me |
 | Created | 2026-04-11 21:01 |
-| Last Updated | 2026-04-25 22:43 |
+| Last Updated | 2026-05-06 23:08 |
 | Stage | Development |
 
 ## Goals
@@ -64,6 +64,8 @@ This is how Patreon/Supercast work. Full control, no third-party dependency.
 
 Reverse chronological. Format: `YYYY-MM-DD — [Decision] — [Rationale]`
 
+- 2026-05-06 — Public site visual vocabulary locked: shared `grain` / `breathe` / `cursor-blink` / `reveal` utilities; `type-tech` / `type-soft` typography (no italic serif); gradient highlights on key phrases via Goldmark `WithUnsafe()` + inline `<span class="gradient-text">` in markdown. Site-wide sticky NOW status strip in `templates/layout/now.templ`. Each home pillar gets its own visual signature (Beetl Bot terminal, BTCUSD candlesticks, SRD ledger, breathing circle). Projects grouped by status (Building / Live / Paused) with status-coloured pills. About page: animated polyglot bars, editorialised Journey, Places Lived grouped geographically.
+- 2026-05-06 — Durable copy/type rules: no em dashes anywhere on the site (use periods, commas, middots, or ` · ` for chrome separators); no italic-serif fonts (express duality via weight + tracking + colour, not font-family). Encoded in tests so regressions break the build.
 - 2026-04-25 — Public site deploys as static HTML to Render Static Site (free tier), not a Go Web Service — public pages have no per-request logic (templ + markdown only), so paying for an always-on service before there's dynamic behavior is premature. `cmd/gen` renders all routes to `./public/`. Reverses (for now) the "single binary serving all subdomains" plan from 2026-04-11 — `circle.ramiro.me` and `x.ramiro.me` will become separate Web Services when auth/Stripe/podcast feeds actually need a server. One template system (templ) still shared across both static export and future dynamic services
 - 2026-04-17 — Migrate Home page prose to markdown — 4 card descriptions + featured project blurb live in `content/home/**/*.md`; structured UI (cards, bio, tags) stays in templ. Projects/Booking skipped (placeholders + pricing one-liners don't benefit)
 - 2026-04-17 — Enable Goldmark Typographer extension — authors write `---`, `...`, straight quotes in markdown; renderer produces proper em-dashes, ellipses, and smart quotes without special keyboard input

@@ -1,10 +1,10 @@
 # Timesheet
 
-**Total: 49h 45m**
+**Total: 61h 26m**
 
 | # | Branch | Description | Started | Ended | Duration |
 |---|--------|-------------|---------|-------|----------|
-| 15 | feat/redesign-v2 | — | 2026-05-06 11:26 | — | — |
+| 15 | feat/redesign-v2 | Redesigned all four public pages with shared vocabulary (gradient accents, pillar visuals, NOW strip, scroll reveal) | 2026-05-06 11:26 | 2026-05-06 23:07 | 11h 41m |
 | 14 | feat/redesign-v2 | — | 2026-05-06 11:26 | 2026-05-06 11:26 | 0h 0m |
 | 13 | main | — | 2026-05-06 11:19 | 2026-05-06 11:20 | 0h 1m |
 | 12 | main | — | 2026-05-06 11:17 | 2026-05-06 11:19 | 0h 2m |
