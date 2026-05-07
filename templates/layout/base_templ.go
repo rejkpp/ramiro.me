@@ -42,14 +42,14 @@ func Base(title string, path string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, " — ramiro.me</title><!-- Favicons --><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/favicon-16x16.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\"><link rel=\"manifest\" href=\"/static/manifest.json\"><meta name=\"theme-color\" content=\"#f59e0b\"><!-- Open Graph --><meta property=\"og:type\" content=\"website\"><meta property=\"og:title\" content=\"")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, " · ramiro.me</title><!-- Favicons --><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/favicon-32x32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/favicon-16x16.png\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\"><link rel=\"manifest\" href=\"/static/manifest.json\"><meta name=\"theme-color\" content=\"#f59e0b\"><!-- Open Graph --><meta property=\"og:type\" content=\"website\"><meta property=\"og:title\" content=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var3 string
-		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(title + " — ramiro.me")
+		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(title + " · ramiro.me")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout/base.templ`, Line: 18, Col: 63}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/layout/base.templ`, Line: 18, Col: 62}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -68,11 +68,15 @@ func Base(title string, path string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\"><meta name=\"twitter:card\" content=\"summary_large_image\"><!-- Styles & Scripts --><link rel=\"stylesheet\" href=\"/static/css/app.css\"><script src=\"/static/js/htmx.min.js\"></script><script src=\"/static/js/color-switcher.js\"></script></head><body class=\"bg-bg text-text font-body min-h-screen flex flex-col\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\"><meta name=\"twitter:card\" content=\"summary_large_image\"><!-- Styles & Scripts --><link rel=\"stylesheet\" href=\"/static/css/app.css\"><script src=\"/static/js/htmx.min.js\"></script><script src=\"/static/js/color-switcher.js\"></script><script src=\"/static/js/reveal.js\" defer></script></head><body class=\"bg-bg text-text font-body min-h-screen flex flex-col\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		templ_7745c5c3_Err = Nav(path).Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = Now().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

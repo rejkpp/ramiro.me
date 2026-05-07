@@ -13,6 +13,7 @@ import (
 	"github.com/a-h/templ"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/extension"
+	"github.com/yuin/goldmark/renderer/html"
 )
 
 // cache stores rendered HTML keyed by path-without-extension
@@ -20,7 +21,12 @@ import (
 var cache = make(map[string]string)
 
 // md is the Goldmark instance with GFM extensions enabled.
-var md = goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Typographer))
+// WithUnsafe lets curated raw HTML inside markdown render through (used
+// for inline `<span class="gradient-text">` highlights on key words).
+var md = goldmark.New(
+	goldmark.WithExtensions(extension.GFM, extension.Typographer),
+	goldmark.WithRendererOptions(html.WithUnsafe()),
+)
 
 // Init walks the embedded filesystem under "content/", reads every *.md file,
 // renders it to HTML via Goldmark, and stores the result in the package-level

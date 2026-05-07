@@ -1,1 +1,3 @@
-Purpose-built accounting and invoicing software for businesses in Suriname. Local tax compliance, multi-currency support and local exchange rates.
+Built for Surinamese tax rules and the SRD-USD currency reality.
+Local tax compliance, multi-currency support,
+and exchange rates that actually apply.

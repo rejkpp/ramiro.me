@@ -1,1 +1,4 @@
-Clairvoyant meditation techniques for the modern world. Tools for developing intuition, reading energy, and navigating life from a place of clarity.
+Sit with the part of you that already knows.
+Clairvoyant meditation for the modern world.
+Tools to develop intuition, read energy, and navigate
+from clarity instead of noise.

@@ -1,1 +1,3 @@
-Systematic trading strategies. Backtesting frameworks using blind forward testing, signal generation, and execution infrastructure.
+Rule-based, emotionless algorithmic trading.
+Backtests that respect look-ahead bias, blind forward tests,
+signal generation, and execution infrastructure that survives Monday morning.

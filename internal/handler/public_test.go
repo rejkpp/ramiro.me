@@ -22,19 +22,16 @@ func TestMain(m *testing.M) {
 			Data: []byte("Who am I?"),
 		},
 		"content/home/cards/ai.md": &fstest.MapFile{
-			Data: []byte("Multi-agent orchestration, LLM pipelines, and autonomous systems."),
+			Data: []byte("Beetl Bot, a personal AI assistant built around the way you actually work."),
 		},
 		"content/home/cards/trading.md": &fstest.MapFile{
-			Data: []byte("Systematic trading strategies."),
+			Data: []byte("Rule-based, emotionless algorithmic trading."),
 		},
 		"content/home/cards/accounting.md": &fstest.MapFile{
-			Data: []byte("Purpose-built accounting and invoicing software."),
+			Data: []byte("Built for Surinamese tax rules and the SRD-USD currency reality."),
 		},
 		"content/home/cards/meditation.md": &fstest.MapFile{
-			Data: []byte("Clairvoyant meditation techniques for the modern world."),
-		},
-		"content/home/featured.md": &fstest.MapFile{
-			Data: []byte("A framework for coordinating autonomous AI agents."),
+			Data: []byte("Sit with the part of you that already knows. Clairvoyant meditation for the modern world."),
 		},
 	}
 	if err := content.Init(fs); err != nil {
@@ -73,26 +70,93 @@ func TestPublic_Home(t *testing.T) {
 		t.Errorf("body missing htmx script reference")
 	}
 
-	// Homepage sections
+	// Hero markers and decorative classes.
 	for _, want := range []string{
 		"Intelligence",
 		"Intuition",
 		"Impact",
-		"ship fast and stay sane",
+		"Helping founders",
+		"ship fast",
+		"stay sane",
 		"Book a call",
-		"AI and agents",
-		"Algorithmic trading",
-		"Accounting software",
-		"Clairvoyant Meditation",
-		"Currently building",
-		"ORC",
-		"Ramiro",
-		"AI integrations",
-		"Meditation",
+		"grain",
+		"breathe",
+		"cursor-blink",
 	} {
 		if !strings.Contains(body, want) {
 			t.Errorf("home body missing %q", want)
 		}
+	}
+
+	// Pillar headlines and signature elements.
+	for _, want := range []string{
+		"Your own Jarvis",                         // AI headline
+		"Beetl Bot",                               // AI product name (full)
+		"~/beetl-bot",                             // AI terminal path
+		"beetl-bot brief me on today",             // AI command
+		"BTCUSD",                                  // Trading ticker
+		"+8.4%",                                   // Trading change
+		"Algo Trading",                            // Trading headline (primary)
+		"Rules, not feelings",                     // Trading headline (secondary)
+		"Accounting software, built for Suriname", // Accounting headline
+		"Inhale",                                  // Meditation eyebrow
+		"already knows",                           // Meditation headline
+		"Clairvoyant meditation",                  // Meditation framing
+	} {
+		if !strings.Contains(body, want) {
+			t.Errorf("home pillars missing %q", want)
+		}
+	}
+
+	// Five service pills present.
+	for _, pill := range []string{
+		"AI integrations",
+		"Trading algos",
+		"SaaS development",
+		"Meditation",
+		"Breathwork",
+	} {
+		if !strings.Contains(body, pill) {
+			t.Errorf("home bio missing service pill %q", pill)
+		}
+	}
+
+	// Single bio with the detached "Services" spectrum band.
+	if strings.Count(body, "Developer, entrepreneur, and meditation teacher") != 1 {
+		t.Errorf("expected single bio")
+	}
+	if !strings.Contains(body, ">Services<") {
+		t.Errorf("home bio missing the detached Services spectrum band")
+	}
+
+	// Earlier rejected copy must not creep back.
+	for _, gone := range []string{
+		"AI and agents",
+		"Algorithmic trading",
+		"Currently building",
+		"ORC",
+		"Another framework",
+		"way of seeing",
+		"Same mind",
+		"Systems that don",
+		"earns its rent",
+		"Stop watching demos",
+		"orc plan",
+		"EURUSD",
+		"think for a living",
+		"Software that fits your country",
+	} {
+		if strings.Contains(body, gone) {
+			t.Errorf("home body should no longer contain rejected copy %q", gone)
+		}
+	}
+
+	// Durable user preferences.
+	if strings.Contains(body, "&mdash;") {
+		t.Errorf("home body contains &mdash; entity, em dashes are out of copy")
+	}
+	if strings.Contains(body, "serif-i") {
+		t.Errorf("home body still references serif-i class, italic serif is out")
 	}
 }
 

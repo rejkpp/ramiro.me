@@ -5,138 +5,237 @@ import (
 	"github.com/rejkpp/ramiro.me/templates/layout"
 )
 
+// Home is the public landing page.
+//
+// The design speaks to a reader-first framing (visitor's transformation,
+// not Ramiro's bio): a hero with gradient accents, four pillar cards each
+// with a distinct visual signature (terminal, candlestick chart, ledger,
+// breathing circle), and a service spectrum + minimal bio card at the end.
 templ Home() {
 	@layout.Base("Home", "/") {
-
-		<!-- Hero -->
-		<section class="py-20 px-12 max-w-3xl md:py-20 md:px-12 py-10 px-6">
-			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
-			<p class="text-xs uppercase tracking-widest text-accent mb-4">
-				Intelligence &middot; Intuition &middot; Impact
-			</p>
-			<h1 class="text-2xl md:text-4xl font-medium leading-tight text-text mb-4">
-				Helping founders <br> ship fast and stay sane.
-			</h1>
-			<p class="text-base text-text-muted leading-relaxed max-w-xl mb-8">
-				AI integrations, trading algorithms, SaaS development, <br> breathwork and clairvoyant meditation.
-			</p>
-			<div class="flex flex-wrap gap-4">
-				<a
-					href="/booking"
-					class="bg-accent text-bg px-7 py-3 rounded-lg text-sm font-medium hover:bg-accent-light transition-colors"
-				>
-					Book a call
-				</a>
-				<a
-					href="/about"
-					class="border border-accent/40 text-accent px-7 py-3 rounded-lg text-sm font-medium hover:border-accent hover:bg-accent/10 transition-colors"
-				>
-					About
-				</a>
-			</div>
-		</section>
-		<!-- Gradient divider -->
-		<div
-			class="h-px mx-12"
-			style="background: linear-gradient(90deg, #1e1e2e, #f59e0b, #ec4899, #1e1e2e)"
-		></div>
-		<!-- Cards -->
-		<section class="py-12 px-12 md:px-12 px-6">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-				@homeCard(homeCardProps{
-					Title:       "AI and agents",
-					Description: content.MustGet("home/cards/ai"),
-					LinkText:    "Explore AI work",
-					LinkHref:    "/projects",
-					Variant:     "amber",
-				})
-				@homeCard(homeCardProps{
-					Title:       "Algorithmic trading",
-					Description: content.MustGet("home/cards/trading"),
-					LinkText:    "See trading projects",
-					LinkHref:    "/projects",
-					Variant:     "amber",
-				})
-				@homeCard(homeCardProps{
-					Title:       "Accounting software",
-					Description: content.MustGet("home/cards/accounting"),
-					LinkText:    "Learn more",
-					LinkHref:    "/projects",
-					Variant:     "amber",
-				})
-				@homeCard(homeCardProps{
-					Title:       "Clairvoyant Meditation",
-					Description: content.MustGet("home/cards/meditation"),
-					LinkText:    "Discover meditation",
-					LinkHref:    "/projects",
-					Variant:     "pink",
-				})
-			</div>
-		</section>
-		<!-- Featured project -->
-		<section class="py-12 px-12 md:px-12 px-6">
-			<div class="bg-bg-surface rounded-[10px] p-7 border border-bg-border relative overflow-hidden">
-				<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-accent to-accent-2"></div>
-				<p class="text-[11px] uppercase tracking-wide text-accent-2 mb-2">Currently building</p>
-				<h2 class="text-xl font-medium text-text mb-2">
-					ORC — Open-source multi-agent orchestration
-				</h2>
-				<div class="text-sm text-text-muted leading-relaxed mb-4">
-					@content.MustGet("home/featured")
-				</div>
-				<a href="https://github.com/rejkpp" target="_blank" rel="noopener noreferrer" class="text-xs text-accent-2 hover:text-accent-2-light transition-colors">
-					View on GitHub &rarr;
-				</a>
-			</div>
-		</section>
-		<!-- Bio card -->
-		<section class="py-12 px-12 md:px-12 px-6">
-			<div class="bg-bg-surface rounded-[10px] p-7 border border-bg-border">
-				<div class="flex items-center gap-4 mb-4">
-					<img src="/static/img/ramiro_profile_200x200.jpg" alt="Ramiro" class="w-20 h-20 rounded-full object-cover" />
-					<div>
-						<h3 class="text-lg font-medium text-text">Ramiro</h3>
-						<p class="text-sm text-text-muted">
-							Developer, entrepreneur, and meditation teacher based in Colombia.
-						</p>
-					</div>
-				</div>
-				<div class="flex flex-wrap gap-2">
-					<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">AI integrations</span>
-					<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">Trading Algos</span>
-					<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">SaaS development</span>
-					<span class="bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full">Meditation</span>
-					<span class="bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full">Breathwork</span>
-				</div>
-			</div>
-		</section>
+		<div class="grain">
+			@homeHero()
+			@homeGradientDivider()
+			@homePillars()
+			@homeBio()
+		</div>
 	}
 }
 
-type homeCardProps struct {
-	Title       string
-	Description templ.Component
-	LinkText    string
-	LinkHref    string
-	Variant     string
+// ─────────────────────────────────────────────────────────────────
+// Hero. Based on the live /home hero, with gradient text on the
+// two operative phrases ("ship fast", "stay sane").
+// ─────────────────────────────────────────────────────────────────
+templ homeHero() {
+	<section class="px-6 md:px-12 py-12 md:py-20 max-w-3xl relative z-10 reveal">
+		<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+		<p class="text-xs uppercase tracking-[0.22em] text-accent mb-5">
+			Intelligence &middot; Intuition &middot; Impact
+		</p>
+		<h1 class="font-heading font-medium text-text leading-[1.05] text-3xl md:text-5xl mb-6">
+			Helping founders<br/>
+			<span class="gradient-text">ship fast</span> and <span class="gradient-text">stay sane</span>.
+		</h1>
+		<p class="text-base md:text-lg text-text-muted leading-relaxed max-w-xl mb-8">
+			AI integrations, trading algos, SaaS development,
+			breathwork and clairvoyant meditation.
+		</p>
+		<div class="flex flex-wrap gap-3">
+			<a href="/booking" class="bg-accent text-bg px-6 py-3 rounded-lg text-sm font-medium hover:bg-accent-light transition-colors">
+				Book a call
+			</a>
+			<a href="/about" class="border border-accent/40 text-accent px-6 py-3 rounded-lg text-sm font-medium hover:border-accent hover:bg-accent/10 transition-colors">
+				About
+			</a>
+		</div>
+	</section>
 }
 
-templ homeCard(props homeCardProps) {
-	if props.Variant == "pink" {
-		<a href={ templ.SafeURL(props.LinkHref) } class="bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent-2">
-			<h3 class="text-[17px] font-medium text-text mb-2">{ props.Title }</h3>
-			<div class="text-[13px] text-text-muted leading-relaxed mb-4">
-				@props.Description
-			</div>
-			<span class="text-xs text-accent-2">{ props.LinkText } &rarr;</span>
-		</a>
-	} else {
-		<a href={ templ.SafeURL(props.LinkHref) } class="bg-bg-surface rounded-r-[10px] p-6 block hover:bg-[#1a1a2a] transition border-l-[3px] border-accent">
-			<h3 class="text-[17px] font-medium text-text mb-2">{ props.Title }</h3>
-			<div class="text-[13px] text-text-muted leading-relaxed mb-4">
-				@props.Description
-			</div>
-			<span class="text-xs text-accent">{ props.LinkText } &rarr;</span>
-		</a>
-	}
+templ homeGradientDivider() {
+	<div class="px-6 md:px-12 relative z-10">
+		<div class="h-px" style="background: linear-gradient(90deg, transparent, #f59e0b, #ec4899, transparent)"></div>
+	</div>
 }
+
+// ─────────────────────────────────────────────────────────────────
+// Pillars. Four cards, each with a distinct visual signature.
+// ─────────────────────────────────────────────────────────────────
+templ homePillars() {
+	<section class="px-6 md:px-12 pt-4 pb-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+		@homePillarAI()
+		@homePillarTrading()
+		@homePillarAccounting()
+		@homePillarMeditation()
+	</section>
+}
+
+// AI / Beetl Bot → terminal aesthetic, agent-style output.
+templ homePillarAI() {
+	<a href="/projects" class="group block bg-bg-surface border border-bg-border rounded-[12px] p-7 hover:border-accent/60 transition-colors reveal">
+		<div class="flex items-center gap-2 mb-5 font-mono text-[11px] text-text-muted">
+			<span class="inline-flex gap-1.5">
+				<span class="w-2 h-2 rounded-full bg-[#ef4444]/70"></span>
+				<span class="w-2 h-2 rounded-full bg-[#eab308]/70"></span>
+				<span class="w-2 h-2 rounded-full bg-[#22c55e]/70"></span>
+			</span>
+			<span class="ml-2 text-text-muted/70">~/beetl-bot</span>
+		</div>
+		<div class="font-mono text-[13px] leading-relaxed text-text mb-4">
+			<div><span class="text-accent">$</span> beetl-bot brief me on today</div>
+			<div class="text-text-muted">→ thinking...</div>
+			<div><span class="text-accent-2">✓</span> 3 meetings, 1 deadline, start at 11<span class="cursor-blink"></span></div>
+		</div>
+		<h3 class="font-heading text-lg text-text mb-2">Your own Jarvis</h3>
+		<div class="text-[13px] text-text-muted leading-relaxed">
+			@content.MustGet("home/cards/ai")
+		</div>
+		<span class="inline-block mt-4 text-xs text-accent group-hover:text-accent-light transition-colors">Explore AI work &rarr;</span>
+	</a>
+}
+
+// Trading → BTCUSD candlestick chart, 16 candles, 4h timeframe.
+// Amber bodies = bullish, pink = bearish. Big bodies (up to 26 units of
+// 60) and some candles spanning 36+ units high-to-low so the chart reads
+// as REALLY volatile. Macro shape: violent oscillation early, then a
+// rally to new highs in the right half.
+templ homePillarTrading() {
+	<a href="/projects" class="group block bg-bg-surface border border-bg-border rounded-[12px] p-7 hover:border-accent/60 transition-colors reveal">
+		<div class="flex items-center justify-between mb-5">
+			<div class="flex items-baseline gap-2">
+				<span class="font-mono text-[11px] tracking-widest text-text-muted">BTCUSD</span>
+				<span class="font-mono text-[11px] text-accent-2">+8.4%</span>
+			</div>
+			<span class="font-mono text-[10px] text-text-muted/70">4h</span>
+		</div>
+		<svg viewBox="0 0 240 60" class="w-full h-24 mb-4" preserveAspectRatio="none" aria-hidden="true">
+			<g shape-rendering="crispEdges">
+				<!-- 1 bullish O=50 H=42 L=54 C=44 -->
+				<line x1="8" y1="42" x2="8" y2="54" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="3" y="44" width="10" height="6" fill="#f59e0b"/>
+				<!-- 2 bullish,big up O=44 H=16 L=48 C=22 -->
+				<line x1="23" y1="16" x2="23" y2="48" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="18" y="22" width="10" height="22" fill="#f59e0b"/>
+				<!-- 3 bearish,reversal O=22 H=18 L=38 C=36 -->
+				<line x1="38" y1="18" x2="38" y2="38" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="33" y="22" width="10" height="14" fill="#ec4899"/>
+				<!-- 4 bearish,extension O=36 H=14 L=50 C=48 -->
+				<line x1="53" y1="14" x2="53" y2="50" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="48" y="36" width="10" height="12" fill="#ec4899"/>
+				<!-- 5 bullish,huge recovery O=48 H=14 L=52 C=22 -->
+				<line x1="68" y1="14" x2="68" y2="52" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="63" y="22" width="10" height="26" fill="#f59e0b"/>
+				<!-- 6 bearish O=22 H=18 L=42 C=38 -->
+				<line x1="83" y1="18" x2="83" y2="42" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="78" y="22" width="10" height="16" fill="#ec4899"/>
+				<!-- 7 bullish,rally O=38 H=14 L=42 C=18 -->
+				<line x1="98" y1="14" x2="98" y2="42" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="93" y="18" width="10" height="20" fill="#f59e0b"/>
+				<!-- 8 bearish O=18 H=14 L=36 C=30 -->
+				<line x1="113" y1="14" x2="113" y2="36" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="108" y="18" width="10" height="12" fill="#ec4899"/>
+				<!-- 9 bullish small O=30 H=24 L=34 C=26 -->
+				<line x1="128" y1="24" x2="128" y2="34" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="123" y="26" width="10" height="4" fill="#f59e0b"/>
+				<!-- 10 bullish,breakout O=26 H=8 L=30 C=12 -->
+				<line x1="143" y1="8" x2="143" y2="30" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="138" y="12" width="10" height="14" fill="#f59e0b"/>
+				<!-- 11 bearish doji O=12 H=6 L=18 C=14 -->
+				<line x1="158" y1="6" x2="158" y2="18" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="153" y="12" width="10" height="2" fill="#ec4899"/>
+				<!-- 12 bullish O=14 H=4 L=22 C=8 -->
+				<line x1="173" y1="4" x2="173" y2="22" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="168" y="8" width="10" height="6" fill="#f59e0b"/>
+				<!-- 13 bearish,pullback O=8 H=4 L=22 C=18 -->
+				<line x1="188" y1="4" x2="188" y2="22" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="183" y="8" width="10" height="10" fill="#ec4899"/>
+				<!-- 14 bullish,strong rally O=18 H=2 L=22 C=6 -->
+				<line x1="203" y1="2" x2="203" y2="22" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="198" y="6" width="10" height="12" fill="#f59e0b"/>
+				<!-- 15 bearish small O=6 H=4 L=14 C=10 -->
+				<line x1="218" y1="4" x2="218" y2="14" stroke="#ec4899" stroke-width="1.2"/>
+				<rect x="213" y="6" width="10" height="4" fill="#ec4899"/>
+				<!-- 16 bullish,final push O=10 H=2 L=14 C=4 -->
+				<line x1="233" y1="2" x2="233" y2="14" stroke="#f59e0b" stroke-width="1.2"/>
+				<rect x="228" y="4" width="10" height="6" fill="#f59e0b"/>
+			</g>
+		</svg>
+		<h3 class="font-heading text-lg text-text mb-2">Algo Trading. <span class="text-text-muted">Rules, not feelings.</span></h3>
+		<div class="text-[13px] text-text-muted leading-relaxed">
+			@content.MustGet("home/cards/trading")
+		</div>
+		<span class="inline-block mt-4 text-xs text-accent group-hover:text-accent-light transition-colors">See trading work &rarr;</span>
+	</a>
+}
+
+// Accounting → ledger / numeric tabular treatment.
+templ homePillarAccounting() {
+	<a href="/projects" class="group block bg-bg-surface border border-bg-border rounded-[12px] p-7 hover:border-accent/60 transition-colors reveal">
+		<div class="font-mono text-[11px] text-text-muted mb-4 grid grid-cols-[1fr_auto] gap-y-1.5 max-w-xs">
+			<span>Invoice #00142</span>      <span class="text-text">SRD 12,400.00</span>
+			<span class="text-text-muted/70">VAT 10%</span>           <span class="text-text-muted/70">1,240.00</span>
+			<span class="text-text-muted/70">FX rate (USD)</span>     <span class="text-text-muted/70">37.20</span>
+			<span class="border-t border-bg-border pt-1.5 text-accent">Total</span>
+			<span class="border-t border-bg-border pt-1.5 text-accent">USD 365.59</span>
+		</div>
+		<h3 class="font-heading text-lg text-text mb-2">Accounting software, built for Suriname</h3>
+		<div class="text-[13px] text-text-muted leading-relaxed">
+			@content.MustGet("home/cards/accounting")
+		</div>
+		<span class="inline-block mt-4 text-xs text-accent group-hover:text-accent-light transition-colors">See the build &rarr;</span>
+	</a>
+}
+
+// Meditation → breathing circle behind a sans treatment with pink gradient.
+templ homePillarMeditation() {
+	<a href="/projects" class="group block bg-bg-surface border border-bg-border rounded-[12px] p-7 hover:border-accent-2/60 transition-colors reveal relative overflow-hidden">
+		<div class="absolute -top-4 -right-4 breathe pointer-events-none" aria-hidden="true"></div>
+		<div class="relative">
+			<p class="font-mono text-[10px] tracking-[0.22em] text-accent-2 uppercase mb-5">Inhale &middot; Exhale</p>
+			<h3 class="type-soft text-2xl text-text mb-3 leading-tight">
+				The part of you that <span class="gradient-text">already knows.</span>
+			</h3>
+			<div class="text-[13px] text-text-muted leading-relaxed max-w-sm">
+				@content.MustGet("home/cards/meditation")
+			</div>
+			<span class="inline-block mt-4 text-xs text-accent-2 group-hover:text-accent-2-light transition-colors">Discover meditation &rarr;</span>
+		</div>
+	</a>
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Bio. Detached "Services" spectrum band above a minimal bio card.
+// ─────────────────────────────────────────────────────────────────
+templ homeBio() {
+	<section class="px-6 md:px-12 pt-12 pb-10 relative z-10 reveal max-w-3xl">
+		<!-- Service spectrum band -->
+		<div class="mb-3 flex items-center gap-3">
+			<span class="font-mono text-[10px] tracking-[0.22em] text-text-muted uppercase shrink-0">Services</span>
+			<div class="flex-1 h-px bg-bg-border"></div>
+		</div>
+		<div class="flex flex-wrap gap-2 mb-5">
+			<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">AI integrations</span>
+			<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">Trading algos</span>
+			<span class="bg-accent-subtle text-accent-light text-xs px-3 py-1 rounded-full">SaaS development</span>
+			<span class="bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full">Meditation</span>
+			<span class="bg-accent-2-subtle text-accent-2-light text-xs px-3 py-1 rounded-full">Breathwork</span>
+		</div>
+		<!-- Minimal bio card -->
+		<div class="bg-bg-surface rounded-[12px] p-6 border border-bg-border flex items-center gap-5">
+			<img
+				src="/static/img/ramiro_profile_200x200.jpg"
+				alt="Ramiro"
+				class="w-16 h-16 rounded-full object-cover shrink-0"
+			/>
+			<div class="flex-1 min-w-0">
+				<h3 class="text-base font-medium text-text leading-tight">Ramiro</h3>
+				<p class="text-sm text-text-muted leading-snug mb-3">
+					Developer, entrepreneur, and meditation teacher based in Colombia.
+				</p>
+				<a href="/booking" class="text-sm text-accent hover:text-accent-light transition-colors">
+					Book a call &rarr;
+				</a>
+			</div>
+		</div>
+	</section>
+}
+

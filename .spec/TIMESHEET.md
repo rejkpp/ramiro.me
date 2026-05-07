@@ -1,9 +1,14 @@
 # Timesheet
 
-**Total: 49h 8m**
+**Total: 49h 45m**
 
 | # | Branch | Description | Started | Ended | Duration |
 |---|--------|-------------|---------|-------|----------|
+| 15 | feat/redesign-v2 | — | 2026-05-06 11:26 | — | — |
+| 14 | feat/redesign-v2 | — | 2026-05-06 11:26 | 2026-05-06 11:26 | 0h 0m |
+| 13 | main | — | 2026-05-06 11:19 | 2026-05-06 11:20 | 0h 1m |
+| 12 | main | — | 2026-05-06 11:17 | 2026-05-06 11:19 | 0h 2m |
+| 11 | main | — | 2026-05-06 10:41 | 2026-05-06 11:15 | 0h 34m |
 | 10 | feat/static-export | Static export pipeline for Render Static Site deploy | 2026-04-25 21:32 | 2026-04-25 22:43 | 1h 11m |
 | 9 | main | Goldmark markdown content pipeline + typographer | 2026-04-17 02:36 | 2026-04-17 03:55 | 1h 19m |
 | 8 | main | — | 2026-04-17 01:45 | 2026-04-17 02:27 | 0h 42m |

@@ -48,39 +48,55 @@ func About() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<section class=\"px-6 md:px-12 py-12 md:py-16\"><div class=\"grid gap-10 lg:grid-cols-[15rem_minmax(0,1fr)] max-w-5xl\"><aside class=\"lg:sticky lg:top-28 self-start\"><div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div><div class=\"flex items-center gap-4 mb-6\"><img src=\"/static/img/ramiro_profile_200x200.jpg\" alt=\"Ramiro\" class=\"w-20 h-20 rounded-full object-cover\"><div><h1 class=\"text-2xl font-medium text-text\">Ramiro</h1><p class=\"text-sm text-text-muted leading-relaxed\">Developer, entrepreneur, and meditation teacher based in Colombia.</p></div></div><div class=\"flex flex-wrap gap-2 text-xs\"><span class=\"bg-accent-subtle text-accent-light px-3 py-1 rounded-full\">AI integrations</span> <span class=\"bg-accent-subtle text-accent-light px-3 py-1 rounded-full\">Trading Algos</span> <span class=\"bg-accent-subtle text-accent-light px-3 py-1 rounded-full\">SaaS development</span> <span class=\"bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full\">Meditation</span> <span class=\"bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full\">Breathwork</span></div><p class=\"mt-6 border-t border-bg-border pt-5 text-sm italic leading-relaxed text-text-muted\">I found belonging when I stopped looking.</p></aside><div class=\"max-w-3xl\"><div class=\"about-story\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"grain\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = content.MustGet("about/intro").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = aboutHero().Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div></div></div></section><section class=\"px-6 md:px-12 py-12\"><div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div><h2 class=\"text-2xl md:text-3xl font-medium text-text mb-8\">Journey</h2><div class=\"relative pl-8 border-l-2 border-bg-border space-y-6 max-w-3xl\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "<!-- Journey ─ improvement 2 + 5: editorial cards + section-specific mark --><section class=\"px-6 md:px-12 py-12 reveal\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = milestoneCard("Building", "AI systems, trading algorithms, SaaS software, businesses, and meditation.").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = aboutMarkLine().Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = milestoneCard("Personal Challenges", "Heartbreak, losing my dad, and family conflict around inheritance.").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<h2 class=\"text-2xl md:text-3xl font-medium text-text mb-10\">Journey</h2><div class=\"relative pl-10 md:pl-12 border-l border-bg-border space-y-8 max-w-3xl\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = milestoneCard("Behind the Counter", "My mom's supermarket, working the register, doing admin, selling fireworks, learning business early on.").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = journeyEntry("01", "Building", "AI systems, trading algorithms, SaaS software, businesses, and meditation.").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = milestoneCard("Training", "Swimming, tae kwon do, basketball, ping pong, kung fu, keyboard, and vocals. Different ways of learning discipline, timing, and focus.").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = journeyEntry("02", "Personal Challenges", "Heartbreak, losing my dad, and family conflict around inheritance.").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = milestoneCard("Growing Up", "Suriname, Dutch school, Chinese roots, a Colombian mom, Caribbean culture, American cartoons, Japanese video games, and a silent dad.").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = journeyEntry("03", "Behind the Counter", "My mom's supermarket, working the register, doing admin, selling fireworks, learning business early on.").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</div></section><section class=\"px-6 md:px-12 py-12\"><div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div><h2 class=\"text-2xl md:text-3xl font-medium text-text mb-8\">Polyglot</h2><div class=\"space-y-4 max-w-md\">")
+			templ_7745c5c3_Err = journeyEntry("04", "Training", "Swimming, tae kwon do, basketball, ping pong, kung fu, keyboard, and vocals. Different ways of learning discipline, timing, and focus.").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = journeyEntry("05", "Growing Up", "Suriname, Dutch school, Chinese roots, a Colombian mom, Caribbean culture, American cartoons, Japanese video games, and a silent dad.").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</div></section><!-- Polyglot ─ improvement 1 + 5: animated bars + dot mark --><section class=\"px-6 md:px-12 py-12 reveal\" id=\"about-polyglot\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = aboutMarkDots().Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<h2 class=\"text-2xl md:text-3xl font-medium text-text mb-8\">Polyglot</h2><div class=\"space-y-4 max-w-md\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -108,43 +124,39 @@ func About() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</div></section><section class=\"px-6 md:px-12 py-12 pb-16\"><div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div><h2 class=\"text-2xl md:text-3xl font-medium text-text mb-8\">Places Lived</h2><div class=\"flex flex-wrap gap-3 max-w-3xl\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "</div></section><!-- Places Lived ─ improvement 3 + 5: geographic groups + arrow mark --><section class=\"px-6 md:px-12 py-12 pb-16 reveal\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("Paramaribo", "SR").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = aboutMarkArrow().Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("Rotterdam", "NL").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<h2 class=\"text-2xl md:text-3xl font-medium text-text mb-10\">Places Lived</h2><div class=\"space-y-6 max-w-3xl\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("The Hague", "NL").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = placesGroup("CO", "Colombia", []string{"Medellín", "Guatapé", "San Rafael"}).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("Leiden", "NL").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = placesGroup("NL", "Netherlands", []string{"Rotterdam", "The Hague", "Leiden", "Almere"}).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("Almere", "NL").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = placesGroup("SR", "Suriname", []string{"Paramaribo"}).Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("Medell\u00edn", "CO").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</div></section>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("Guatap\u00e9", "CO").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = aboutPolyglotAnimateScript().Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = placeBadge("San Rafael", "CO").Render(ctx, templ_7745c5c3_Buffer)
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</div></section>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "</div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -158,7 +170,12 @@ func About() templ.Component {
 	})
 }
 
-func milestoneCard(title string, description string) templ.Component {
+// ─────────────────────────────────────────────────────────────
+// Section-specific marks (improvement 5)
+// ─────────────────────────────────────────────────────────────
+
+// Hero / aside: bold gradient bar (the "anchor" mark).
+func aboutMarkBar() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -179,33 +196,7 @@ func milestoneCard(title string, description string) templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<div class=\"relative bg-bg-surface border border-bg-border rounded-lg p-5\"><div class=\"absolute -left-[2.3rem] top-5 w-4 h-4 rounded-full bg-accent border-2 border-bg\"></div><div class=\"font-heading text-accent text-sm font-semibold uppercase mb-1\">")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var4 string
-		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(title)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 95, Col: 10}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "</div><div class=\"font-body text-text\">")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var5 string
-		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(description)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 98, Col: 16}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</div></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<div class=\"w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6\"></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -213,7 +204,68 @@ func milestoneCard(title string, description string) templ.Component {
 	})
 }
 
-func languageBar(name string, percent int) templ.Component {
+// Journey: thin gradient line (forward motion).
+func aboutMarkLine() templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var4 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var4 == nil {
+			templ_7745c5c3_Var4 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "<div class=\"h-px w-32 bg-gradient-to-r from-accent via-accent-2 to-transparent mb-6\"></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+// Polyglot: three dots (language ticks).
+func aboutMarkDots() templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var5 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var5 == nil {
+			templ_7745c5c3_Var5 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "<div class=\"flex items-center gap-1.5 mb-6\"><span class=\"w-1.5 h-1.5 rounded-full bg-accent\"></span> <span class=\"w-1.5 h-1.5 rounded-full bg-accent-2\"></span> <span class=\"w-1.5 h-1.5 rounded-full bg-text-muted/50\"></span></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+// Places Lived: thin amber line (migration trail), no arrow.
+func aboutMarkArrow() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -234,46 +286,7 @@ func languageBar(name string, percent int) templ.Component {
 			templ_7745c5c3_Var6 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "<div class=\"space-y-1\"><div class=\"flex justify-between text-sm\"><span class=\"font-body text-text\">")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var7 string
-		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(name)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 106, Col: 43}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "</span> <span class=\"font-mono text-text-muted\">")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var8 string
-		templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(percentStr(percent))
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 107, Col: 64}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "</span></div><div class=\"h-2 bg-bg-surface rounded-full overflow-hidden\"><div class=\"h-full bg-gradient-to-r from-accent to-accent-2 rounded-full\" style=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var9 string
-		templ_7745c5c3_Var9, templ_7745c5c3_Err = templruntime.SanitizeStyleAttributeValues("width: " + percentStr(percent))
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 112, Col: 43}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "\"></div></div></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "<div class=\"h-px w-16 bg-gradient-to-r from-accent to-transparent mb-6\"></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -281,11 +294,11 @@ func languageBar(name string, percent int) templ.Component {
 	})
 }
 
-func percentStr(p int) string {
-	return fmt.Sprintf("%d%%", p)
-}
-
-func placeBadge(city string, country string) templ.Component {
+// ─────────────────────────────────────────────────────────────
+// Journey entry (improvement 2): bigger card, gradient accent bar,
+// mono-numbered marker on the rail. Same content, more presence.
+// ─────────────────────────────────────────────────────────────
+func journeyEntry(num string, title string, description string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -301,33 +314,279 @@ func placeBadge(city string, country string) templ.Component {
 			}()
 		}
 		ctx = templ.InitializeContext(ctx)
-		templ_7745c5c3_Var10 := templ.GetChildren(ctx)
-		if templ_7745c5c3_Var10 == nil {
-			templ_7745c5c3_Var10 = templ.NopComponent
+		templ_7745c5c3_Var7 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var7 == nil {
+			templ_7745c5c3_Var7 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "<div class=\"bg-bg-surface border border-bg-border rounded-lg px-4 py-2 font-body flex items-center gap-2\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 14, "<div class=\"relative group\"><!-- Marker dot on the rail --><div class=\"absolute -left-[2.7rem] md:-left-[3.05rem] top-2 w-3 h-3 rounded-full bg-accent ring-4 ring-bg group-hover:bg-accent-2 transition-colors\"></div><!-- Card --><div class=\"bg-bg-surface border border-bg-border rounded-lg overflow-hidden\"><!-- Top accent strip --><div class=\"h-[2px] bg-gradient-to-r from-accent via-accent-2 to-transparent\"></div><div class=\"p-6 md:p-7\"><div class=\"flex items-baseline gap-3 mb-2\"><span class=\"font-mono text-[11px] tracking-[0.18em] text-accent\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = flagCircle(country).Render(ctx, templ_7745c5c3_Buffer)
+		var templ_7745c5c3_Var8 string
+		templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(num)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 106, Col: 76}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 14, "<span class=\"text-text\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "</span><h3 class=\"font-heading text-lg md:text-xl font-medium text-text\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var11 string
-		templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinStringErrs(city)
+		var templ_7745c5c3_Var9 string
+		templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 125, Col: 32}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 108, Col: 13}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "</span></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 16, "</h3></div><p class=\"font-body text-text-muted leading-relaxed\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var10 string
+		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(description)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 112, Col: 18}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 17, "</p></div></div></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+// ─────────────────────────────────────────────────────────────
+// Polyglot bar (improvement 1): width animates from 0% to its
+// target on reveal. Uses CSS variable + transition; JS triggers
+// the animation when the section enters the viewport.
+// ─────────────────────────────────────────────────────────────
+func languageBar(name string, percent int) templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var11 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var11 == nil {
+			templ_7745c5c3_Var11 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 18, "<div class=\"space-y-1\"><div class=\"flex justify-between text-sm\"><span class=\"font-body text-text\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var12 string
+		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(name)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 127, Col: 43}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 19, "</span> <span class=\"font-mono text-text-muted\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var13 string
+		templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs(percentStr(percent))
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 128, Col: 64}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 20, "</span></div><div class=\"h-2 bg-bg-surface rounded-full overflow-hidden\"><div class=\"lang-bar h-full bg-gradient-to-r from-accent to-accent-2 rounded-full\" style=\"")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var14 string
+		templ_7745c5c3_Var14, templ_7745c5c3_Err = templruntime.SanitizeStyleAttributeValues("--target: " + percentStr(percent))
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 133, Col: 46}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 21, "\"></div></div></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+func percentStr(p int) string {
+	return fmt.Sprintf("%d%%", p)
+}
+
+// JS that staggers each .lang-bar from 0 → its --target width when
+// #about-polyglot scrolls into view.
+func aboutPolyglotAnimateScript() templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var15 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var15 == nil {
+			templ_7745c5c3_Var15 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "<script>\n\t\t(function () {\n\t\t\tvar section = document.getElementById('about-polyglot');\n\t\t\tif (!section) return;\n\t\t\tvar bars = section.querySelectorAll('.lang-bar');\n\t\t\tif (!bars.length) return;\n\n\t\t\t// Initial state: collapsed.\n\t\t\tbars.forEach(function (b) { b.style.width = '0%'; });\n\n\t\t\tfunction play() {\n\t\t\t\tbars.forEach(function (b, i) {\n\t\t\t\t\tsetTimeout(function () {\n\t\t\t\t\t\tb.style.transition = 'width 900ms cubic-bezier(.2,.7,.2,1)';\n\t\t\t\t\t\tb.style.width = getComputedStyle(b).getPropertyValue('--target').trim();\n\t\t\t\t\t}, 120 * i);\n\t\t\t\t});\n\t\t\t}\n\n\t\t\tif (!('IntersectionObserver' in window)) { play(); return; }\n\t\t\tvar io = new IntersectionObserver(function (entries) {\n\t\t\t\tentries.forEach(function (e) {\n\t\t\t\t\tif (e.isIntersecting) { play(); io.disconnect(); }\n\t\t\t\t});\n\t\t\t}, { threshold: 0.3 });\n\t\t\tio.observe(section);\n\t\t})();\n\t</script>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+// ─────────────────────────────────────────────────────────────
+// Places Lived (improvement 3): grouped by country with subtle
+// section labels (mono code + country name). Tells the migration
+// story without a single word change to the place names.
+// ─────────────────────────────────────────────────────────────
+func placesGroup(code string, country string, cities []string) templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var16 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var16 == nil {
+			templ_7745c5c3_Var16 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 23, "<div><div class=\"flex items-center gap-3 mb-3\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = flagCircle(code).Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 24, "<span class=\"font-mono text-[11px] tracking-[0.22em] text-accent uppercase\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var17 string
+		templ_7745c5c3_Var17, templ_7745c5c3_Err = templ.JoinStringErrs(code)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 185, Col: 85}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var17))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 25, "</span> <span class=\"text-sm text-text-muted\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var18 string
+		templ_7745c5c3_Var18, templ_7745c5c3_Err = templ.JoinStringErrs(country)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 186, Col: 50}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var18))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 26, "</span><div class=\"flex-1 h-px bg-bg-border\"></div></div><div class=\"flex flex-wrap gap-3 pl-7\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		for _, city := range cities {
+			templ_7745c5c3_Err = placeBadge(city).Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 27, "</div></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+func placeBadge(city string) templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var19 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var19 == nil {
+			templ_7745c5c3_Var19 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 28, "<div class=\"bg-bg-surface border border-bg-border rounded-lg px-4 py-2 font-body\"><span class=\"text-text\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		var templ_7745c5c3_Var20 string
+		templ_7745c5c3_Var20, templ_7745c5c3_Err = templ.JoinStringErrs(city)
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 199, Col: 32}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var20))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 29, "</span></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -351,58 +610,142 @@ func flagCircle(country string) templ.Component {
 			}()
 		}
 		ctx = templ.InitializeContext(ctx)
-		templ_7745c5c3_Var12 := templ.GetChildren(ctx)
-		if templ_7745c5c3_Var12 == nil {
-			templ_7745c5c3_Var12 = templ.NopComponent
+		templ_7745c5c3_Var21 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var21 == nil {
+			templ_7745c5c3_Var21 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 16, "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" class=\"flex-shrink-0\"><clipPath id=\"")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 30, "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" class=\"flex-shrink-0\"><clipPath id=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var13 string
-		templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs("clip-" + country)
+		var templ_7745c5c3_Var22 string
+		templ_7745c5c3_Var22, templ_7745c5c3_Err = templ.JoinStringErrs("clip-" + country)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 131, Col: 34}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 205, Col: 34}
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 17, "\"><circle cx=\"10\" cy=\"10\" r=\"10\"></circle></clipPath> <g clip-path=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var22))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		var templ_7745c5c3_Var14 string
-		templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs("url(#clip-" + country + ")")
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 134, Col: 45}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 31, "\"><circle cx=\"10\" cy=\"10\" r=\"10\"></circle></clipPath> <g clip-path=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 18, "\">")
+		var templ_7745c5c3_Var23 string
+		templ_7745c5c3_Var23, templ_7745c5c3_Err = templ.JoinStringErrs("url(#clip-" + country + ")")
+		if templ_7745c5c3_Err != nil {
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `templates/pages/about.templ`, Line: 208, Col: 45}
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var23))
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 32, "\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if country == "SR" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 19, "<!-- Suriname: green, white, red (large), white, green --> <rect x=\"0\" y=\"0\" width=\"20\" height=\"4\" fill=\"#377E3F\"></rect> <rect x=\"0\" y=\"4\" width=\"20\" height=\"2\" fill=\"#FFFFFF\"></rect> <rect x=\"0\" y=\"6\" width=\"20\" height=\"8\" fill=\"#B40A2D\"></rect> <rect x=\"0\" y=\"14\" width=\"20\" height=\"2\" fill=\"#FFFFFF\"></rect> <rect x=\"0\" y=\"16\" width=\"20\" height=\"4\" fill=\"#377E3F\"></rect><!-- Yellow star --> <polygon points=\"10,7 11,9.3 13.5,9.3 11.5,10.9 12.3,13.5 10,11.8 7.7,13.5 8.5,10.9 6.5,9.3 9,9.3\" fill=\"#ECC81D\"></polygon>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 33, "<!-- Suriname: green, white, red (large), white, green --> <rect x=\"0\" y=\"0\" width=\"20\" height=\"4\" fill=\"#377E3F\"></rect> <rect x=\"0\" y=\"4\" width=\"20\" height=\"2\" fill=\"#FFFFFF\"></rect> <rect x=\"0\" y=\"6\" width=\"20\" height=\"8\" fill=\"#B40A2D\"></rect> <rect x=\"0\" y=\"14\" width=\"20\" height=\"2\" fill=\"#FFFFFF\"></rect> <rect x=\"0\" y=\"16\" width=\"20\" height=\"4\" fill=\"#377E3F\"></rect><!-- Yellow star --> <polygon points=\"10,7 11,9.3 13.5,9.3 11.5,10.9 12.3,13.5 10,11.8 7.7,13.5 8.5,10.9 6.5,9.3 9,9.3\" fill=\"#ECC81D\"></polygon>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else if country == "NL" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 20, "<!-- Netherlands: red, white, blue --> <rect x=\"0\" y=\"0\" width=\"20\" height=\"7\" fill=\"#AE1C28\"></rect> <rect x=\"0\" y=\"7\" width=\"20\" height=\"6\" fill=\"#FFFFFF\"></rect> <rect x=\"0\" y=\"13\" width=\"20\" height=\"7\" fill=\"#21468B\"></rect>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 34, "<!-- Netherlands: red, white, blue --> <rect x=\"0\" y=\"0\" width=\"20\" height=\"7\" fill=\"#AE1C28\"></rect> <rect x=\"0\" y=\"7\" width=\"20\" height=\"6\" fill=\"#FFFFFF\"></rect> <rect x=\"0\" y=\"13\" width=\"20\" height=\"7\" fill=\"#21468B\"></rect>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else if country == "CO" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 21, "<!-- Colombia: yellow (half), blue, red --> <rect x=\"0\" y=\"0\" width=\"20\" height=\"10\" fill=\"#FCD116\"></rect> <rect x=\"0\" y=\"10\" width=\"20\" height=\"5\" fill=\"#003893\"></rect> <rect x=\"0\" y=\"15\" width=\"20\" height=\"5\" fill=\"#CE1126\"></rect>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 35, "<!-- Colombia: yellow (half), blue, red --> <rect x=\"0\" y=\"0\" width=\"20\" height=\"10\" fill=\"#FCD116\"></rect> <rect x=\"0\" y=\"10\" width=\"20\" height=\"5\" fill=\"#003893\"></rect> <rect x=\"0\" y=\"15\" width=\"20\" height=\"5\" fill=\"#CE1126\"></rect>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "</g> <circle cx=\"10\" cy=\"10\" r=\"9.5\" fill=\"none\" stroke=\"rgba(255,255,255,0.1)\" stroke-width=\"1\"></circle></svg>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 36, "</g> <circle cx=\"10\" cy=\"10\" r=\"9.5\" fill=\"none\" stroke=\"rgba(255,255,255,0.1)\" stroke-width=\"1\"></circle></svg>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+// ─────────────────────────────────────────────────────────────
+// Hero/intro layout (chosen direction: L1 — NOW strip + sticky aside).
+// ─────────────────────────────────────────────────────────────
+
+// Sticky aside content used in the hero.
+func aboutAsideDefault() templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var24 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var24 == nil {
+			templ_7745c5c3_Var24 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = aboutMarkBar().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 37, "<div class=\"flex flex-col items-start gap-4 mb-7\"><img src=\"/static/img/ramiro_profile_200x200.jpg\" alt=\"Ramiro\" class=\"w-28 h-28 rounded-full object-cover ring-1 ring-bg-border\"><div><h1 class=\"text-2xl font-medium text-text leading-tight mb-1\">Ramiro</h1><p class=\"text-sm text-text-muted leading-relaxed\">Developer, entrepreneur, and meditation teacher based in Colombia.</p></div></div><div class=\"flex flex-wrap gap-2 text-xs mb-6\"><span class=\"bg-accent-subtle text-accent-light px-3 py-1 rounded-full\">AI integrations</span> <span class=\"bg-accent-subtle text-accent-light px-3 py-1 rounded-full\">Trading algos</span> <span class=\"bg-accent-subtle text-accent-light px-3 py-1 rounded-full\">SaaS development</span> <span class=\"bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full\">Meditation</span> <span class=\"bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full\">Breathwork</span></div><div class=\"rounded-lg bg-bg-surface/60 border border-bg-border px-4 py-3.5\"><p class=\"text-sm italic leading-relaxed text-text-muted\">I found <span class=\"gradient-text not-italic font-medium\">belonging</span> when I stopped looking.</p></div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+// Hero/intro — sticky aside on the left + about-story prose on the right.
+func aboutHero() templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var25 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var25 == nil {
+			templ_7745c5c3_Var25 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 38, "<section class=\"reveal\"><div class=\"px-6 md:px-12 py-12 md:py-16\"><div class=\"grid gap-10 lg:grid-cols-[17rem_minmax(0,1fr)] max-w-5xl\"><aside class=\"lg:sticky lg:top-28 self-start\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = aboutAsideDefault().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 39, "</aside><div class=\"max-w-3xl\"><div class=\"about-story\">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = content.MustGet("about/intro").Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 40, "</div></div></div></div></section>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
