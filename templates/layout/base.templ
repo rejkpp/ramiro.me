@@ -6,7 +6,7 @@ templ Base(title string, path string) {
 		<head>
 			<meta charset="utf-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
-			<title>{ title } — ramiro.me</title>
+			<title>{ title } · ramiro.me</title>
 			<!-- Favicons -->
 			<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png"/>
 			<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png"/>
@@ -15,7 +15,7 @@ templ Base(title string, path string) {
 			<meta name="theme-color" content="#f59e0b"/>
 			<!-- Open Graph -->
 			<meta property="og:type" content="website"/>
-			<meta property="og:title" content={ title + " — ramiro.me" }/>
+			<meta property="og:title" content={ title + " · ramiro.me" }/>
 			<meta property="og:image" content="https://ramiro.me/static/og-image.png"/>
 			<meta property="og:url" content={ "https://ramiro.me" + path }/>
 			<meta name="twitter:card" content="summary_large_image"/>
@@ -23,9 +23,11 @@ templ Base(title string, path string) {
 			<link rel="stylesheet" href="/static/css/app.css"/>
 			<script src="/static/js/htmx.min.js"></script>
 			<script src="/static/js/color-switcher.js"></script>
+			<script src="/static/js/reveal.js" defer></script>
 		</head>
 		<body class="bg-bg text-text font-body min-h-screen flex flex-col">
 			@Nav(path)
+			@Now()
 			<main class="flex-1 w-full max-w-5xl mx-auto px-4 py-8">
 				{ children... }
 			</main>

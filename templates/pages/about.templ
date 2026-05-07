@@ -9,97 +9,118 @@ import (
 
 templ About() {
 	@layout.Base("About", "/about") {
-		<section class="px-6 md:px-12 py-12 md:py-16">
-			<div class="grid gap-10 lg:grid-cols-[15rem_minmax(0,1fr)] max-w-5xl">
-				<aside class="lg:sticky lg:top-28 self-start">
-					<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
-					<div class="flex items-center gap-4 mb-6">
-						<img src="/static/img/ramiro_profile_200x200.jpg" alt="Ramiro" class="w-20 h-20 rounded-full object-cover"/>
-						<div>
-							<h1 class="text-2xl font-medium text-text">
-								Ramiro
-							</h1>
-							<p class="text-sm text-text-muted leading-relaxed">
-								Developer, entrepreneur, and meditation teacher based in Colombia.
-							</p>
-						</div>
-					</div>
-					<div class="flex flex-wrap gap-2 text-xs">
-						<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">AI integrations</span>
-						<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">Trading Algos</span>
-						<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">SaaS development</span>
-						<span class="bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full">Meditation</span>
-						<span class="bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full">Breathwork</span>
-					</div>
-					<p class="mt-6 border-t border-bg-border pt-5 text-sm italic leading-relaxed text-text-muted">
-						I found belonging when I stopped looking.
-					</p>
-				</aside>
-				<div class="max-w-3xl">
-					<div class="about-story">
-						@content.MustGet("about/intro")
-					</div>
+		<div class="grain">
+			@aboutHero()
+
+			<!-- Journey ─ improvement 2 + 5: editorial cards + section-specific mark -->
+			<section class="px-6 md:px-12 py-12 reveal">
+				@aboutMarkLine()
+				<h2 class="text-2xl md:text-3xl font-medium text-text mb-10">
+					Journey
+				</h2>
+				<div class="relative pl-10 md:pl-12 border-l border-bg-border space-y-8 max-w-3xl">
+					@journeyEntry("01", "Building", "AI systems, trading algorithms, SaaS software, businesses, and meditation.")
+					@journeyEntry("02", "Personal Challenges", "Heartbreak, losing my dad, and family conflict around inheritance.")
+					@journeyEntry("03", "Behind the Counter", "My mom's supermarket, working the register, doing admin, selling fireworks, learning business early on.")
+					@journeyEntry("04", "Training", "Swimming, tae kwon do, basketball, ping pong, kung fu, keyboard, and vocals. Different ways of learning discipline, timing, and focus.")
+					@journeyEntry("05", "Growing Up", "Suriname, Dutch school, Chinese roots, a Colombian mom, Caribbean culture, American cartoons, Japanese video games, and a silent dad.")
 				</div>
-			</div>
-		</section>
-		<section class="px-6 md:px-12 py-12">
-			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
-			<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
-				Journey
-			</h2>
-			<div class="relative pl-8 border-l-2 border-bg-border space-y-6 max-w-3xl">
-				@milestoneCard("Building", "AI systems, trading algorithms, SaaS software, businesses, and meditation.")
-				@milestoneCard("Personal Challenges", "Heartbreak, losing my dad, and family conflict around inheritance.")
-				@milestoneCard("Behind the Counter", "My mom's supermarket, working the register, doing admin, selling fireworks, learning business early on.")
-				@milestoneCard("Training", "Swimming, tae kwon do, basketball, ping pong, kung fu, keyboard, and vocals. Different ways of learning discipline, timing, and focus.")
-				@milestoneCard("Growing Up", "Suriname, Dutch school, Chinese roots, a Colombian mom, Caribbean culture, American cartoons, Japanese video games, and a silent dad.")
-			</div>
-		</section>
-		<section class="px-6 md:px-12 py-12">
-			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
-			<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
-				Polyglot
-			</h2>
-			<div class="space-y-4 max-w-md">
-				@languageBar("English", 99)
-				@languageBar("Dutch", 99)
-				@languageBar("Surinamese", 97)
-				@languageBar("Spanish", 95)
-				@languageBar("Papiamentu", 60)
-				@languageBar("Mandarin", 10)
-			</div>
-		</section>
-		<section class="px-6 md:px-12 py-12 pb-16">
-			<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
-			<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
-				Places Lived
-			</h2>
-			<div class="flex flex-wrap gap-3 max-w-3xl">
-				@placeBadge("Paramaribo", "SR")
-				@placeBadge("Rotterdam", "NL")
-				@placeBadge("The Hague", "NL")
-				@placeBadge("Leiden", "NL")
-				@placeBadge("Almere", "NL")
-				@placeBadge("Medell\u00edn", "CO")
-				@placeBadge("Guatap\u00e9", "CO")
-				@placeBadge("San Rafael", "CO")
-			</div>
-		</section>
+			</section>
+
+			<!-- Polyglot ─ improvement 1 + 5: animated bars + dot mark -->
+			<section class="px-6 md:px-12 py-12 reveal" id="about-polyglot">
+				@aboutMarkDots()
+				<h2 class="text-2xl md:text-3xl font-medium text-text mb-8">
+					Polyglot
+				</h2>
+				<div class="space-y-4 max-w-md">
+					@languageBar("English", 99)
+					@languageBar("Dutch", 99)
+					@languageBar("Surinamese", 97)
+					@languageBar("Spanish", 95)
+					@languageBar("Papiamentu", 60)
+					@languageBar("Mandarin", 10)
+				</div>
+			</section>
+
+			<!-- Places Lived ─ improvement 3 + 5: geographic groups + arrow mark -->
+			<section class="px-6 md:px-12 py-12 pb-16 reveal">
+				@aboutMarkArrow()
+				<h2 class="text-2xl md:text-3xl font-medium text-text mb-10">
+					Places Lived
+				</h2>
+				<div class="space-y-6 max-w-3xl">
+					@placesGroup("CO", "Colombia", []string{"Medellín", "Guatapé", "San Rafael"})
+					@placesGroup("NL", "Netherlands", []string{"Rotterdam", "The Hague", "Leiden", "Almere"})
+					@placesGroup("SR", "Suriname", []string{"Paramaribo"})
+				</div>
+			</section>
+
+			@aboutPolyglotAnimateScript()
+		</div>
 	}
 }
 
-templ milestoneCard(title string, description string) {
-	<div class="relative bg-bg-surface border border-bg-border rounded-lg p-5">
-		<div class="absolute -left-[2.3rem] top-5 w-4 h-4 rounded-full bg-accent border-2 border-bg"></div>
-		<div class="font-heading text-accent text-sm font-semibold uppercase mb-1">
-			{ title }
-		</div>
-		<div class="font-body text-text">
-			{ description }
+// ─────────────────────────────────────────────────────────────
+// Section-specific marks (improvement 5)
+// ─────────────────────────────────────────────────────────────
+
+// Hero / aside: bold gradient bar (the "anchor" mark).
+templ aboutMarkBar() {
+	<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+}
+
+// Journey: thin gradient line (forward motion).
+templ aboutMarkLine() {
+	<div class="h-px w-32 bg-gradient-to-r from-accent via-accent-2 to-transparent mb-6"></div>
+}
+
+// Polyglot: three dots (language ticks).
+templ aboutMarkDots() {
+	<div class="flex items-center gap-1.5 mb-6">
+		<span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+		<span class="w-1.5 h-1.5 rounded-full bg-accent-2"></span>
+		<span class="w-1.5 h-1.5 rounded-full bg-text-muted/50"></span>
+	</div>
+}
+
+// Places Lived: thin amber line (migration trail), no arrow.
+templ aboutMarkArrow() {
+	<div class="h-px w-16 bg-gradient-to-r from-accent to-transparent mb-6"></div>
+}
+
+// ─────────────────────────────────────────────────────────────
+// Journey entry (improvement 2): bigger card, gradient accent bar,
+// mono-numbered marker on the rail. Same content, more presence.
+// ─────────────────────────────────────────────────────────────
+templ journeyEntry(num string, title string, description string) {
+	<div class="relative group">
+		<!-- Marker dot on the rail -->
+		<div class="absolute -left-[2.7rem] md:-left-[3.05rem] top-2 w-3 h-3 rounded-full bg-accent ring-4 ring-bg group-hover:bg-accent-2 transition-colors"></div>
+		<!-- Card -->
+		<div class="bg-bg-surface border border-bg-border rounded-lg overflow-hidden">
+			<!-- Top accent strip -->
+			<div class="h-[2px] bg-gradient-to-r from-accent via-accent-2 to-transparent"></div>
+			<div class="p-6 md:p-7">
+				<div class="flex items-baseline gap-3 mb-2">
+					<span class="font-mono text-[11px] tracking-[0.18em] text-accent">{ num }</span>
+					<h3 class="font-heading text-lg md:text-xl font-medium text-text">
+						{ title }
+					</h3>
+				</div>
+				<p class="font-body text-text-muted leading-relaxed">
+					{ description }
+				</p>
+			</div>
 		</div>
 	</div>
 }
 
+// ─────────────────────────────────────────────────────────────
+// Polyglot bar (improvement 1): width animates from 0% to its
+// target on reveal. Uses CSS variable + transition; JS triggers
+// the animation when the section enters the viewport.
+// ─────────────────────────────────────────────────────────────
 templ languageBar(name string, percent int) {
 	<div class="space-y-1">
 		<div class="flex justify-between text-sm">
@@ -108,8 +129,8 @@ templ languageBar(name string, percent int) {
 		</div>
 		<div class="h-2 bg-bg-surface rounded-full overflow-hidden">
 			<div
-				class="h-full bg-gradient-to-r from-accent to-accent-2 rounded-full"
-				style={ "width: " + percentStr(percent) }
+				class="lang-bar h-full bg-gradient-to-r from-accent to-accent-2 rounded-full"
+				style={ "--target: " + percentStr(percent) }
 			></div>
 		</div>
 	</div>
@@ -119,9 +140,62 @@ func percentStr(p int) string {
 	return fmt.Sprintf("%d%%", p)
 }
 
-templ placeBadge(city string, country string) {
-	<div class="bg-bg-surface border border-bg-border rounded-lg px-4 py-2 font-body flex items-center gap-2">
-		@flagCircle(country)
+// JS that staggers each .lang-bar from 0 → its --target width when
+// #about-polyglot scrolls into view.
+templ aboutPolyglotAnimateScript() {
+	<script>
+		(function () {
+			var section = document.getElementById('about-polyglot');
+			if (!section) return;
+			var bars = section.querySelectorAll('.lang-bar');
+			if (!bars.length) return;
+
+			// Initial state: collapsed.
+			bars.forEach(function (b) { b.style.width = '0%'; });
+
+			function play() {
+				bars.forEach(function (b, i) {
+					setTimeout(function () {
+						b.style.transition = 'width 900ms cubic-bezier(.2,.7,.2,1)';
+						b.style.width = getComputedStyle(b).getPropertyValue('--target').trim();
+					}, 120 * i);
+				});
+			}
+
+			if (!('IntersectionObserver' in window)) { play(); return; }
+			var io = new IntersectionObserver(function (entries) {
+				entries.forEach(function (e) {
+					if (e.isIntersecting) { play(); io.disconnect(); }
+				});
+			}, { threshold: 0.3 });
+			io.observe(section);
+		})();
+	</script>
+}
+
+// ─────────────────────────────────────────────────────────────
+// Places Lived (improvement 3): grouped by country with subtle
+// section labels (mono code + country name). Tells the migration
+// story without a single word change to the place names.
+// ─────────────────────────────────────────────────────────────
+templ placesGroup(code string, country string, cities []string) {
+	<div>
+		<div class="flex items-center gap-3 mb-3">
+			@flagCircle(code)
+			<span class="font-mono text-[11px] tracking-[0.22em] text-accent uppercase">{ code }</span>
+			<span class="text-sm text-text-muted">{ country }</span>
+			<div class="flex-1 h-px bg-bg-border"></div>
+		</div>
+		<div class="flex flex-wrap gap-3 pl-7">
+			for _, city := range cities {
+				@placeBadge(city)
+			}
+		</div>
+	</div>
+}
+
+templ placeBadge(city string) {
+	<div class="bg-bg-surface border border-bg-border rounded-lg px-4 py-2 font-body">
 		<span class="text-text">{ city }</span>
 	</div>
 }
@@ -156,3 +230,54 @@ templ flagCircle(country string) {
 		<circle cx="10" cy="10" r="9.5" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"></circle>
 	</svg>
 }
+
+// ─────────────────────────────────────────────────────────────
+// Hero/intro layout (chosen direction: L1 — NOW strip + sticky aside).
+// ─────────────────────────────────────────────────────────────
+
+// Sticky aside content used in the hero.
+templ aboutAsideDefault() {
+	@aboutMarkBar()
+	<div class="flex flex-col items-start gap-4 mb-7">
+		<img src="/static/img/ramiro_profile_200x200.jpg" alt="Ramiro" class="w-28 h-28 rounded-full object-cover ring-1 ring-bg-border"/>
+		<div>
+			<h1 class="text-2xl font-medium text-text leading-tight mb-1">
+				Ramiro
+			</h1>
+			<p class="text-sm text-text-muted leading-relaxed">
+				Developer, entrepreneur, and meditation teacher based in Colombia.
+			</p>
+		</div>
+	</div>
+	<div class="flex flex-wrap gap-2 text-xs mb-6">
+		<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">AI integrations</span>
+		<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">Trading algos</span>
+		<span class="bg-accent-subtle text-accent-light px-3 py-1 rounded-full">SaaS development</span>
+		<span class="bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full">Meditation</span>
+		<span class="bg-accent-2-subtle text-accent-2-light px-3 py-1 rounded-full">Breathwork</span>
+	</div>
+	<div class="rounded-lg bg-bg-surface/60 border border-bg-border px-4 py-3.5">
+		<p class="text-sm italic leading-relaxed text-text-muted">
+			I found <span class="gradient-text not-italic font-medium">belonging</span> when I stopped looking.
+		</p>
+	</div>
+}
+
+// Hero/intro — sticky aside on the left + about-story prose on the right.
+templ aboutHero() {
+	<section class="reveal">
+		<div class="px-6 md:px-12 py-12 md:py-16">
+			<div class="grid gap-10 lg:grid-cols-[17rem_minmax(0,1fr)] max-w-5xl">
+				<aside class="lg:sticky lg:top-28 self-start">
+					@aboutAsideDefault()
+				</aside>
+				<div class="max-w-3xl">
+					<div class="about-story">
+						@content.MustGet("about/intro")
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+}
+

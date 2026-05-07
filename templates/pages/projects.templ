@@ -2,73 +2,153 @@ package pages
 
 import "github.com/rejkpp/ramiro.me/templates/layout"
 
-templ Projects() {
-	@layout.Base("Projects", "/projects") {
-		<section class="py-12">
-			<h1 class="font-heading text-4xl md:text-5xl font-bold text-text mb-4">
-				Projects
-			</h1>
-			<p class="font-body text-lg text-text-muted">
-				Things I'm building
-			</p>
-		</section>
-		<section class="py-8">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				@projectCard(
-					"Pradisi",
-					"Wellness",
-					"A retreat and education project focused on meditation, breathwork, yoga, and inner development. Pradisi exists to help people reset, deepen their practice, and reconnect through retreats and courses.",
-					[]string{"Meditation", "Breathwork", "Yoga", "Retreats"},
-				)
-				@projectCard(
-					"Suriname Legal AI",
-					"AI",
-					"An AI project exploring how legal information from Suriname can become more accessible. The goal is to build a system that understands Surinamese law and helps people navigate legal questions more clearly.",
-					[]string{"AI", "Legal", "NLP"},
-				)
-				@projectCard(
-					"Algo Trading",
-					"Trading",
-					"A learning and research track where I'm studying algorithmic trading, strategy design, and trading systems. This also supports more technical client work in the trading space.",
-					[]string{"Research", "Strategy"},
-				)
-				@projectCard(
-					"Client Algo Trading Bot",
-					"Trading",
-					"A software project focused on implementing a client's trading strategy as an automated bot. It combines backend engineering, trading logic, testing, and reliable execution.",
-					[]string{"Backend", "Automation"},
-				)
-				@projectCard(
-					"Multiagent System",
-					"AI",
-					"A workflow project for using multiple AI agents to plan, build, research, review, and execute work more effectively across projects.",
-					[]string{"Multi-agent", "Workflow"},
-				)
-			</div>
-		</section>
+// projectItem is the canonical record for a project.
+type projectItem struct {
+	Title       string
+	Category    string // "AI" | "Trading" | "Accounting" | "Wellness"
+	Status      string // "Building" | "Live" | "Research" | "Paused"
+	Description string
+	Tags        []string
+}
+
+// allProjects: ordered. Beetl Bot first (current focus).
+var allProjects = []projectItem{
+	{"Beetl Bot", "AI", "Building",
+		"A personal AI assistant built around the way you actually work. Multi-agent orchestration, LLM pipelines, and autonomous systems wired into the way your work actually runs.",
+		[]string{"AI", "Multi-agent", "Personal"}},
+	{"Pradisi Retreat Center", "Wellness", "Paused",
+		"A retreat and education project focused on meditation, breathwork, yoga, and inner development. Currently on pause. One retreat planned this year.",
+		[]string{"Meditation", "Breathwork", "Yoga", "Retreats"}},
+	{"Suriname Legal AI", "AI", "Research",
+		"An AI project exploring how legal information from Suriname can become more accessible. The goal is to build a system that understands Surinamese law and helps people navigate legal questions more clearly.",
+		[]string{"AI", "Legal", "NLP"}},
+	{"Accounting software for Suriname", "Accounting", "Building",
+		"Purpose-built accounting and invoicing software for businesses in Suriname. Local tax compliance, multi-currency support, and exchange rates that actually apply.",
+		[]string{"SaaS", "Accounting", "Suriname"}},
+	{"Algo Trading", "Trading", "Building",
+		"Building a Bitcoin Regime Trader. A systematic strategy that adapts to changing market conditions, designed with a quant and engineered for live execution.",
+		[]string{"Bitcoin", "Regime", "Strategy"}},
+	{"Client Algo Trading Bot", "Trading", "Building",
+		"A software project focused on implementing a client's trading strategy as an automated bot. It combines backend engineering, trading logic, testing, and reliable execution.",
+		[]string{"Backend", "Automation"}},
+	{"Multiagent System", "AI", "Live",
+		"A workflow project for using multiple AI agents to plan, build, research, review, and execute work more effectively across projects.",
+		[]string{"Multi-agent", "Workflow"}},
+}
+
+// categoryAccent: amber for tech, pink for consciousness.
+func categoryAccent(category string) string {
+	if category == "Wellness" || category == "Meditation" || category == "Breathwork" {
+		return "pink"
+	}
+	return "amber"
+}
+
+// statusBg: pill background + text classes by status.
+// Building = amber. Live = pink (matches the dual-accent palette).
+// Research / Paused = muted neutral (the latter slightly softer).
+func statusBg(status string) string {
+	switch status {
+	case "Live":
+		return "bg-accent-2-subtle text-accent-2-light"
+	case "Research":
+		return "bg-bg-border text-text-muted"
+	case "Paused":
+		return "bg-bg-surface text-text-muted/80 ring-1 ring-bg-border"
+	default: // Building
+		return "bg-accent-subtle text-accent-light"
 	}
 }
 
-templ projectCard(title string, category string, description string, tags []string) {
-	<div class="bg-bg-surface border border-bg-border rounded-lg p-6 hover:border-accent transition-colors">
-		<span class="inline-block bg-accent-subtle font-heading text-xs text-accent uppercase tracking-wide mb-2 px-2 py-0.5 rounded">
+templ Projects() {
+	@layout.Base("Projects", "/projects") {
+		<div class="grain">
+			<section class="px-6 md:px-12 py-12 md:py-16 max-w-3xl reveal">
+				<div class="w-20 h-[3px] bg-gradient-to-r from-accent to-accent-2 rounded mb-6"></div>
+				<h1 class="font-heading font-medium text-text leading-[1.05] text-3xl md:text-5xl mb-4">
+					Things <span class="gradient-text">I'm building</span>.
+				</h1>
+			</section>
+
+			<section class="px-6 md:px-12 pb-10 reveal">
+				@statusSection(
+					"Currently building",
+					"Building",
+					[]projectItem{allProjects[0], allProjects[2], allProjects[3], allProjects[4], allProjects[5]},
+				)
+			</section>
+
+			<section class="px-6 md:px-12 pb-10 reveal">
+				@statusSection(
+					"Live and running",
+					"Live",
+					[]projectItem{allProjects[6]},
+				)
+			</section>
+
+			<section class="px-6 md:px-12 pb-16 reveal">
+				@statusSection(
+					"On pause",
+					"Paused",
+					[]projectItem{allProjects[1]},
+				)
+			</section>
+		</div>
+	}
+}
+
+templ projectCategoryTag(category string) {
+	if categoryAccent(category) == "pink" {
+		<span class="bg-accent-2-subtle font-mono text-[10px] text-accent-2-light uppercase tracking-[0.18em] px-2 py-0.5 rounded shrink-0">
 			{ category }
 		</span>
-		<h3 class="font-heading text-xl md:text-2xl font-semibold text-text mb-3">
-			{ title }
-		</h3>
-		<p class="font-body text-text-muted text-sm mb-4">
-			{ description }
-		</p>
-		<div class="flex flex-wrap gap-2 mb-4">
-			for _, tag := range tags {
-				<span class="bg-bg border border-bg-border text-text-muted text-xs font-body rounded-full px-3 py-1">
-					{ tag }
-				</span>
+	} else {
+		<span class="bg-accent-subtle font-mono text-[10px] text-accent-light uppercase tracking-[0.18em] px-2 py-0.5 rounded shrink-0">
+			{ category }
+		</span>
+	}
+}
+
+templ projectStatusTag(status string) {
+	<span class={ "font-mono text-[10px] uppercase tracking-[0.18em] px-2 py-0.5 rounded shrink-0 " + statusBg(status) }>
+		{ status }
+	</span>
+}
+
+templ statusSection(label string, status string, items []projectItem) {
+	<div>
+		<div class="flex items-center gap-3 mb-6">
+			@projectStatusTag(status)
+			<h3 class="font-heading text-lg md:text-xl font-medium text-text">{ label }</h3>
+			<div class="flex-1 h-px bg-bg-border"></div>
+			<span class="font-mono text-xs text-text-muted">{ projectNum(len(items)) }</span>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+			for _, p := range items {
+				@statusCard(p)
 			}
 		</div>
-		<a href="#" class="font-body text-accent hover:text-accent-light text-sm transition-colors">
-			View →
-		</a>
 	</div>
+}
+
+templ statusCard(p projectItem) {
+	<a href="#" class="group block bg-bg-surface border border-bg-border rounded-[10px] p-5 hover:border-accent/60 transition-colors">
+		<div class="mb-2">
+			@projectCategoryTag(p.Category)
+		</div>
+		<h4 class="font-heading text-lg font-medium text-text mb-2 leading-snug">
+			{ p.Title }
+		</h4>
+		<p class="font-body text-[13px] text-text-muted leading-relaxed">
+			{ p.Description }
+		</p>
+	</a>
+}
+
+// Helper: zero-padded 2-digit project number.
+func projectNum(n int) string {
+	if n < 10 {
+		return "0" + string(rune('0'+n))
+	}
+	return string(rune('0'+n/10)) + string(rune('0'+n%10))
 }

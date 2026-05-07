@@ -1,7 +1,8 @@
-.PHONY: css templ build dev gen static clean
+.PHONY: css templ build dev watch gen static clean
 
 TAILWIND_BIN := ./tailwindcss
 TEMPL_VERSION := v0.3.1001
+AIR_VERSION := v1.65.1
 
 css:
 	@if [ ! -x $(TAILWIND_BIN) ] || ! $(TAILWIND_BIN) --help >/dev/null 2>&1; then \
@@ -33,6 +34,17 @@ build: templ css
 
 dev: build
 	./bin/server
+
+# Live-reload dev loop. Watches .go/.templ/.css/.md and rebuilds on change.
+# App on :8080, hot-reloading browser proxy on :8383.
+watch:
+	@air_bin="$$(go env GOPATH)/bin/air"; \
+	if ! command -v air >/dev/null 2>&1 && [ ! -x "$$air_bin" ]; then \
+		echo "Installing air $(AIR_VERSION)..."; \
+		go install github.com/air-verse/air@$(AIR_VERSION); \
+	fi
+	@echo "Watching for changes. Open http://localhost:8383"
+	PATH="$$(go env GOPATH)/bin:$$PATH" air
 
 gen:
 	go run ./cmd/gen

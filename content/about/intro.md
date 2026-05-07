@@ -4,11 +4,11 @@ These days I live on a mountain, hike with my dogs, build AI systems, trading al
 
 A question I have asked many times over and continue to answer daily.
 
-I’m a character in a movie.
+I’m a <span class="gradient-text">character</span> in a movie.
 
-I’m a player in a game.
+I’m a <span class="gradient-text">player</span> in a game.
 
-I’m a spirit in a body.
+I’m a <span class="gradient-text">spirit</span> in a body.
 
 Multi-cultural, multi-disciplined, multi-lingual.  
 Not Chinese enough to be Chinese,  
@@ -16,11 +16,11 @@ too Chinese to be Surinamese,
 too Surinamese to be Colombian.  
 Too rich to be poor, too poor to be rich. 
 
-I was born in Suriname, influenced by a Colombian mom, Dutch education, American cartoons, Japanese video games, Caribbean culture, Chinese roots, and a silent dad.
+I was born in <span class="gradient-text">Suriname</span>, influenced by a <span class="gradient-text">Colombian</span> mom, Dutch education, American cartoons, Japanese video games, Caribbean culture, Chinese roots, and a silent dad.
 
-I grew up behind the counter at my mom's supermarket, ringing people up, helping with admin, and selling fireworks.  
+I grew up behind the counter at my mom's <span class="gradient-text">supermarket</span>, ringing people up, helping with admin, and selling fireworks.  
 It was pretty ghetto.  
-One time, I saw one of the employees swing a machete at a customer. 
+One time, I saw one of the employees swing a <span class="gradient-text">machete</span> at a customer. 
 
 In a past life,  
 I made mojitos behind bars,  
@@ -32,4 +32,4 @@ I lost my dad, and my half-siblings took me to court.
 
 I basically needed a LOT of therapy, coaching, and healing.
 
-Connecting to spirit keeps me grounded.
+Connecting to <span class="gradient-text">spirit</span> keeps me grounded.

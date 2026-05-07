@@ -1,0 +1,18 @@
+package layout
+
+// Now renders the site-wide status strip that sits sticky beneath the nav.
+// Editable in one place; appears on every page via Base.
+templ Now() {
+	<div class="sticky top-14 z-20 border-b border-bg-border bg-bg/85 backdrop-blur supports-[backdrop-filter]:bg-bg/70">
+		<div class="w-full max-w-5xl mx-auto px-4 py-2.5">
+			<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+				<span class="font-mono text-[10px] text-accent uppercase tracking-[0.22em]">Now</span>
+				<span class="text-text-muted">Building <span class="text-text">Beetl Bot</span></span>
+				<span class="text-text-muted/40">·</span>
+				<span class="text-text-muted">On a mountain in <span class="text-text">Colombia</span></span>
+				<span class="text-text-muted/40">·</span>
+				<span class="text-accent-2">Open for new work</span>
+			</div>
+		</div>
+	</div>
+}
